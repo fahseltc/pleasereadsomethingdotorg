@@ -4,16 +4,16 @@ import mdx from '@astrojs/mdx';
 
 // GitHub Pages configuration.
 //
-// If this repo is published as a PROJECT site (the default), the site lives at
-//   https://<user>.github.io/<repo>/
-// and `base` MUST be the repo name (leading slash). If you instead use a custom
-// domain or a <user>.github.io USER site, set `base: '/'` and point `site` at
-// the custom domain.
+// This repo is served from its own CUSTOM DOMAIN (pleasereadsomething.org), so
+// the site lives at the ROOT of that domain and `base` is '/'. The domain is
+// kept in public/CNAME so it survives every Actions deploy.
 //
-// Override without editing this file by setting the SITE / BASE env vars
-// (the GitHub Actions workflow does this automatically from the repo name).
-const site = process.env.SITE ?? 'https://your-username.github.io';
-const base = process.env.BASE ?? '/pleasereadsomething';
+// (If you ever move back to a project subpath — e.g. fahseltc.github.io/<repo>/
+// — set base to '/<repo>' and site to that origin.)
+//
+// SITE / BASE env vars still override these for one-off builds if needed.
+const site = process.env.SITE ?? 'https://pleasereadsomething.org';
+const base = process.env.BASE ?? '/';
 
 export default defineConfig({
   site,

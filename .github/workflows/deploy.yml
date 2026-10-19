@@ -36,11 +36,10 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Build
-        # actions/configure-pages exposes the correct base_path for project
-        # sites; feed it to astro.config.mjs via SITE/BASE so links resolve.
-        env:
-          SITE: ${{ steps.pages.outputs.origin }}
-          BASE: ${{ steps.pages.outputs.base_path }}
+        # Custom domain (pleasereadsomething.org) serves from the root, so the
+        # build uses the site/base pinned in astro.config.mjs. We intentionally
+        # do NOT feed configure-pages' base_path here — for a project repo it
+        # would wrongly inject the /<repo>/ subpath even under a custom domain.
         run: npm run build
 
       - name: Upload artifact
