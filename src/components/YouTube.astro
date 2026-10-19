@@ -1,0 +1,114 @@
+---
+/*
+ * YouTube.astro — embed a YouTube video in a blog post with one line.
+ *
+ * Usage inside an .mdx post (after importing it — the scaffold does this for
+ * you):
+ *   <YouTube url="https://www.youtube.com/shorts/qyL8XcY8ZG4" />
+ *   <YouTube url="https://www.youtube.com/watch?v=1Zq5fAD2n0Y" />
+ *   <YouTube id="1Zq5fAD2n0Y" title="A tour of the shop" />
+ *
+ * Accepts any common YouTube URL form (watch, shorts, youtu.be, embed) or a
+ * bare 11-character video id. Auto-detects Shorts (vertical 9:16) vs. a regular
+ * widescreen video (16:9) and sizes the frame accordingly. Uses the
+ * privacy-enhanced youtube-nocookie.com host and lazy loading.
+ */
+interface Props {
+  /** Any YouTube URL (watch / shorts / youtu.be / embed). */
+  url?: string;
+  /** Or the bare 11-char video id, if you already have it. */
+  id?: string;
+  /** Accessible title for the embedded player. */
+  title?: string;
+  /** Force an orientation; otherwise inferred (shorts URL => vertical). */
+  orientation?: 'wide' | 'vertical';
+}
+
+const { url, id, title = 'YouTube video player', orientation } = Astro.props;
+
+/** Pull the 11-char video id out of any common YouTube URL (or pass-through an id). */
+function extractId(input?: string): string | null {
+  if (!input) return null;
+  const trimmed = input.trim();
+  // Already a bare id.
+  if (/^[a-zA-Z0-9_-]{11}$/.test(trimmed)) return trimmed;
+  const patterns = [
+    /youtube\.com\/shorts\/([a-zA-Z0-9_-]{11})/,
+    /youtube\.com\/watch\?[^#]*\bv=([a-zA-Z0-9_-]{11})/,
+    /youtube\.com\/embed\/([a-zA-Z0-9_-]{11})/,
+    /youtu\.be\/([a-zA-Z0-9_-]{11})/,
+  ];
+  for (const re of patterns) {
+    const m = trimmed.match(re);
+    if (m) return m[1];
+  }
+  return null;
+}
+
+const videoId = extractId(id ?? url);
+
+// Infer orientation: an explicit prop wins; otherwise a /shorts/ URL is vertical.
+const isVertical =
+  orientation === 'vertical' ||
+  (orientation !== 'wide' && !!url && /youtube\.com\/shorts\//.test(url));
+
+const src = videoId
+  ? `https://www.youtube-nocookie.com/embed/${videoId}`
+  : null;
+---
+
+{
+  src ? (
+    <div class={`yt-embed ${isVertical ? 'yt-embed--vertical' : 'yt-embed--wide'}`}>
+      <iframe
+        src={src}
+        title={title}
+        loading="lazy"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      />
+    </div>
+  ) : (
+    <p class="yt-embed-error">
+      ⚠️ Could not read a YouTube video from{' '}
+      <code>{url ?? id ?? '(nothing provided)'}</code>. Paste the full video URL,
+      e.g. <code>https://www.youtube.com/watch?v=XXXXXXXXXXX</code>.
+    </p>
+  )
+}
+
+<style>
+  .yt-embed {
+    position: relative;
+    width: 100%;
+    margin-block: var(--space, 1rem);
+    border-radius: var(--radius, 8px);
+    overflow: hidden;
+    background: #000;
+  }
+  /* Widescreen 16:9. */
+  .yt-embed--wide {
+    aspect-ratio: 16 / 9;
+  }
+  /* Shorts are vertical 9:16 — cap the width so it doesn't dominate on desktop. */
+  .yt-embed--vertical {
+    aspect-ratio: 9 / 16;
+    max-width: 24rem;
+    margin-inline: auto;
+  }
+  .yt-embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  .yt-embed-error {
+    border: var(--card-border, 1px solid #ccc);
+    border-radius: var(--radius, 8px);
+    padding: var(--space, 1rem);
+    color: var(--color-muted, #666);
+  }
+</style>

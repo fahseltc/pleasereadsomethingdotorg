@@ -1,0 +1,35 @@
+/* "zine" — bold, condensed sans, tight & punchy, hard edges, no shadows. */
+[data-theme='zine'] {
+  --color-bg: #fff8e7;
+  --color-surface: #ffffff;
+  --color-fg: #111111;
+  --color-muted: #444444;
+  --color-accent: #e4322b;
+  --color-accent-contrast: #ffffff;
+  --color-border: #111111;
+
+  --font-body: 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Impact', 'Arial Black', sans-serif;
+  --text-base: 1.05rem;
+  --text-scale: 1.5;
+
+  --space: 0.6rem;
+  --radius: 0px;
+  --card-shadow: none;
+  --card-border: 3px solid #111111;
+
+  color-scheme: light;
+}
+
+[data-theme='zine'][data-mode='dark'] {
+  --color-bg: #111111;
+  --color-surface: #1a1a1a;
+  --color-fg: #fff8e7;
+  --color-muted: #cccccc;
+  --color-accent: #ff5a52;
+  --color-accent-contrast: #111111;
+  --color-border: #fff8e7;
+  --card-border: 3px solid #fff8e7;
+
+  color-scheme: dark;
+}

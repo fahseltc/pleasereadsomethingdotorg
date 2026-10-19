@@ -1,0 +1,70 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import YouTube from '../../components/YouTube.astro';
+import { withBase } from '../../lib/url';
+
+export const getStaticPaths = (async () => {
+  // Draft posts are excluded from the build (design §10).
+  const posts = (await getCollection('blog')).filter((p) => !p.data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}) satisfies GetStaticPaths;
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const store = post.data.bookstore
+  ? await getEntry('bookstores', post.data.bookstore.id)
+  : null;
+---
+
+<BaseLayout title={post.data.title} description={post.data.description}>
+  <article class="section prose stack">
+    <p><a href={withBase('/blog')}>← All posts</a></p>
+
+    <h1>{post.data.title}</h1>
+    <p class="muted small">
+      {post.data.pubDate.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      })}
+      {
+        store && (
+          <>
+            {' · about '}
+            <a href={withBase(`/bookstores/${store.data.id}`)}>{store.data.name}</a>
+          </>
+        )
+      }
+    </p>
+
+    {
+      post.data.heroImage && (
+        <img
+          src={withBase(post.data.heroImage)}
+          alt=""
+          width="960"
+          height="540"
+          style="border-radius: var(--radius);"
+        />
+      )
+    }
+
+    <Content components={{ YouTube }} />
+
+    {
+      post.data.tags.length > 0 && (
+        <ul class="tags">
+          {post.data.tags.map((t) => (
+            <li class="tag">{t}</li>
+          ))}
+        </ul>
+      )
+    }
+  </article>
+</BaseLayout>

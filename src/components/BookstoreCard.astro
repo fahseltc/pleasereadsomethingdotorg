@@ -1,0 +1,38 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { withBase } from '../lib/url';
+
+interface Props {
+  store: CollectionEntry<'bookstores'>;
+}
+const { store } = Astro.props;
+const d = store.data;
+const href = withBase(`/bookstores/${d.id}`);
+---
+
+<article class="card">
+  <a href={href}>
+    <img
+      class="card__media"
+      src={withBase(d.image)}
+      alt={`${d.name} storefront`}
+      loading="lazy"
+      width="480"
+      height="320"
+    />
+  </a>
+  <div class="card__body">
+    <a href={href}><h3>{d.name}</h3></a>
+    <p class="small muted">{d.address}</p>
+    <p>{d.review.length > 160 ? d.review.slice(0, 157) + '…' : d.review}</p>
+    {
+      d.tags.length > 0 && (
+        <ul class="tags">
+          {d.tags.map((t) => (
+            <li class="tag">{t}</li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</article>

@@ -1,0 +1,59 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase } from '../../lib/url';
+
+// Every non-draft post lists, store-linked or not (design §8).
+const posts = (await getCollection('blog'))
+  .filter((p) => !p.data.draft)
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+// Resolve linked store names for the "about <store>" tag.
+const storeNames = new Map<string, string>();
+for (const post of posts) {
+  const ref = post.data.bookstore;
+  if (ref && !storeNames.has(ref.id)) {
+    const store = await getEntry('bookstores', ref.id);
+    if (store) storeNames.set(ref.id, store.data.name);
+  }
+}
+---
+
+<BaseLayout
+  title="Blog"
+  description="Articles about the Front Range's independent bookstores — reviews, roundups, and news."
+>
+  <section class="section stack">
+    <h1>Blog</h1>
+    {posts.length === 0 && <p class="muted">No posts yet. Check back soon.</p>}
+    <ul class="stack">
+      {
+        posts.map((post) => (
+          <li class="card">
+            <div class="card__body">
+              <a href={withBase(`/blog/${post.id}`)}>
+                <h3>{post.data.title}</h3>
+              </a>
+              <p class="small muted">
+                {post.data.pubDate.toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })}
+                {post.data.bookstore && storeNames.get(post.data.bookstore.id) && (
+                  <>
+                    {' · about '}
+                    <a href={withBase(`/bookstores/${post.data.bookstore.id}`)}>
+                      {storeNames.get(post.data.bookstore.id)}
+                    </a>
+                  </>
+                )}
+              </p>
+              {post.data.description && <p>{post.data.description}</p>}
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</BaseLayout>

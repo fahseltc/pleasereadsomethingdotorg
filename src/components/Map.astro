@@ -1,0 +1,134 @@
+---
+/*
+ * Map.astro — Leaflet + OpenStreetMap map (design §7).
+ *
+ * Renders one pin per ENABLED bookstore that has resolved coordinates. Disabled
+ * stores (or ones still missing lat/lng) are filtered out by the caller and/or
+ * here, so a hidden store never ships a pin. No API key, no billing.
+ *
+ * Leaflet's CSS/JS are pinned to a specific version with SRI for reproducible,
+ * tamper-evident loads.
+ */
+import { withBase } from '../lib/url';
+
+export interface MapPin {
+  id: string;
+  name: string;
+  lat: number;
+  lng: number;
+  image?: string;
+  href: string;
+}
+
+interface Props {
+  pins: MapPin[];
+  /** Fit all pins (index map) or center on one (detail map). */
+  mode?: 'all' | 'single';
+  /** Extra class on the map container, e.g. for the shorter detail map. */
+  class?: string;
+}
+
+const { pins, mode = 'all', class: className = '' } = Astro.props;
+
+// Denver fallback center when there are zero/one pins.
+const DENVER = { lat: 39.7392, lng: -104.9903, zoom: 11 };
+
+const payload = {
+  pins,
+  mode,
+  denver: DENVER,
+  // Resolve the image base path server-side so popups work under a Pages subpath.
+  base: withBase('/'),
+};
+
+const LEAFLET_VERSION = '1.9.4';
+const LEAFLET_CSS = `https://unpkg.com/leaflet@${LEAFLET_VERSION}/dist/leaflet.css`;
+const LEAFLET_CSS_SRI =
+  'sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=';
+const LEAFLET_JS = `https://unpkg.com/leaflet@${LEAFLET_VERSION}/dist/leaflet.js`;
+const LEAFLET_JS_SRI =
+  'sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=';
+---
+
+<link
+  rel="stylesheet"
+  href={LEAFLET_CSS}
+  integrity={LEAFLET_CSS_SRI}
+  crossorigin="anonymous"
+/>
+
+<div
+  class={`map ${className}`.trim()}
+  id="prs-map"
+  data-map={JSON.stringify(payload)}
+  role="application"
+  aria-label="Map of Front Range independent bookstores"
+>
+</div>
+
+<script
+  is:inline
+  src={LEAFLET_JS}
+  integrity={LEAFLET_JS_SRI}
+  crossorigin="anonymous"
+></script>
+
+<script>
+  function initMap() {
+    const el = document.getElementById('prs-map');
+    // @ts-expect-error Leaflet is a global from the pinned CDN script.
+    const L = window.L;
+    if (!el || !L) return;
+
+    const cfg = JSON.parse(el.getAttribute('data-map') || '{}');
+    const pins = cfg.pins || [];
+    const denver = cfg.denver || { lat: 39.7392, lng: -104.9903, zoom: 11 };
+    const base = cfg.base || '/';
+
+    const map = L.map(el, { scrollWheelZoom: false }).setView(
+      [denver.lat, denver.lng],
+      denver.zoom
+    );
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    const markers = [];
+    for (const p of pins) {
+      if (typeof p.lat !== 'number' || typeof p.lng !== 'number') continue;
+      const marker = L.marker([p.lat, p.lng]).addTo(map);
+      const img = p.image
+        ? `<img src="${base.replace(/\/$/, '')}/${String(p.image).replace(/^\//, '')}" alt="" />`
+        : '';
+      marker.bindPopup(
+        `<div class="map-popup">
+           <a class="map-popup__title" href="${p.href}">${p.name}</a>
+           ${img}
+           <div><a href="${p.href}">Read the review →</a></div>
+         </div>`
+      );
+      markers.push(marker);
+    }
+
+    if (cfg.mode === 'single' && markers.length === 1) {
+      map.setView(markers[0].getLatLng(), 15);
+    } else if (markers.length > 1) {
+      map.fitBounds(L.featureGroup(markers).getBounds().pad(0.2));
+    }
+
+    // Re-layout tiles when the viewport changes (mobile rotate/resize).
+    const relayout = () => map.invalidateSize();
+    window.addEventListener('resize', relayout);
+    window.addEventListener('orientationchange', relayout);
+    setTimeout(relayout, 200);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMap);
+  } else {
+    initMap();
+  }
+</script>

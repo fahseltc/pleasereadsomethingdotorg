@@ -1,0 +1,51 @@
+/*
+ * tokens.css — shared token NAMES + the :root default.
+ *
+ * Themes (src/styles/themes/*.css) override these under a [data-theme="..."]
+ * selector. Components reference ONLY these variables — never hard-coded colors,
+ * fonts, spacing, radii, borders, or shadows — so swapping `data-theme` on
+ * <html> reskins the whole site in one move (design §12).
+ *
+ * The :root block below mirrors the "classic" theme so the site has a sane look
+ * even if no data-theme attribute is set.
+ */
+:root {
+  /* color */
+  --color-bg: #faf7f2;
+  --color-surface: #fffdf9;
+  --color-fg: #1b1b1b;
+  --color-muted: #5c554c;
+  --color-accent: #7a4a2b;
+  --color-accent-contrast: #ffffff;
+  --color-border: #e4ddd1;
+
+  /* typography */
+  --font-body: Georgia, "Times New Roman", serif;
+  --font-heading: Georgia, "Times New Roman", serif;
+  --text-base: 1.05rem;
+  --text-scale: 1.2;
+
+  /* derived type scale */
+  --text-sm: calc(var(--text-base) / var(--text-scale));
+  --text-lg: calc(var(--text-base) * var(--text-scale));
+  --text-xl: calc(var(--text-lg) * var(--text-scale));
+  --text-2xl: calc(var(--text-xl) * var(--text-scale));
+
+  /* spacing / density */
+  --space: 1rem;
+  --space-xs: calc(var(--space) * 0.25);
+  --space-sm: calc(var(--space) * 0.5);
+  --space-lg: calc(var(--space) * 1.5);
+  --space-xl: calc(var(--space) * 2.5);
+
+  /* shape */
+  --radius: 10px;
+  --card-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+  --card-border: 1px solid var(--color-border);
+
+  /* layout */
+  --content-max: 70rem;
+  --prose-max: 44rem;
+
+  color-scheme: light;
+}

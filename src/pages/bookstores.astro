@@ -1,0 +1,86 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BookstoreCard from '../components/BookstoreCard.astro';
+import Map, { type MapPin } from '../components/Map.astro';
+import { withBase } from '../lib/url';
+
+// Only enabled stores with resolved coordinates appear (design §7).
+const stores = (await getCollection('bookstores'))
+  .filter((s) => s.data.enabled)
+  .sort((a, b) => a.data.name.localeCompare(b.data.name));
+
+const mapped = stores.filter(
+  (s) => typeof s.data.lat === 'number' && typeof s.data.lng === 'number'
+);
+
+const pins: MapPin[] = mapped.map((s) => ({
+  id: s.data.id,
+  name: s.data.name,
+  lat: s.data.lat as number,
+  lng: s.data.lng as number,
+  image: s.data.image,
+  href: withBase(`/bookstores/${s.data.id}`),
+}));
+
+const allTags = Array.from(new Set(stores.flatMap((s) => s.data.tags))).sort();
+---
+
+<BaseLayout
+  title="Bookstores"
+  description="A map and index of independent bookstores along Colorado's Front Range."
+>
+  <section class="section stack">
+    <h1>Front Range Indie Bookstores</h1>
+    <p class="lede">
+      {mapped.length} shop{mapped.length === 1 ? '' : 's'} on the map. Tap a pin
+      for the review, or browse the list below.
+    </p>
+    <Map pins={pins} mode="all" />
+  </section>
+
+  <section class="section">
+    <div class="cluster" style="justify-content: space-between;">
+      <h2>All bookstores</h2>
+      {
+        allTags.length > 0 && (
+          <div class="cluster">
+            <label for="tag-filter" class="small muted">
+              Filter by tag:
+            </label>
+            <select id="tag-filter" class="theme-switcher">
+              <option value="">All</option>
+              {allTags.map((t) => (
+                <option value={t}>{t}</option>
+              ))}
+            </select>
+          </div>
+        )
+      }
+    </div>
+
+    <div class="grid" id="store-grid">
+      {
+        stores.map((store) => (
+          <div class="store-item" data-tags={store.data.tags.join(' ')}>
+            <BookstoreCard store={store} />
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <script is:inline>
+    (function () {
+      var sel = document.getElementById('tag-filter');
+      if (!sel) return;
+      sel.addEventListener('change', function () {
+        var tag = sel.value;
+        document.querySelectorAll('.store-item').forEach(function (el) {
+          var tags = (el.getAttribute('data-tags') || '').split(' ');
+          el.style.display = !tag || tags.indexOf(tag) !== -1 ? '' : 'none';
+        });
+      });
+    })();
+  </script>
+</BaseLayout>

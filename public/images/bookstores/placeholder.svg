@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="Bookstore photo placeholder">
+  <rect width="480" height="320" fill="#efe9df" />
+  <rect x="40" y="120" width="400" height="160" fill="#d8c9b2" />
+  <rect x="60" y="140" width="80" height="140" fill="#7a4a2b" />
+  <rect x="150" y="140" width="80" height="140" fill="#a9683d" />
+  <rect x="240" y="140" width="80" height="140" fill="#8a5a36" />
+  <rect x="330" y="140" width="90" height="140" fill="#6a4024" />
+  <text x="240" y="70" font-family="Georgia, serif" font-size="28" fill="#5c554c" text-anchor="middle">Add a photo</text>
+  <text x="240" y="100" font-family="Georgia, serif" font-size="14" fill="#8a8176" text-anchor="middle">public/images/bookstores/</text>
+</svg>

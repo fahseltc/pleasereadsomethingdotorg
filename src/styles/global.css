@@ -1,0 +1,358 @@
+/*
+ * global.css — base, mobile-first styles. Everything here references tokens
+ * from tokens.css / the active theme, so a theme swap restyles all of it
+ * (design §12). Base styles target small screens; wider layouts are added at
+ * min-width breakpoints only.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-body);
+  /* Fluid base type so headings scale without horizontal scroll. */
+  font-size: clamp(1rem, 0.95rem + 0.3vw, var(--text-base));
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  margin: 0 0 var(--space-sm);
+}
+
+h1 {
+  font-size: clamp(1.6rem, 1.2rem + 2.5vw, var(--text-2xl));
+}
+
+h2 {
+  font-size: clamp(1.35rem, 1.1rem + 1.5vw, var(--text-xl));
+}
+
+h3 {
+  font-size: var(--text-lg);
+}
+
+p,
+ul,
+ol {
+  margin: 0 0 var(--space);
+}
+
+a {
+  color: var(--color-accent);
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---- layout ---- */
+
+.container {
+  width: 100%;
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: var(--space);
+}
+
+main {
+  flex: 1;
+  padding-block: var(--space-lg);
+}
+
+.prose {
+  max-width: var(--prose-max);
+  margin-inline: auto;
+}
+
+/* ---- site header / nav ---- */
+
+.site-header {
+  background: var(--color-surface);
+  border-bottom: var(--card-border);
+}
+
+.site-header .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm) var(--space);
+  padding-block: var(--space-sm);
+}
+
+.site-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  color: var(--color-fg);
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+/* ~44px tap targets for touch (design §12). */
+.site-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: var(--space-sm);
+  color: var(--color-fg);
+  text-decoration: none;
+  border-radius: var(--radius);
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current='page'] {
+  background: var(--color-bg);
+  color: var(--color-accent);
+}
+
+/* theme switcher */
+.theme-switcher {
+  display: inline-flex;
+  gap: var(--space-xs);
+  align-items: center;
+}
+
+.theme-switcher select {
+  min-height: 44px;
+  font: inherit;
+  color: var(--color-fg);
+  background: var(--color-bg);
+  border: var(--card-border);
+  border-radius: var(--radius);
+  padding: 0 var(--space-sm);
+}
+
+/* ---- footer ---- */
+
+.site-footer {
+  background: var(--color-surface);
+  border-top: var(--card-border);
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+}
+
+.site-footer .container {
+  padding-block: var(--space-lg);
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-xs) var(--space);
+}
+
+.footer-row p {
+  margin: 0;
+}
+
+.footer-attribution {
+  margin-left: auto;
+  text-align: right;
+}
+
+/* ---- cards / grid ---- */
+
+.grid {
+  display: grid;
+  gap: var(--space);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 48rem) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
+}
+
+.card {
+  background: var(--color-surface);
+  border: var(--card-border);
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__body {
+  padding: var(--space);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  flex: 1;
+}
+
+.card__media {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  width: 100%;
+  background: var(--color-bg);
+}
+
+.card h3 {
+  margin: 0;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card a:hover h3 {
+  text-decoration: underline;
+}
+
+.muted {
+  color: var(--color-muted);
+}
+
+.small {
+  font-size: var(--text-sm);
+}
+
+/* ---- tags ---- */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tag {
+  font-size: var(--text-sm);
+  padding: 0.15em 0.6em;
+  border: var(--card-border);
+  border-radius: 999px;
+  color: var(--color-muted);
+}
+
+/* ---- buttons ---- */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  gap: var(--space-xs);
+  padding-inline: var(--space);
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+  border: none;
+  border-radius: var(--radius);
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  text-decoration: none;
+  filter: brightness(0.95);
+}
+
+.button--ghost {
+  background: transparent;
+  color: var(--color-accent);
+  border: var(--card-border);
+}
+
+/* ---- map ---- */
+
+.map {
+  width: 100%;
+  height: 60vh;
+  max-height: 32rem;
+  min-height: 18rem;
+  border: var(--card-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.map--detail {
+  height: 40vh;
+  max-height: 22rem;
+}
+
+/* Keep Leaflet's attribution/controls legible on all themes. */
+.leaflet-container {
+  font-family: var(--font-body);
+}
+
+.map-popup__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.map-popup img {
+  width: 100%;
+  height: auto;
+  margin-top: 4px;
+  border-radius: 4px;
+}
+
+/* ---- misc helpers ---- */
+
+.stack>*+* {
+  margin-top: var(--space);
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.lede {
+  font-size: var(--text-lg);
+  color: var(--color-muted);
+}
+
+.section+.section {
+  margin-top: var(--space-xl);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

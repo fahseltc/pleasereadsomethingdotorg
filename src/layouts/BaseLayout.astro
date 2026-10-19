@@ -1,0 +1,111 @@
+---
+import { withBase } from '../lib/url';
+import '../styles/tokens.css';
+import '../styles/themes/classic.css';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const siteName = 'Please Read Something';
+const fullTitle = title === siteName ? title : `${title} — ${siteName}`;
+
+// The site-wide DEFAULT look. Change this one value to reskin the whole site
+// (design §12). A visitor's saved choice (localStorage) overrides it at runtime.
+const DEFAULT_THEME = 'classic';
+const DEFAULT_MODE = 'light';
+
+const nav = [
+  { href: '/', label: 'Home' },
+  { href: '/bookstores', label: 'Bookstores' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/contact', label: 'Contact' },
+];
+
+const current = Astro.url.pathname.replace(/\/+$/, '') || '/';
+function isActive(href: string) {
+  const target = withBase(href).replace(/\/+$/, '') || '/';
+  return current === target;
+}
+---
+
+<!doctype html>
+<html lang="en" data-theme={DEFAULT_THEME} data-mode={DEFAULT_MODE}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
+    <meta name="color-scheme" content="light dark" />
+    <!-- Apply the saved light/dark mode BEFORE paint to avoid a flash. -->
+    <script is:inline>
+      (function () {
+        try {
+          var m = localStorage.getItem('prs-mode');
+          if (m) document.documentElement.setAttribute('data-mode', m);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="site-title" href={withBase('/')}>Please Read Something</a>
+        <nav class="site-nav" aria-label="Primary">
+          {
+            nav.map((item) => (
+              <a
+                href={withBase(item.href)}
+                aria-current={isActive(item.href) ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            ))
+          }
+        </nav>
+        <div class="theme-switcher">
+          <button id="mode-toggle" class="button button--ghost" type="button" aria-label="Toggle light/dark">
+            ◐
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <slot />
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p class="small">
+          Please Read Something — independent bookstore reviews for Colorado's
+          Front Range.
+        </p>
+        <p class="small footer-attribution">
+          Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>
+          contributors.
+        </p>
+      </div>
+    </footer>
+
+    <script is:inline>
+      (function () {
+        var modeBtn = document.getElementById('mode-toggle');
+        var root = document.documentElement;
+        if (modeBtn) {
+          modeBtn.addEventListener('click', function () {
+            var next = root.getAttribute('data-mode') === 'dark' ? 'light' : 'dark';
+            root.setAttribute('data-mode', next);
+            try { localStorage.setItem('prs-mode', next); } catch (e) {}
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+# build output
+dist/
+.output/
+
+# astro
+.astro/
+
+# dependencies
+node_modules/
+
+# NOTE: src/data/events.json is committed as an empty stub so the build always
+# resolves the import. `npm run sync:events` overwrites it locally with real
+# aggregator data; commit that only if you want events in the published site.
+
+# env / secrets
+.env
+.env.*
+!.env.example
+
+# os / editor noise
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*

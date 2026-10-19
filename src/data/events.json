@@ -1,0 +1,4 @@
+{
+  "note": "Placeholder. Run `npm run sync:events` to copy real events from ../book-events-aggregator/output/events.json. This committed stub keeps the build working when no events have been synced.",
+  "events": []
+}

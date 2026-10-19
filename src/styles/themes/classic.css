@@ -1,0 +1,36 @@
+/* "classic" — warm, serif, generous spacing, soft corners (design §12). */
+[data-theme='classic'] {
+  --color-bg: #faf7f2;
+  --color-surface: #fffdf9;
+  --color-fg: #1b1b1b;
+  --color-muted: #5c554c;
+  --color-accent: #7a4a2b;
+  --color-accent-contrast: #ffffff;
+  --color-border: #e4ddd1;
+
+  --font-body: Georgia, 'Times New Roman', serif;
+  --font-heading: Georgia, 'Times New Roman', serif;
+  --text-base: 1.05rem;
+  --text-scale: 1.2;
+
+  --space: 1rem;
+  --radius: 10px;
+  --card-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+  --card-border: 1px solid var(--color-border);
+
+  color-scheme: light;
+}
+
+/* Optional dark mode WITHIN the classic theme. */
+[data-theme='classic'][data-mode='dark'] {
+  --color-bg: #15130f;
+  --color-surface: #1f1b16;
+  --color-fg: #efe9df;
+  --color-muted: #b7ac9b;
+  --color-accent: #d8a05a;
+  --color-accent-contrast: #15130f;
+  --color-border: #3a332a;
+  --card-shadow: 0 2px 10px rgb(0 0 0 / 45%);
+
+  color-scheme: dark;
+}

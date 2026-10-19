@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Static site, no backend: this is a mailto link (design §8/§11). To accept
+// submissions without a server, swap in a third-party form embed (e.g.
+// Formspree) — no data is ever stored in this repo.
+const CONTACT_EMAIL = 'hello@example.com';
+const subject = encodeURIComponent('Tell you about my bookstore');
+const body = encodeURIComponent(
+  'Bookstore name:\nAddress:\nWebsite:\nWhat makes it worth a visit:\n'
+);
+const mailto = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+---
+
+<BaseLayout
+  title="Contact"
+  description="Tell us about a Front Range independent bookstore we should review."
+>
+  <section class="section prose stack">
+    <h1>Tell me about your bookstore</h1>
+    <p class="lede">
+      Know a Front Range independent bookstore that belongs here? Run one? Send
+      it over and it may show up on the map.
+    </p>
+    <p>
+      The quickest way is email. Use the button below — it pre-fills a short
+      template you can edit.
+    </p>
+    <p>
+      <a class="button" href={mailto}>Email a bookstore tip</a>
+    </p>
+    <p class="small muted">
+      This site is static and has no comment section or stored forms — your note
+      goes straight to an inbox, nowhere else.
+    </p>
+
+    <h2>What's helpful to include</h2>
+    <ul>
+      <li>The bookstore's name and address</li>
+      <li>A link to its website or social page</li>
+      <li>What it's especially good at (used, rare, kids, events, cafe…)</li>
+      <li>Whether you're the owner, staff, or just a fan</li>
+    </ul>
+  </section>
+</BaseLayout>

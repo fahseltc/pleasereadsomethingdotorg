@@ -1,0 +1,35 @@
+{
+  "name": "pleasereadsomething",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Static site for Front Range independent bookstore reviews: blog, a map of reviewed stores, and simple npm authoring commands.",
+  "engines": {
+    "node": ">=18.14.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "preview:local": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "new:post": "node scripts/new-post.mjs",
+    "new:bookstore": "node scripts/new-bookstore.mjs",
+    "disable:bookstore": "node scripts/toggle-bookstore.mjs disable",
+    "enable:bookstore": "node scripts/toggle-bookstore.mjs enable",
+    "geocode": "node scripts/geocode.mjs",
+    "sync:events": "node scripts/sync-events.mjs",
+    "publish": "node scripts/publish.mjs",
+    "update": "node scripts/update.mjs"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.14",
+    "astro": "^5.0.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.0",
+    "@types/node": "^20.19.43",
+    "typescript": "^5.4.0"
+  }
+}
