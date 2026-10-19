@@ -40,6 +40,16 @@ jobs:
         # build uses the site/base pinned in astro.config.mjs. We intentionally
         # do NOT feed configure-pages' base_path here — for a project repo it
         # would wrongly inject the /<repo>/ subpath even under a custom domain.
+        #
+        # Contact addresses are injected from repo secrets so they aren't in the
+        # source. Astro reads PUBLIC_* env vars at build time. Set these under
+        # Settings → Secrets and variables → Actions:
+        #   PUBLIC_CONTACT_EMAIL, PUBLIC_ADMIN_EMAIL
+        # (NOTE: they render into the published HTML — "secret" here just means
+        # "not stored in the repo", not hidden from visitors.)
+        env:
+          PUBLIC_CONTACT_EMAIL: ${{ secrets.PUBLIC_CONTACT_EMAIL }}
+          PUBLIC_ADMIN_EMAIL: ${{ secrets.PUBLIC_ADMIN_EMAIL }}
         run: npm run build
 
       - name: Upload artifact

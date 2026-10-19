@@ -9,7 +9,7 @@ content collections. The map is the only client-side JavaScript island
 ## Layout
 
 ```
-astro.config.mjs           site/base config (reads SITE/BASE env for Pages)
+astro.config.mjs           site/base pinned for custom domain (base '/'); + mdx()
 tsconfig.json              extends astro/tsconfigs/strict
 package.json               npm scripts = the author's whole workflow
 src/
@@ -21,7 +21,7 @@ src/
     blog/[slug].astro      rendered article
     contact.astro          mailto "tell me about your bookstore"
   layouts/
-    BaseLayout.astro       <html data-theme>, nav, theme switcher, viewport meta
+    BaseLayout.astro       <html data-theme="classic">, nav, light/dark toggle, viewport meta
   components/
     Map.astro              Leaflet + OSM map island (pinned CDN + SRI)
     BookstoreCard.astro    index/listing card
@@ -38,8 +38,9 @@ src/
   styles/
     tokens.css             shared token NAMES + :root default
     global.css             base, mobile-first styles (reference tokens only)
-    themes/{classic,zine,minimal}.css   full token sets per theme
+    themes/{classic,zine,minimal}.css   token sets per theme (only classic is imported)
 public/
+  CNAME                    custom domain (pleasereadsomething.org); copied into dist
   favicon.svg
   images/bookstores/*      store photos (placeholder.svg shipped)
   images/blog/*            article hero images
@@ -57,16 +58,19 @@ scripts/
 
 ## Data flow
 
-- **Build:** Astro loads `bookstores.json` and `blog/*.md` through the
+- **Build:** Astro loads `bookstores.json` and `blog/**/*.{md,mdx}` through the
   collections in `content/config.ts` (schema-validated). Pages query them with
   `getCollection` / `getEntry`. `bookstores/[id].astro` and `blog/[slug].astro`
   are generated via `getStaticPaths`.
 - **Map:** `bookstores.astro` filters to `enabled` stores with numeric
   `lat`/`lng`, builds a `MapPin[]`, and passes it to `Map.astro`, which
   serializes it into a `data-map` attribute and hydrates Leaflet client-side.
-- **Events bridge:** `lib/events.ts` dynamically imports `src/data/events.json`
-  (always resolvable — a stub is committed) and matches events to a store by
-  `sourceAliases` / name / location substring, filtered to upcoming.
+- **Events bridge (DISABLED):** `lib/events.ts` would dynamically import
+  `src/data/events.json` (always resolvable — a stub is committed) and match
+  events to a store by `sourceAliases` / name / location substring, filtered to
+  upcoming. It is currently short-circuited by `eventsFeature.disabled = true`,
+  so `upcomingEventsForStore` returns `[]` and no events render. Flip the flag to
+  re-enable; all wiring stays in place.
 - **Publish:** author runs `npm run publish` → `scripts/publish.mjs` builds, then
   `git add/commit/push` → GitHub Actions builds and deploys to Pages.
 
@@ -87,8 +91,9 @@ scripts/
   Keep ~44px tap targets, fluid type (`clamp()`), and the responsive map
   (`invalidateSize()` on resize/orientation).
 - **Base-aware links.** Use `withBase()` from `lib/url.ts` for internal links in
-  `.astro` files so they work under the Pages project subpath. (Markdown body
-  links are a known gap — see README.)
+  `.astro` files. The site serves from a custom-domain root (`base: '/'`), so
+  this is a no-op today, but keep it for portability back to a subpath. Markdown/
+  MDX body links don't get `withBase()` — fine at `base: '/'`.
 - **Scripts are plain Node, git-hidden.** `scripts/*.mjs` use Node built-ins
   only (no deps). They assume the author doesn't know git: wrap git in friendly
   messages, never surface raw git errors.

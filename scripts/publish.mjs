@@ -11,13 +11,27 @@ import { spawnSync } from 'node:child_process';
 import { parseArgs, ROOT, log } from './lib.mjs';
 
 function run(cmd, args, { capture = false } = {}) {
-  const res = spawnSync(cmd, args, {
+  // On Windows we run through the shell (so `git`/`npm` resolve via PATH),
+  // but that means spawnSync joins args into a command string and the shell
+  // re-splits on spaces. Quote each arg so values like a commit message with
+  // spaces/parens stay a single argument. On non-Windows we pass args directly
+  // (no shell), so no quoting is needed.
+  const useShell = process.platform === 'win32';
+  const finalArgs = useShell ? args.map(quoteArg) : args;
+  const res = spawnSync(cmd, finalArgs, {
     cwd: ROOT,
     stdio: capture ? 'pipe' : 'inherit',
     encoding: 'utf8',
-    shell: process.platform === 'win32',
+    shell: useShell,
   });
   return res;
+}
+
+// Wrap an argument in double quotes for cmd.exe, escaping embedded quotes.
+function quoteArg(arg) {
+  const s = String(arg);
+  if (s.length > 0 && !/[\s"()&|<>^]/.test(s)) return s; // safe bare token
+  return `"${s.replace(/"/g, '\\"')}"`;
 }
 
 function gitOut(args) {

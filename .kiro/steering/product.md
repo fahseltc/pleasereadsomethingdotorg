@@ -27,20 +27,27 @@ on GitHub Pages. Built so a non-technical author can add content with plain
   coordinates. Enabled stores MUST have numeric `lat`/`lng` (build-enforced).
 - **Blog post `bookstore` field:** optional reference to a store `id`. Present =
   cross-linked both ways; absent = standalone post that still lists.
-- **Theme vs. color mode:** a *theme* (`classic`/`zine`/`minimal`) is a full
-  visual reskin via CSS custom properties under `data-theme`; *color mode*
-  (`data-mode` light/dark) is an optional layer within a theme. Full reskins,
-  not just dark mode.
+- **Theme + color mode:** styling is driven by CSS custom properties (design
+  tokens) under `data-theme`. The site uses one active theme, **classic**
+  (`src/styles/themes/classic.css`); `zine`/`minimal` files exist but are not
+  loaded. The header exposes only a light/dark **color mode** toggle
+  (`data-mode`), persisted in `localStorage`. A theme is a full reskin (colors,
+  fonts, spacing, shape) — not just dark mode — but there is no in-page theme
+  picker.
 
 ## Relationship to book-events-aggregator
 
 The sibling `book-events-aggregator` repo crawls bookstore event pages into
-`output/events.json`. `npm run sync:events` copies that into
-`src/data/events.json`; store detail pages then show matching upcoming events,
-mapped to a store via its `sourceAliases` (and a name/location substring
-fallback). The bridge is **optional and additive**: the committed
-`src/data/events.json` is an empty stub, the aggregator schema is never changed,
-and the site builds fine with no events synced.
+`output/events.json`. There's an optional bridge that can list a store's
+upcoming events on its detail page — `npm run sync:events` copies the aggregator
+output into `src/data/events.json`, and events are matched to a store via its
+`sourceAliases` (plus a name/location substring fallback).
+
+**This bridge is currently DISABLED** via a feature flag (`eventsFeature.disabled
+= true` in `src/lib/events.ts`): no events render anywhere, even if synced. All
+the wiring is intentionally left in place; flip the flag to re-enable. The bridge
+is additive — the committed `src/data/events.json` is an empty stub and the
+aggregator schema is never changed, so the site builds fine regardless.
 
 ## Authoring workflow (git-free, by design)
 
@@ -68,6 +75,7 @@ editing JSON; `npm run geocode -- "<address>"` re-checks coordinates.
 
 ## Privacy stance
 
-No comments, no visitor submissions, no analytics. A theme choice (if the
-visitor uses the switcher) is kept in `localStorage` on-device only. The only
-external runtime call is OpenStreetMap tile fetches (attribution shown).
+No comments, no visitor submissions, no analytics. The visitor's light/dark
+choice is kept in `localStorage` on-device only. The only external runtime calls
+are OpenStreetMap tile fetches (attribution shown) and any YouTube embeds a post
+includes (loaded from youtube-nocookie.com).

@@ -8,12 +8,22 @@ import { spawnSync } from 'node:child_process';
 import { ROOT, log } from './lib.mjs';
 
 function git(args, capture = true) {
-  return spawnSync('git', args, {
+  // See publish.mjs: on Windows we run via the shell, so quote each arg to keep
+  // values with spaces intact.
+  const useShell = process.platform === 'win32';
+  const finalArgs = useShell ? args.map(quoteArg) : args;
+  return spawnSync('git', finalArgs, {
     cwd: ROOT,
     stdio: capture ? 'pipe' : 'inherit',
     encoding: 'utf8',
-    shell: process.platform === 'win32',
+    shell: useShell,
   });
+}
+
+function quoteArg(arg) {
+  const s = String(arg);
+  if (s.length > 0 && !/[\s"()&|<>^]/.test(s)) return s;
+  return `"${s.replace(/"/g, '\\"')}"`;
 }
 
 function main() {

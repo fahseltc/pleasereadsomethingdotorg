@@ -26,10 +26,11 @@ You only need four commands. You never touch git.
 npm run new:post
 ```
 
-It asks a few questions and creates a file at `src/content/blog/<slug>.md`. Open
-that file, write your article under the `---` block, and set `draft: false` when
-it's ready. (Hero image optional — drop it in `public/images/blog/` and set
-`heroImage` in the file.)
+It asks a few questions and creates a file at `src/content/blog/<slug>.mdx`.
+Open that file, write your article under the `---` block, and set `draft: false`
+when it's ready. (Hero image optional — drop it in `public/images/blog/` and set
+`heroImage` in the file.) Posts are `.mdx` so you can embed a YouTube video; for
+everyday writing it's just Markdown.
 
 Prefer one line? `npm run new:post -- --title "My first review"`
 
@@ -89,12 +90,12 @@ Run `npm run disable:bookstore` with no id to see the list of store ids.
 
 | You want to… | Edit / run |
 |---|---|
-| Write an article | `npm run new:post`, then `src/content/blog/<slug>.md` |
+| Write an article | `npm run new:post`, then `src/content/blog/<slug>.mdx` |
 | Add a bookstore | `npm run new:bookstore` |
 | Add a store photo | `public/images/bookstores/<id>.jpg` + set `image` in `bookstores.json` |
 | Hide/show a store | `npm run disable:bookstore` / `enable:bookstore` |
 | Fix a map pin | `npm run geocode -- "<address>"`, then edit `lat`/`lng` |
-| Change contact email | `CONTACT_EMAIL` in `src/pages/contact.astro` |
+| Change contact emails | `.env` locally / GitHub secrets in CI (see "Contact email addresses" below) |
 | Put it live | `npm run publish` |
 
 A bookstore record looks like this (`src/content/bookstores.json`):
@@ -172,41 +173,53 @@ list.
 
 ---
 
-## Changing the look (themes)
+## Changing the look (theme)
 
-The site ships three full looks — **classic**, **zine**, **minimal** — plus a
-light/dark toggle. Visitors can switch using the control in the header.
-
-To change the **default** look for everyone, edit one line in
-`src/layouts/BaseLayout.astro`:
+The site uses the **classic** theme, with a light/dark toggle (the `◐` button in
+the header). The default mode is set in `src/layouts/BaseLayout.astro`:
 
 ```js
-const DEFAULT_THEME = 'classic'; // 'classic' | 'zine' | 'minimal'
+const DEFAULT_THEME = 'classic';
 const DEFAULT_MODE = 'light';    // 'light' | 'dark'
 ```
 
-A theme is a full visual reskin (colors, fonts, spacing, corners, shadows), not
-just dark mode. To add a new theme, copy
-`src/styles/themes/classic.css` to `src/styles/themes/<name>.css`, change the
-values under the `[data-theme="<name>"]` selector, and import it in
-`BaseLayout.astro` (and add it to the switcher's `<select>`). Components never
-hard-code styles — they read these tokens — so a new theme restyles everything.
+Styling is driven by CSS design tokens, so the look is easy to change without
+touching components. The active theme's tokens live in
+`src/styles/themes/classic.css` (with `src/styles/tokens.css` holding the
+defaults). Edit those values — colors, fonts, spacing, corners, shadows — and
+the whole site restyles, because components read the tokens rather than
+hard-coding anything.
+
+Two extra theme files (`zine.css`, `minimal.css`) also exist in
+`src/styles/themes/` but are **not** loaded — only `classic.css` is imported in
+`BaseLayout.astro`. To switch themes, change that import (and the
+`DEFAULT_THEME` value); to add a new one, copy `classic.css`, edit the values
+under its `[data-theme="<name>"]` selector, and import it.
 
 ---
 
-## Showing events from book-events-aggregator (optional)
+## Events from book-events-aggregator (currently off)
 
-If you also use the sibling [`book-events-aggregator`](../book-events-aggregator)
-project, you can show each store's upcoming events on its page:
+There's an optional bridge to the sibling
+[`book-events-aggregator`](../book-events-aggregator) project that can list each
+store's upcoming events on its detail page. **It is currently disabled** — no
+events render anywhere, by design.
 
-```bash
-npm run sync:events
+All the wiring is still in place (`src/lib/events.ts`, `npm run sync:events`,
+`src/data/events.json`, and the "Upcoming events" section on the detail page); a
+single feature flag short-circuits it. To turn it back on, set `disabled` to
+`false` in `src/lib/events.ts`:
+
+```ts
+const eventsFeature = {
+  disabled: true, // ← set to false to show events again
+};
 ```
 
-This copies the aggregator's `output/events.json` into `src/data/events.json`.
-Events are matched to a store by its `sourceAliases` (plus the store
-name/address appearing in the event). If you never run this, the site builds
-fine — detail pages just show no events.
+With the flag on, running `npm run sync:events` (which copies the aggregator's
+`output/events.json` into `src/data/events.json`) has no visible effect. With it
+off, events are matched to a store by its `sourceAliases` (plus the store
+name/address appearing in the event). Either way the site builds fine.
 
 ---
 
@@ -221,20 +234,63 @@ it.
 npm install
 ```
 
-### Point it at your GitHub Pages URL
+### Contact email addresses
 
-Edit `astro.config.mjs` defaults, or rely on the deploy workflow which sets them
-automatically for a **project site** served from
-`https://<user>.github.io/<repo>/`:
+The `/contact` page shows two addresses, read from environment variables so
+they're not hardcoded in the committed source:
 
-```js
-const site = process.env.SITE ?? 'https://your-username.github.io';
-const base = process.env.BASE ?? '/pleasereadsomething';
+| Variable | Used for | Current value |
+|---|---|---|
+| `PUBLIC_CONTACT_EMAIL` | General "tell me about your bookstore" contact | `dearreader@pleasereadsomething.org` |
+| `PUBLIC_ADMIN_EMAIL` | Tech support / problems with the site | `admin@pleasereadsomething.org` |
+
+**Locally:** copy `.env.example` to `.env` and fill in the real addresses.
+`.env` is gitignored; `.env.example` holds only placeholders and is committed.
+
+```bash
+cp .env.example .env    # then edit .env with the real addresses
 ```
 
-For a user/org site (`<user>.github.io`) or a custom domain, set `base` to `/`.
+**In CI / production:** set them as repository secrets so they're injected at
+build time instead of living in the repo. In GitHub:
+**Settings → Secrets and variables → Actions → New repository secret**, add
+`PUBLIC_CONTACT_EMAIL` and `PUBLIC_ADMIN_EMAIL`. The deploy workflow passes them
+to the build (see `.github/workflows/deploy.yml`). If a secret isn't set, the
+build falls back to `…@example.com` placeholders.
+
+> Reality check: this is a **static** site, so whatever email the page shows is
+> visible in the published HTML to anyone who views the page — that's
+> unavoidable for a contact page. The `PUBLIC_` prefix is Astro's way of marking
+> a value as browser-visible. Using env/secrets here keeps the addresses out of
+> the **git repository** (and code search), not out of the browser. Don't treat
+> these as secret, and never put a real secret in a `PUBLIC_` variable.
+
+### Domain and base path
+
+This site is served from the custom domain **pleasereadsomething.org**, at the
+root, so `astro.config.mjs` pins:
+
+```js
+const site = process.env.SITE ?? 'https://pleasereadsomething.org';
+const base = process.env.BASE ?? '/';
+```
+
+The domain is kept in `public/CNAME`, which Astro copies into the build every
+time — that's what keeps GitHub Pages pointed at the custom domain across
+deploys. The deploy workflow does **not** feed a base path from
+`actions/configure-pages` (for a project repo that would wrongly inject a
+`/<repo>/` subpath even under a custom domain), so the pinned `base: '/'` is
+what ships.
+
+If you ever move off the custom domain to a project site
+(`https://<user>.github.io/<repo>/`), set `base` to `'/<repo>'` and `site` to
+that origin, and remove `public/CNAME`.
 
 ### Connect the repo to GitHub (enables `npm run publish`)
+
+The repo is already connected to
+`github.com/fahseltc/pleasereadsomethingdotorg` on the `main` branch. For a
+fresh clone elsewhere you don't need to re-do this. To wire a brand-new repo:
 
 ```bash
 git init
@@ -245,10 +301,17 @@ git remote add origin https://github.com/<user>/<repo>.git
 git push -u origin main
 ```
 
+Note: this environment has a global git rule that rewrites
+`https://github.com/...` remotes to SSH (`git@github.com:...`), so pushing uses
+your SSH key even when the remote URL is HTTPS.
+
 Then in the repo on GitHub: **Settings → Pages → Build and deployment →
-Source: GitHub Actions**. The workflow in `.github/workflows/deploy.yml` builds
-and deploys on every push to `main` — which is exactly what `npm run publish`
-triggers.
+Source: GitHub Actions**, and set the **Custom domain** to
+`pleasereadsomething.org` (DNS: four `A` records to GitHub's Pages IPs for the
+apex, or a `CNAME` to `fahseltc.github.io` for `www`). The repo must be public
+(or on a paid plan) for Pages to work. The workflow in
+`.github/workflows/deploy.yml` builds and deploys on every push to `main` —
+which is exactly what `npm run publish` triggers.
 
 ### Developer commands
 
@@ -271,21 +334,25 @@ There's no automated test suite; verify changes with `npm run build` and
   `src/content/config.ts`.
 - **Map** (`src/components/Map.astro`): Leaflet + OpenStreetMap, one pin per
   enabled store, rendered client-side. No key, no billing.
-- **Styling:** CSS design tokens in `src/styles/` — `tokens.css` + one file per
-  theme + mobile-first `global.css`.
+- **Blog:** Markdown/MDX in `src/content/blog/`. `.mdx` lets posts embed the
+  `<YouTube/>` component (`src/components/YouTube.astro`); it's registered via
+  the `@astrojs/mdx` integration in `astro.config.mjs`.
+- **Styling:** CSS design tokens in `src/styles/` — `tokens.css` defaults, the
+  active `themes/classic.css`, and mobile-first `global.css`.
 - **Scripts** (`scripts/*.mjs`): the npm authoring commands. Plain Node, no
   dependencies.
-- **Deploy:** `.github/workflows/deploy.yml` → GitHub Pages.
+- **Deploy:** `.github/workflows/deploy.yml` → GitHub Pages, custom domain via
+  `public/CNAME`.
 
 See `.kiro/steering/` for deeper architecture notes.
 
-### Known limitation
+### Note on in-post links
 
-Links written **inside a Markdown post body** (e.g. `[the map](/bookstores)`)
-are not automatically prefixed with the GitHub Pages base path. On a project
-site served from a subpath, prefer linking to full paths or keep cross-links in
-the page templates (which use `withBase()`). On a user site / custom domain
-(base `/`) this isn't an issue.
+Because the site is served from the root of its custom domain (`base: '/'`),
+links written inside a Markdown/MDX post body (e.g. `[the map](/bookstores)`)
+work as-is. (This would only need care if the site moved back to a project
+subpath, where in-post links aren't auto-prefixed with the base path — the page
+templates handle that themselves via `withBase()`.)
 
 ---
 

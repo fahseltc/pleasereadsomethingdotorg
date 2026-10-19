@@ -1,20 +1,35 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// Static site, no backend: this is a mailto link (design §8/§11). To accept
-// submissions without a server, swap in a third-party form embed (e.g.
-// Formspree) — no data is ever stored in this repo.
-const CONTACT_EMAIL = 'hello@example.com';
-const subject = encodeURIComponent('Tell you about my bookstore');
-const body = encodeURIComponent(
+// Static site, no backend: these are mailto links (design §8/§11). The two
+// addresses are read from env so they aren't committed in source (see .env /
+// .env.example and the GitHub Actions secret). NOTE: because this is a static
+// page, whatever renders here is visible in the published HTML — env keeps the
+// addresses out of the REPO, not out of the browser.
+//
+//   PUBLIC_CONTACT_EMAIL  — general contact (dearreader@…)
+//   PUBLIC_ADMIN_EMAIL    — tech support / problems (admin@…)
+// Treat missing OR empty (unset CI secret resolves to "") as "use fallback".
+const CONTACT_EMAIL =
+  (import.meta.env.PUBLIC_CONTACT_EMAIL || '').trim() || 'dearreader@example.com';
+const ADMIN_EMAIL =
+  (import.meta.env.PUBLIC_ADMIN_EMAIL || '').trim() || 'admin@example.com';
+
+// Pre-filled "tell me about your bookstore" mailto for the general address.
+const tipSubject = encodeURIComponent('A bookstore you should review');
+const tipBody = encodeURIComponent(
   'Bookstore name:\nAddress:\nWebsite:\nWhat makes it worth a visit:\n'
 );
-const mailto = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+const tipMailto = `mailto:${CONTACT_EMAIL}?subject=${tipSubject}&body=${tipBody}`;
+
+// Tech/support mailto for the admin address.
+const supportSubject = encodeURIComponent('Website problem / tech support');
+const supportMailto = `mailto:${ADMIN_EMAIL}?subject=${supportSubject}`;
 ---
 
 <BaseLayout
   title="Contact"
-  description="Tell us about a Front Range independent bookstore we should review."
+  description="Tell us about a Front Range independent bookstore we should review, or report a problem with the site."
 >
   <section class="section prose stack">
     <h1>Tell me about your bookstore</h1>
@@ -23,15 +38,14 @@ const mailto = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
       it over and it may show up on the map.
     </p>
     <p>
-      The quickest way is email. Use the button below — it pre-fills a short
-      template you can edit.
+      The quickest way is email. The button below pre-fills a short template you
+      can edit.
     </p>
     <p>
-      <a class="button" href={mailto}>Email a bookstore tip</a>
+      <a class="button" href={tipMailto}>Email a bookstore tip</a>
     </p>
     <p class="small muted">
-      This site is static and has no comment section or stored forms — your note
-      goes straight to an inbox, nowhere else.
+      General contact: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
     </p>
 
     <h2>What's helpful to include</h2>
@@ -41,5 +55,22 @@ const mailto = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
       <li>What it's especially good at (used, rare, kids, events, cafe…)</li>
       <li>Whether you're the owner, staff, or just a fan</li>
     </ul>
+
+    <h2>Something broken? Tech support</h2>
+    <p>
+      For problems with the site itself — a broken link, a map that won't load, a
+      wrong address — email the admin inbox.
+    </p>
+    <p>
+      <a class="button button--ghost" href={supportMailto}>Report a problem</a>
+    </p>
+    <p class="small muted">
+      Tech support: <a href={`mailto:${ADMIN_EMAIL}`}>{ADMIN_EMAIL}</a>
+    </p>
+
+    <p class="small muted">
+      This site is static and has no comment section or stored forms — your note
+      goes straight to an inbox, nowhere else.
+    </p>
   </section>
 </BaseLayout>
