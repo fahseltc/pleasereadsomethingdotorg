@@ -1,0 +1,211 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {
+  allUpcomingEvents,
+  matchStoreForEvent,
+  type AggregatorEvent,
+} from '../lib/events';
+import { withBase } from '../lib/url';
+
+// All upcoming book events across the Front Range, soonest first. Capped so the
+// page stays reasonable even with a large feed. Events come from the
+// book-events-aggregator feed via `npm run sync:events`.
+const MAX_EVENTS = 200;
+const events = (await allUpcomingEvents()).slice(0, MAX_EVENTS);
+
+// Indexed bookstores, so an event's location can link to the store we already
+// have (enabled stores only — a disabled store has no detail page to link to).
+const stores = (await getCollection('bookstores'))
+  .filter((s) => s.data.enabled)
+  .map((s) => ({ id: s.data.id, name: s.data.name, sourceAliases: s.data.sourceAliases }));
+
+// Precompute each event's matched store id (or null) once.
+const storeIdFor = new Map<AggregatorEvent, string | null>();
+for (const e of events) {
+  storeIdFor.set(e, matchStoreForEvent(e, stores));
+}
+
+// Group by "Month YYYY" for readable section headers, preserving sort order.
+const monthFmt = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' });
+const groups: { label: string; items: AggregatorEvent[] }[] = [];
+for (const e of events) {
+  const label = monthFmt.format(new Date(e.start));
+  let group = groups.find((g) => g.label === label);
+  if (!group) {
+    group = { label, items: [] };
+    groups.push(group);
+  }
+  group.items.push(e);
+}
+
+// "OCT 23" — the headline date, uppercased for emphasis.
+function formatDate(e: AggregatorEvent): string {
+  return new Date(e.start)
+    .toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+    .toUpperCase();
+}
+
+// "6:30 PM" — omitted for all-day events (start at midnight).
+function formatTime(e: AggregatorEvent): string {
+  const start = new Date(e.start);
+  const hasTime = start.getHours() !== 0 || start.getMinutes() !== 0;
+  return hasTime
+    ? start.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })
+    : '';
+}
+---
+
+<BaseLayout
+  title="Book Events in the Front Range"
+  description="Upcoming author talks, signings, book clubs, and literary events at independent bookstores and libraries along Colorado's Front Range."
+>
+  <section class="section stack">
+    <h1>Book Events in the Front Range</h1>
+
+    {
+      events.length === 0 ? (
+        <p class="muted">
+          No upcoming events right now. Check back soon — the list refreshes when
+          the events feed is synced.
+        </p>
+      ) : (
+        <>
+          <p class="lede">
+            Author talks, signings, book clubs, and readings happening around
+            Colorado's Front Range.
+          </p>
+
+          {groups.map((group, i) => (
+            <details class="month-group section" open={i === 0}>
+              <summary class="month-summary">
+                <h2>{group.label}</h2>
+                <span class="month-count small muted">
+                  {group.items.length} event{group.items.length === 1 ? '' : 's'}
+                </span>
+              </summary>
+              <ul class="stack">
+                {group.items.map((e) => (
+                  <li class="card">
+                    <div class="card__body">
+                      <p class="event-headline">
+                        <span class="event-date">{formatDate(e)}</span>
+                        {e.url ? (
+                          <a
+                            class="event-name"
+                            href={e.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {e.title}
+                          </a>
+                        ) : (
+                          <span class="event-name">{e.title}</span>
+                        )}
+                      </p>
+                      <p class="small muted event-meta">
+                        {formatTime(e) && <>{formatTime(e)}</>}
+                        {formatTime(e) && e.location && <> · </>}
+                        {e.location &&
+                          (storeIdFor.get(e) ? (
+                            <a href={withBase(`/bookstores/${storeIdFor.get(e)}`)}>
+                              {e.location}
+                            </a>
+                          ) : (
+                            <>{e.location}</>
+                          ))}
+                        {e.source && <> · {e.source}</>}
+                      </p>
+                      {e.description && (
+                        <p>
+                          {e.description.length > 220
+                            ? e.description.slice(0, 217) + '…'
+                            : e.description}
+                        </p>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          ))}
+
+          <p class="small muted">
+            Events via <code>book-events-aggregator</code>. Dates and details are
+            best-effort — confirm with the venue before heading out.
+          </p>
+        </>
+      )
+    }
+  </section>
+</BaseLayout>
+
+<style>
+  /* Date leads the line and is the largest, most prominent text. */
+  .event-headline {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 var(--space-sm);
+  }
+  .event-date {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: var(--text-xl);
+    line-height: 1.1;
+    color: var(--color-accent);
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+  .event-name {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    color: var(--color-fg);
+    text-decoration: none;
+  }
+  a.event-name:hover {
+    text-decoration: underline;
+  }
+  .event-meta {
+    margin-top: var(--space-xs);
+  }
+
+  /* Collapsible month groups (native <details>/<summary>). */
+  .month-group {
+    border-bottom: var(--card-border);
+  }
+  .month-summary {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-sm);
+    cursor: pointer;
+    list-style: none; /* hide default marker; we draw our own caret */
+    padding: var(--space-sm) 0;
+    min-height: 44px; /* comfortable tap target */
+  }
+  .month-summary::-webkit-details-marker {
+    display: none;
+  }
+  /* Disclosure caret, rotates when open. */
+  .month-summary::before {
+    content: '▸';
+    color: var(--color-accent);
+    font-size: var(--text-lg);
+    line-height: 1;
+    transition: transform 0.15s ease;
+  }
+  .month-group[open] > .month-summary::before {
+    transform: rotate(90deg);
+  }
+  .month-summary h2 {
+    margin: 0;
+    display: inline;
+  }
+  .month-count {
+    margin-left: auto;
+  }
+  .month-summary:hover h2 {
+    color: var(--color-accent);
+  }
+</style>

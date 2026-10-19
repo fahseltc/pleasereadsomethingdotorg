@@ -10,13 +10,12 @@
  * The file is OPTIONAL: if it's absent (never synced), this returns no events
  * and the site degrades gracefully.
  *
- * FEATURE FLAG: the events→bookstore link is currently DISABLED. All the wiring
- * (this module, sync-events.mjs, src/data/events.json, and the "Upcoming events"
- * section on the detail page) stays in place but produces nothing. Flip
- * `disabled` to false below to turn it back on — no other change needed.
+ * FEATURE FLAG: set `disabled: true` to sever the events→bookstore link
+ * site-wide (store "Upcoming events" sections and the global /events page both
+ * go empty) without removing any wiring.
  */
 const eventsFeature = {
-  disabled: true,
+  disabled: false,
 };
 
 export interface AggregatorEvent {
@@ -77,4 +76,60 @@ export async function upcomingEventsForStore(
       return !Number.isNaN(start.getTime()) && start >= now;
     })
     .sort((a, b) => new Date(a.start).getTime() - new Date(b.start).getTime());
+}
+
+/**
+ * All upcoming events (every source), soonest first — for the global /events
+ * page. Respects the same feature flag. `now` is injectable for tests.
+ */
+export async function allUpcomingEvents(
+  now: Date = new Date()
+): Promise<AggregatorEvent[]> {
+  if (eventsFeature.disabled) return [];
+
+  const events = await loadEvents();
+  return events
+    .filter((e) => {
+      const start = new Date(e.start);
+      return !Number.isNaN(start.getTime()) && start >= now;
+    })
+    .sort((a, b) => new Date(a.start).getTime() - new Date(b.start).getTime());
+}
+
+export interface StoreRef {
+  id: string;
+  name: string;
+  sourceAliases?: string[];
+}
+
+/**
+ * Resolve an event to an indexed bookstore `id`, or null if none matches. Uses
+ * the same source/location matching as the per-store listing, so the Events
+ * page can link a location to the store's detail page when we already index it.
+ * If several stores match, the one with the longest matching alias/name wins
+ * (most specific), so "Second Star to the Right Books" beats a generic token.
+ */
+export function matchStoreForEvent(
+  event: AggregatorEvent,
+  stores: StoreRef[]
+): string | null {
+  const haystack = `${event.source ?? ''} ${event.location ?? ''}`.toLowerCase();
+  let bestId: string | null = null;
+  let bestLen = 0;
+  for (const store of stores) {
+    const aliases = store.sourceAliases ?? [];
+    if (!matchesStore(event, aliases, store.name)) continue;
+    const matchLen = Math.max(
+      0,
+      ...[...aliases, store.name]
+        .map((s) => s.toLowerCase().trim())
+        .filter((n) => n && haystack.includes(n))
+        .map((n) => n.length)
+    );
+    if (matchLen > bestLen) {
+      bestLen = matchLen;
+      bestId = store.id;
+    }
+  }
+  return bestId;
 }

@@ -5,13 +5,23 @@
 //
 //   npm run sync:events
 //   npm run sync:events -- --from ../book-events-aggregator/output/events.json
+//
+// By default this pulls the aggregator's FILTERED feed (events-filtered.json) —
+// only book-relevant events (author talks, signings, book clubs, …) per the
+// aggregator's config/filters.json — not the full firehose that also includes
+// unrelated library programs. It falls back to the unfiltered events.json if a
+// filtered file isn't present. Override the source with --from.
 
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { resolve, join } from 'node:path';
 import { parseArgs, ROOT, paths, log } from './lib.mjs';
 
+// Prefer the filtered feed; fall back to the full feed. Checks both the sibling
+// layout (../) and one level up (../../) for each.
 const DEFAULTS = [
+  '../book-events-aggregator/output/events-filtered.json',
+  '../../book-events-aggregator/output/events-filtered.json',
   '../book-events-aggregator/output/events.json',
   '../../book-events-aggregator/output/events.json',
 ];
@@ -55,8 +65,12 @@ async function main() {
     'utf8'
   );
 
-  log.ok(`Synced ${events.length} event(s) from the aggregator into src/data/events.json.`);
-  log.info('Rebuild/preview to see related events on store detail pages.');
+  const which = src.includes('events-filtered') ? 'filtered' : 'UNFILTERED (fallback)';
+  log.ok(`Synced ${events.length} ${which} event(s) from the aggregator into src/data/events.json.`);
+  if (which !== 'filtered') {
+    log.warn('No events-filtered.json found — used the full feed. Run the aggregator\'s `npm run filter` to produce the book-relevant set.');
+  }
+  log.info('Rebuild/preview to see events on the Events page and store detail pages.');
 }
 
 main();

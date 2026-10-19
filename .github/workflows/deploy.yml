@@ -31,6 +31,43 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # --- Fresh events from book-events-aggregator (best-effort) ---
+      # The aggregator is a separate repo that crawls event sources into JSON.
+      # We check it out, run its pipeline, and copy the FILTERED output into
+      # src/data/events.json so the site builds with up-to-date events.
+      #
+      # Every aggregator step is best-effort: it does live web crawling that can
+      # be slow or flaky (sites down, bot-blocked, timeouts). If anything fails,
+      # we fall back to the events.json already committed in this repo and still
+      # build + deploy. A flaky bookstore site must never break the site deploy.
+      - name: Check out book-events-aggregator
+        uses: actions/checkout@v4
+        continue-on-error: true
+        with:
+          repository: fahseltc/book-events-aggregator
+          path: book-events-aggregator
+
+      - name: Install aggregator deps + headless browser
+        id: agg_setup
+        continue-on-error: true
+        working-directory: book-events-aggregator
+        run: |
+          npm ci || npm install
+          npx playwright install --with-deps chromium
+
+      - name: Run aggregator pipeline (crawl + filter)
+        id: agg_run
+        if: steps.agg_setup.outcome == 'success'
+        continue-on-error: true
+        timeout-minutes: 20
+        working-directory: book-events-aggregator
+        run: npm run pipeline
+
+      - name: Sync filtered events into the site
+        if: steps.agg_run.outcome == 'success'
+        continue-on-error: true
+        run: npm run sync:events -- --from book-events-aggregator/output/events-filtered.json
+
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v5
