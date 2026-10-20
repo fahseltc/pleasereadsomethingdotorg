@@ -68,6 +68,16 @@ const blog = defineCollection({
     tags: z.array(z.string()).default([]),
     bookstore: reference('bookstores').optional(),
     library: reference('libraries').optional(),
+    // Optional ISBN-13 of the book this post is about. When set, the post shows
+    // a Bookshop.org affiliate "buy" button. Hyphens/spaces are allowed; it must
+    // be 13 digits once stripped (ISBN-13 always starts 978 or 979).
+    isbn: z
+      .string()
+      .optional()
+      .refine(
+        (v) => v == null || /^(97[89])\d{10}$/.test(v.replace(/[\s-]/g, '')),
+        { message: 'isbn must be a valid ISBN-13 (13 digits, starting 978 or 979).' },
+      ),
     draft: z.boolean().default(false),
   }),
 });

@@ -3,6 +3,7 @@ import { getCollection, getEntry, render } from 'astro:content';
 import type { GetStaticPaths } from 'astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import YouTube from '../../components/YouTube.astro';
+import BookshopLink from '../../components/BookshopLink.astro';
 import { withBase } from '../../lib/url';
 
 export const getStaticPaths = (async () => {
@@ -55,7 +56,9 @@ const store = post.data.bookstore
       )
     }
 
-    <Content components={{ YouTube }} />
+    <Content components={{ YouTube, BookshopLink }} />
+
+    {post.data.isbn && <BookshopLink isbn={post.data.isbn} />}
 
     {
       post.data.tags.length > 0 && (

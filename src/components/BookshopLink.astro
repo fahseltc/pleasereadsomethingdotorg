@@ -1,0 +1,55 @@
+---
+/*
+ * BookshopLink.astro — a "Buy on Bookshop.org" affiliate button for a book.
+ *
+ * Auto-injected on a blog post when its front-matter has an `isbn` (see
+ * blog/[slug].astro), and also usable directly inside an .mdx post:
+ *   <BookshopLink isbn="9781250301697" title="Buy The Book" />
+ *
+ * Build-time only: it just builds a URL. No API key, no runtime calls.
+ */
+import { bookshopBookUrl } from '../lib/affiliate';
+
+interface Props {
+  isbn: string;
+  /** Button label. Defaults to a generic call to action. */
+  label?: string;
+}
+
+const { isbn, label = 'Buy on Bookshop.org' } = Astro.props;
+const href = bookshopBookUrl(isbn);
+---
+
+<div class="bookshop-link">
+  <a class="button bookshop-btn" href={href} target="_blank" rel="noopener noreferrer sponsored">
+    {label}
+  </a>
+  <p class="small muted">
+    Bookshop.org supports independent bookstores. This is an affiliate link —
+    purchases may earn this site a small commission at no extra cost to you.
+  </p>
+</div>
+
+<style>
+  .bookshop-link {
+    margin-block: var(--space-lg);
+    padding: var(--space);
+    border: var(--card-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+  }
+  .bookshop-link p {
+    margin: var(--space-xs) 0 0;
+  }
+  /* Bookshop.org brand blue — deliberately distinct from the site accent
+     (and the beta banner, which uses the accent) so the "buy" action stands
+     apart. A fixed brand color, not a theme token. */
+  .bookshop-btn {
+    background: #3b6aa0;
+    color: #ffffff;
+  }
+  .bookshop-btn:hover {
+    background: #2f567f;
+    filter: none;
+  }
+</style>

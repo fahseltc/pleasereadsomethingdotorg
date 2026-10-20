@@ -3,6 +3,7 @@
 //
 //   npm run new:post
 //   npm run new:post -- --title "My first review"
+//   npm run new:post -- --title "Review" --isbn 9781250301697
 
 import { writeFile, mkdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
@@ -24,6 +25,20 @@ async function main() {
   const description = opts.description || (await prompt('Short description (optional)'));
   const tagsRaw = opts.tags || (await prompt('Tags, comma-separated (optional)'));
   const bookstore = opts.bookstore || (await prompt('Linked bookstore id (optional)'));
+  const isbnRaw = opts.isbn || (await prompt('Book ISBN-13 for a Bookshop.org buy button (optional)'));
+
+  // Normalize + validate the ISBN the same way the content schema does. Accept
+  // hyphens/spaces; must be 13 digits starting 978/979. If it's invalid we warn
+  // and leave it out rather than scaffold a post that won't build.
+  let isbn = '';
+  if (isbnRaw) {
+    const stripped = String(isbnRaw).replace(/[\s-]/g, '');
+    if (/^(97[89])\d{10}$/.test(stripped)) {
+      isbn = stripped;
+    } else {
+      log.warn(`"${isbnRaw}" isn't a valid ISBN-13 (need 13 digits starting 978/979) — leaving it out. Add it later if you have it.`);
+    }
+  }
 
   const slug = slugify(opts.slug || title);
   // Posts are created as .mdx so they can embed the <YouTube/> component. MDX is
@@ -49,6 +64,9 @@ async function main() {
     bookstore
       ? `bookstore: ${JSON.stringify(bookstore)}   # links this post to a store id (optional)`
       : '# bookstore: "boulder-bookstore"   # optional — link this post to a store id',
+    isbn
+      ? `isbn: ${JSON.stringify(isbn)}   # adds a Bookshop.org buy button`
+      : '# isbn: "9780000000000"   # optional — ISBN-13 of the book; adds a Bookshop.org buy button',
     'draft: true   # set to false when ready to publish',
     '---',
     '',
@@ -117,6 +135,7 @@ async function main() {
   log.info('Fill in the body below the front-matter.');
   log.info('Set `draft: false` when ready to publish.');
   log.info('Optional hero image: drop it in public/images/blog/ and set `heroImage`.');
+  if (isbn) log.info(`ISBN ${isbn} set — the post will show a Bookshop.org buy button.`);
   log.info('Preview with `npm run dev`, then publish with `npm run publish`.');
 }
 
