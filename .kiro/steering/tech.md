@@ -75,3 +75,10 @@ There is NO automated test suite. After any change:
   holds the domain so it persists across deploys.
 - **No secrets, ever.** There is no `.env` requirement. Don't introduce
   API-keyed services; the whole point is a free, keyless static site.
+- **Analytics: GoatCounter (cookieless, keyless).** The count script is loaded
+  in `BaseLayout.astro` (endpoint `GOATCOUNTER_ENDPOINT`, a public value — no
+  key). Pageviews are automatic; `BookshopLink.astro` fires a custom
+  `buy-click/<isbn>` event via `window.goatcounter.count({ event: true })`. It's
+  cookieless/no-consent, so it stays within the privacy stance. Currently enabled
+  in dev too; gate with `import.meta.env.PROD` to exclude local runs later. Fire
+  more events with the same one-line pattern (e.g. outbound/directions clicks).

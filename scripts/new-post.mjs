@@ -10,8 +10,16 @@ import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { parseArgs, prompt, slugify, paths, log } from './lib.mjs';
 
-function today() {
-  return new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+function nowStamp() {
+  // Local date-time "YYYY-MM-DDTHH:MM:SS". Including the time means two posts
+  // created on the same day still sort by when they were made (newest first),
+  // instead of tying on the date and ordering arbitrarily.
+  const d = new Date();
+  const pad = (n) => String(n).padStart(2, '0');
+  return (
+    `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}` +
+    `T${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`
+  );
 }
 
 async function main() {
@@ -58,7 +66,7 @@ async function main() {
     '---',
     `title: ${JSON.stringify(title)}`,
     `description: ${JSON.stringify(description || 'A short summary used for previews and SEO.')}`,
-    `pubDate: ${today()}`,
+    `pubDate: ${nowStamp()}`,
     '# heroImage: "/images/blog/your-image.jpg"   # optional — drop the file in public/images/blog/',
     `tags: ${JSON.stringify(tags)}`,
     bookstore

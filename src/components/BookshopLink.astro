@@ -18,10 +18,17 @@ interface Props {
 
 const { isbn, label = 'Buy on Bookshop.org' } = Astro.props;
 const href = bookshopBookUrl(isbn);
+const normIsbn = isbn.replace(/[\s-]/g, '');
 ---
 
 <div class="bookshop-link">
-  <a class="button bookshop-btn" href={href} target="_blank" rel="noopener noreferrer sponsored">
+  <a
+    class="button bookshop-btn"
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer sponsored"
+    data-gc-isbn={normIsbn}
+  >
     {label}
   </a>
   <p class="small muted">
@@ -29,6 +36,29 @@ const href = bookshopBookUrl(isbn);
     purchases may earn this site a small commission at no extra cost to you.
   </p>
 </div>
+
+<script is:inline>
+  // Track Bookshop.org buy-button clicks as a GoatCounter custom event.
+  // Delegated + guarded so it binds once even if several buttons are on a page.
+  (function () {
+    if (window.__prsBookshopTracker) return;
+    window.__prsBookshopTracker = true;
+    document.addEventListener('click', function (e) {
+      var btn = e.target && e.target.closest && e.target.closest('.bookshop-btn');
+      if (!btn) return;
+      var isbn = btn.getAttribute('data-gc-isbn') || 'unknown';
+      try {
+        if (window.goatcounter && window.goatcounter.count) {
+          window.goatcounter.count({
+            path: 'buy-click/' + isbn,
+            title: 'Bookshop buy: ' + (document.title || isbn),
+            event: true,
+          });
+        }
+      } catch (err) {}
+    });
+  })();
+</script>
 
 <style>
   .bookshop-link {

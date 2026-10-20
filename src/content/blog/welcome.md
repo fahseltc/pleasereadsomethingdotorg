@@ -1,7 +1,7 @@
 ---
 title: "Why I started reviewing the Front Range's indie bookstores"
 description: "A quick hello, and what to expect from this little corner of the internet."
-pubDate: 2026-10-15
+pubDate: 2026-10-15T09:00:00
 tags: ["meta", "front-range"]
 draft: false
 ---

@@ -75,7 +75,16 @@ editing JSON; `npm run geocode -- "<address>"` re-checks coordinates.
 
 ## Privacy stance
 
-No comments, no visitor submissions, no analytics. The visitor's light/dark
-choice is kept in `localStorage` on-device only. The only external runtime calls
-are OpenStreetMap tile fetches (attribution shown) and any YouTube embeds a post
-includes (loaded from youtube-nocookie.com).
+No comments, no visitor submissions. Analytics is **privacy-friendly and
+cookieless** — GoatCounter (`pleasereadsomething.goatcounter.com`), loaded in
+`BaseLayout.astro`: no cookies, no cross-site tracking, no personal data, so no
+consent banner is needed. It counts pageviews site-wide and a custom
+`buy-click/<isbn>` event when a Bookshop.org affiliate button is clicked
+(wired in `BookshopLink.astro`). The GoatCounter endpoint is a public value (no
+secret/key). The visitor's light/dark choice is kept in `localStorage`
+on-device only. External runtime calls: OpenStreetMap tiles (attribution
+shown), GoatCounter's count script (`gc.zgo.at`), and any YouTube embeds in a
+post (youtube-nocookie.com).
+
+NOTE: GoatCounter is currently enabled in dev too (local runs count); gate it
+with `import.meta.env.PROD` in `BaseLayout.astro` to exclude dev later.

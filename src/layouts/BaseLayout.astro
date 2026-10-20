@@ -13,6 +13,12 @@ const { title, description } = Astro.props;
 const siteName = 'Please Read Something';
 const fullTitle = title === siteName ? title : `${title} — ${siteName}`;
 
+// Analytics: GoatCounter — privacy-friendly, cookieless, no consent banner.
+// The endpoint is a public value (ships in the HTML), so no secret is involved.
+// Currently enabled everywhere INCLUDING dev (so local clicks show up while we
+// test); to stop dev from counting later, gate this with `import.meta.env.PROD`.
+const GOATCOUNTER_ENDPOINT = 'https://pleasereadsomething.goatcounter.com/count';
+
 // The site-wide DEFAULT look. Change this one value to reskin the whole site
 // (design §12). A visitor's saved choice (localStorage) overrides it at runtime.
 const DEFAULT_THEME = 'classic';
@@ -52,6 +58,11 @@ function isActive(href: string) {
         } catch (e) {}
       })();
     </script>
+    <!-- GoatCounter: cookieless pageview analytics (auto-counts on load). -->
+    <script
+      data-goatcounter={GOATCOUNTER_ENDPOINT}
+      async
+      src="//gc.zgo.at/count.js"></script>
   </head>
   <body>
     <div class="beta-banner" role="note">
