@@ -1,4 +1,3479 @@
 {
-  "note": "Placeholder. CI runs book-events-aggregator and overwrites this at build time (see .github/workflows/deploy.yml). Locally, run `npm run sync:events`. This committed stub keeps the build working when no events are present.",
-  "events": []
+  "generatedAt": "2026-10-20T02:04:01.680Z",
+  "events": [
+    {
+      "title": "Active Minds: Salem Witches",
+      "description": "Active Minds presents engaging programs on history, science, culture, and current events at the library. This month's topic: \"Salem Witches\"",
+      "start": "2026-10-19T14:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17462230",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "sale"
+      ]
+    },
+    {
+      "title": "Reading Buddies at Meadows",
+      "description": "Reading Buddies program helps children build positive relationships with reading and writing.",
+      "start": "2026-10-19T16:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17462366",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Make a Recipe Book",
+      "description": "Learn how to create your very own recipe book! In this hands-on program, participants will learn the basics of using Canva to design and format their recipe, adding text, images, and creative touches to create a one-of-a-kind recipe book. Each participant should bring at least one written recipe. By the end of the program, we'll combine everyone's recipes into a small community digital cookbook. Once you've learned the skills to design your recipe pages, you can create your own recipe book to share with friends and family. What to Bring: Instructions and ingredient list for your favorite recipe (or recipes) and your login information for a free Canva account.",
+      "start": "2026-10-19T17:00:00",
+      "end": null,
+      "location": "Farr Regional Library",
+      "url": "https://highplains.libcal.com/event/17394616",
+      "source": "High Plains Library District",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Haunted Book Club: Starling House",
+      "description": "Come one, come all and dive into \"Starling House\" by Alex E. Harrow, a genre-bending tale of a haunted house, family secrets, and monsters!",
+      "start": "2026-10-19T17:15:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17462507",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "C.N. Kuster with Erika T. Wurth Live at Tattered Cover Aspen Grove",
+      "description": "Join us for a great conversation with local authors C.N. Kuster with Erika T. Wurth as they talk about C.N.'s debut fantasy novel!",
+      "start": "2026-10-19T17:30:00",
+      "end": "2026-10-19T19:00:00",
+      "location": "Tattered Cover Aspen Grove — 7301 South Santa Fe Drive #240, Littleton, CO 80120",
+      "url": "https://www.eventbrite.com/e/cn-kuster-with-erika-t-wurth-live-at-tattered-cover-aspen-grove-tickets-1999060492747",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T17:17:15.574Z",
+      "matchedKeywords": [
+        "author",
+        "novel"
+      ]
+    },
+    {
+      "title": "Relax & Craft",
+      "description": "Unleash your creativity at Riverside's adult crafting program! Rediscover the joy of crafting in a relaxed and welcoming environment tailored just for adults. No experience necessary! Registration is required to attend. This ensures an accurate amount of supplies are purchased. October - Cauldron Wreaths November - Quilt Squares December - Year in Books Ornament",
+      "start": "2026-10-19T17:30:00",
+      "end": null,
+      "location": "Riverside Library and Cultural Center",
+      "url": "https://highplains.libcal.com/event/17394982",
+      "source": "High Plains Library District",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Boulder Cosmology Group Online",
+      "description": "We discuss about six books per year, with 1-4 meetings per book. We do not choose the books far in advance, as each book raises new questions that we want to study.",
+      "start": "2026-10-19T18:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17494592",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Novel Strand SCI-FI Book Club",
+      "description": "Come hang out with us at Novel Strand for our monthly SCI-FI book club meet-up!",
+      "start": "2026-10-19T18:30:00",
+      "end": "2026-10-19T20:00:00",
+      "location": "Novel Strand Brewing Company — 305 1st ave, Denver, CO 80223",
+      "url": "https://www.eventbrite.com/e/novel-strand-sci-fi-book-club-tickets-1992018819914",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T17:17:15.574Z",
+      "matchedKeywords": [
+        "book*",
+        "novel"
+      ]
+    },
+    {
+      "title": "Guilty Pleasure Book Club - CAUGHT UP By Navessa Allen",
+      "description": "In person book club dedicated to dark and spicy romance novels.",
+      "start": "2026-10-19T19:00:00",
+      "end": "2026-10-19T20:00:00",
+      "location": "10200 W 20th Ave — 10200 West 20th Avenue, Lakewood, CO 80215",
+      "url": "https://www.eventbrite.com/e/guilty-pleasure-book-club-caught-up-by-navessa-allen-tickets-1998502824747",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T16:51:06.673Z",
+      "matchedKeywords": [
+        "book*",
+        "romance",
+        "novel"
+      ]
+    },
+    {
+      "title": "Coffee and conversation: book discussion",
+      "description": "A community gathering where we connect over refreshments, with engaging discussions about current events, interesting reads, and shared experiences. These sessions may include a hands-on, beginner-friendly craft project, offering a relaxing and creative way to socialize and make new friends. No prior knowledge or skills required, just a willingness to chat, create, and connect! Questions? Contact Lisa lvarra@highplains.us",
+      "start": "2026-10-20T10:00:00",
+      "end": null,
+      "location": "Mead Public Library",
+      "url": "https://highplains.libcal.com/event/16672309",
+      "source": "High Plains Library District",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Tallyn's Reach Library For All",
+      "description": "A weekly, themed library experience for adults with I/DD and caregivers. Build literacy and life skills through group reading, writing, games, and community knowledge-sharing.",
+      "start": "2026-10-20T10:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/14893874",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Aging Artfully: Folded Bookmaking",
+      "description": "For ages 60+. Make a handmade book using just folding and cutting techniques!",
+      "start": "2026-10-20T13:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17495572",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Discover Your Next Great Read on Social Media",
+      "description": "Join the library every Tuesday on Instagram and Facebook to discover great books!",
+      "start": "2026-10-20T13:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17461902",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Farr Afternoon Book Club",
+      "description": "Join us on the third Tuesday of each month as we discuss both fiction and non-fiction. If you haven't read the book, don't worry; come along and join in anyway. October read: Midnight on Beacon Street by Emily Ruth Verona",
+      "start": "2026-10-20T13:30:00",
+      "end": null,
+      "location": "Farr Regional Library",
+      "url": "https://highplains.libcal.com/event/15591999",
+      "source": "High Plains Library District",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "fiction"
+      ]
+    },
+    {
+      "title": "Capítulos y Conversación : Club de Lectura en Español",
+      "description": "¡Acompáñanos al lanzamiento de nuestro nuevo Club de Lectura en Español! Este grupo amigable y conversacional es perfecto para cualquier persona que disfrute leer en español—ya sea hablante nativo o alguien que está aprendiendo el idioma. Cada mes leeremos un libro seleccionado y nos reuniremos para compartir ideas, momentos favoritos y una conversación significativa en un ambiente relajado y acogedor. Importante: Este club de lectura se reúne fuera de la biblioteca , en el salón de reuniones de la Iglesia St. William’s . No es necesario ser miembro de la iglesia para participar. Este es un programa de la Biblioteca , simplemente alojado en una ubicación diferente. ¡Ven a descubrir grandes historias, conectar con otras personas y disfrutar la lectura en comunidad! Chapters and Conversations: Spanish Book Club Join us for the launch of our brand-new Spanish Book Club! This welcoming, conversational group is perfect for anyone who enjoys reading in Spanish—whether you’re a native speaker or learning the language. Each month, we’ll read a selected book and meet to share thoughts, favorite moments, and meaningful discussion in a relaxed, supportive environment. Important: This book club meets off-site at St. William’s Church in their meeting space. You do not need to be a member of the church to attend. This is a Library program that is simply being hosted in a different location. Come discover great stories, connect with others, and enjoy the joy of reading in community!",
+      "start": "2026-10-20T14:30:00",
+      "end": null,
+      "location": "Fort Lupton Public & School Library - Public Branch",
+      "url": "https://highplains.libcal.com/event/17419381",
+      "source": "High Plains Library District",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "reading"
+      ]
+    },
+    {
+      "title": "Quiet Reading Group",
+      "description": "Drop in for quiet reading with other adults. Bring a book from home or from our shelves.",
+      "start": "2026-10-20T18:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://go.dcl.org/event/14989602",
+      "source": "Douglas County Libraries",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "reading"
+      ]
+    },
+    {
+      "title": "Crafted at the Library",
+      "description": "This program is currently fully booked. If you would like to be considered for a spot in the Haunted Gingerbread House class on October 20, please register for the waitlist here.",
+      "start": "2026-10-20T18:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://go.dcl.org/event/17484724",
+      "source": "Douglas County Libraries",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Novel Strand Book Club Meet-Up",
+      "description": "Come hang out with us at Novel Strand for our monthly book club meet-up! Let's chit-chat about books while enjoying some beer, wine and more",
+      "start": "2026-10-20T18:30:00",
+      "end": "2026-10-20T20:30:00",
+      "location": "Novel Strand Brewing Company — 305 1st ave, Denver, CO 80223",
+      "url": "https://www.eventbrite.com/e/novel-strand-book-club-meet-up-tickets-1982055580597",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T16:51:06.673Z",
+      "matchedKeywords": [
+        "book*",
+        "novel"
+      ]
+    },
+    {
+      "title": "2nd Star's October Book Club",
+      "description": "Join Second Star to the Right at our community book club! We meet in the shop every third Tuesday of the month from 6:30 - 8 pm",
+      "start": "2026-10-20T18:30:00",
+      "end": "2026-10-20T20:00:00",
+      "location": "Second Star to the Right Books — 1455 South Pearl Street, Denver, CO 80210",
+      "url": "https://www.eventbrite.com/e/2nd-stars-october-book-club-tickets-1998997190408",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T16:51:06.673Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Boulder Writer's Alliance",
+      "description": "This is for anyone working on a creative piece -- whether it be fiction, non-fiction, poetry, screen plays, etc. Participants will read through the pieces ahead of time, come up with helpful critiques, and discuss them at the meet up. Authors will need a copy of the critiques, whether through email or hard copy, so be prepared. This event is not hosted by the Boulder Public Library and may be updated, changed, or canceled with little notice.",
+      "start": "2026-10-21T10:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17461303",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "author",
+        "poetry",
+        "fiction"
+      ]
+    },
+    {
+      "title": "Daytime Booklovers Book Club",
+      "description": "Join us the 3rd Wednesday of each month for a lively book discussion. October's book: TBD",
+      "start": "2026-10-21T10:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/14502134",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Tales & Travels",
+      "description": "Adult readers who enjoy traveling and exploring different cultures through fiction and non-fiction.",
+      "start": "2026-10-21T11:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://go.dcl.org/event/14452235",
+      "source": "Douglas County Libraries",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "fiction"
+      ]
+    },
+    {
+      "title": "Pages and Paws",
+      "description": "Read with a licensed Reading Education Asasistance Dog. Practice reading skills in a safe, non-judgmental environment. For ages 5-12. Registration required.",
+      "start": "2026-10-21T15:45:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17461043",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Reading Buddies at Main",
+      "description": "Reading Buddies program helps children build positive relationships with reading and writing.",
+      "start": "2026-10-21T16:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17462158",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Shelf Talkers Book Club",
+      "description": "Great stories lead to great conversations. Share perspectives, hear new insights, and connect with fellow readers in a lively book discussion. Book of the month: \"Beautiful Ugly\" by Alice Feeney",
+      "start": "2026-10-21T17:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17462418",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Book Lovers",
+      "description": "Adults. Discover great new reads at an evening of book talks, featuring door prizes and refreshments. Registration required.",
+      "start": "2026-10-21T18:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://go.dcl.org/event/14220322",
+      "source": "Douglas County Libraries",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Quiet Reading Group",
+      "description": "Drop in for quiet reading with other adults. Bring a book from home or from our shelves.",
+      "start": "2026-10-21T18:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://go.dcl.org/event/15497427",
+      "source": "Douglas County Libraries",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "reading"
+      ]
+    },
+    {
+      "title": "LGBTQIA+ Book Club",
+      "description": "Join us to discuss The House in the Cerulean Sea by TJ Klune!",
+      "start": "2026-10-21T18:00:00",
+      "end": "2026-10-21T19:30:00",
+      "location": "2807 S Broadway — 2807 South Broadway, Englewood, CO 80113",
+      "url": "https://www.eventbrite.com/e/lgbtqia-book-club-tickets-2001250319578",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T16:51:06.673Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Eerie Reads Horror Book Club",
+      "description": "Calling all horror enthusiasts! Want to discover your next favorite read, meet fellow horror fans, and share your opinions about what you’ve read? Join the Eerie Reads book club to discuss horror fiction books. This book club is for adults and meets in-person. Registration required. Pick up your book at the front desk.",
+      "start": "2026-10-21T18:00:00",
+      "end": null,
+      "location": "Erie Community Library",
+      "url": "https://highplains.libcal.com/event/17077350",
+      "source": "High Plains Library District",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "fiction"
+      ]
+    },
+    {
+      "title": "Climate Conversations: Book Discussion of Fire Weather by John Vaillant",
+      "description": "Fire has been a partner in our evolution for hundreds of millennia, shaping culture, civilization, and, very likely, our brains. Fire has enabled us to cook our food, defend and heat our homes, and power the machines that drive our titanic economy. Yet this volatile energy source has always threatened to elude our control, and in our new age of intensifying climate change, we are seeing its destructive power unleashed in previously unimaginable ways. With masterly prose and a cinematic eye, Vaillant takes us on a riveting journey through the intertwined histories of North America's oil industry and the birth of climate science, to the unprecedented devastation wrought by modern forest fires, and into lives forever changed by these disasters. John Vaillant's urgent work is a book for--and from--our new century of fire, which has only just begun. Climate Conversations at the LINC Library Innovation Center is hosted by the Citizens Climate Lobby (CCL) Greeley chapter. CCL is a non-partisan organization that promotes solutions to the current climate crises. The goal is to provide information on various topics surrounding climate issues, to show many sides of the discussion and to get citizens thinking about solutions and obtain a better understanding of the situation. Free and open to the public. Registration is preferred. A limited supply of books are available for check-out at LINC's Front Desk.",
+      "start": "2026-10-21T18:00:00",
+      "end": null,
+      "location": "LINC Library Innovation Center",
+      "url": "https://highplains.libcal.com/event/15961342",
+      "source": "High Plains Library District",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Book Swap @ Method & Muse (Arvada)",
+      "description": "Arvada Book Swap Society hosts book swap events for people to pass along their books in exchange for new (to them) books to take home.",
+      "start": "2026-10-21T18:30:00",
+      "end": "2026-10-21T20:00:00",
+      "location": "Method & Muse Spirits - Distillery and Cocktail Lounge — 7513 Grandview Avenue, Arvada, CO 80002",
+      "url": "https://www.eventbrite.com/e/book-swap-method-muse-arvada-tickets-1998994562548",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "swap",
+        "exchange"
+      ]
+    },
+    {
+      "title": "Queer Romance Book Club - The Dead and The Dark by Courtney Gould",
+      "description": "Spicy Librarian presents a queer romance book club. Each month will be a different book.",
+      "start": "2026-10-21T18:30:00",
+      "end": "2026-10-21T19:30:00",
+      "location": "Spicy Librarian — 3040 Blake Street #110, Denver, CO 80205",
+      "url": "https://www.eventbrite.com/e/queer-romance-book-club-the-dead-and-the-dark-by-courtney-gould-tickets-2001396466708",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "romance"
+      ]
+    },
+    {
+      "title": "Reading Buddies at NoBo",
+      "description": "Reading Buddies program helps children build positive relationships with reading and writing.",
+      "start": "2026-10-22T16:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17461119",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Star-Crossed Covers Erie Romance Book Club",
+      "description": "Date: Thursday, October 22, 2026 Time: 4:00pm - 5:00pm Location: Erie Event Space East Building: Erie Community Library",
+      "start": "2026-10-22T16:00:00",
+      "end": null,
+      "location": "Erie Community Library",
+      "url": "https://highplains.libcal.com/event/15947126",
+      "source": "High Plains Library District",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "romance"
+      ]
+    },
+    {
+      "title": "\"Zombees\" Book Club",
+      "description": "Join us as we read \"Zombees,\" written by Justin Colon and illustrated by Kaly Quarles. We will read this fun Halloween themed book and then make Zombee slime.",
+      "start": "2026-10-22T16:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17494761",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Quiet Reading Group",
+      "description": "Drop in for quiet reading with other adults. Bring a book from home or from our shelves.",
+      "start": "2026-10-22T18:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://go.dcl.org/event/14998094",
+      "source": "Douglas County Libraries",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "reading"
+      ]
+    },
+    {
+      "title": "Dark Romance Book Club - A Soul to Keep and Book Exchange",
+      "description": "Join Spicy Librarian once a month to discuss dark romance books.",
+      "start": "2026-10-22T18:30:00",
+      "end": "2026-10-22T19:30:00",
+      "location": "Spicy Librarian — 3040 Blake Street #110, Denver, CO 80205",
+      "url": "https://www.eventbrite.com/e/dark-romance-book-club-a-soul-to-keep-and-book-exchange-tickets-1995123294481",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "exchange",
+        "romance"
+      ]
+    },
+    {
+      "title": "Spelling Bee(r) @ Velvet Lasso",
+      "description": "Come grab a drink and spell some words with us! We’re bringing Spelling Bee(r) to Velvet Lasso for the first time! Join us for a fun, casual night of spelling, cocktails, prizes, and plenty of cheering—all benefiting Burning Through Pages youth literacy programs. Want to spell? Competitor tickets are $10, with just 20 spots available. Rather watch? Come hang out and cheer on the spellers! Watching is FREE—no ticket needed. PRIZES First place takes home a prize package, including a $25 Velvet Lasso gift card, with prizes for second and third place too. DRINK FOR A GOOD CAUSE Velvet Lasso is generously donating 10% of bar sales during the event to Burning Through Pages. No spelling expertise required. Come sip a cocktail, laugh at some tricky words, and support young readers while you’re at it. 21+ event",
+      "start": "2026-10-22T18:30:00",
+      "end": "2026-10-22T20:00:00",
+      "location": "Velvet Lasso — 3254 Navajo St Suite 100, Denver, CO, 80211",
+      "url": "https://burningthroughpages.org/event/spelling-beer-velvet-lasso/",
+      "source": "Burning Through Pages",
+      "extractor": "tribe",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "sale"
+      ]
+    },
+    {
+      "title": "MileHiCon",
+      "description": "Colorado's long-running science fiction & fantasy literary convention.",
+      "start": "2026-10-23T09:00:00",
+      "end": "2026-10-25T18:00:00",
+      "location": "Denver, CO",
+      "url": "https://milehicon.org/",
+      "source": "MileHiCon",
+      "extractor": "static",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "fiction"
+      ]
+    },
+    {
+      "title": "Writing group",
+      "description": "Friday, 10 a.m.- 12 p.m. Edgewater Books inside Edgewater Public Market No RSVP needed — all are welcome! The Edgewater Books writing group meets on the second Wednesday and fourth Friday of every month. What to expect at each meeting: A few minutes of chit chat to catch up, 15 minutes to go over personal goals for the day and the day’s optional writing prompt, two 45-minute writing sprints, and 15 to 30 minutes to read aloud, ask questions, and give feedback. No requirements to join, just an interest in writing and community!",
+      "start": "2026-10-23T10:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://edgewaterbooksofcolorado.com/events/",
+      "source": "Edgewater Books",
+      "extractor": "heuristic",
+      "firstSeen": "2026-10-19T17:17:15.574Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Paper&Spine Used Bookstore: Spooky Season Pop-up Sale!",
+      "description": "October 23-24 during regular library hours! Paper & Spine Used Book Store is hosting a special pop-up sale of Fiction including Mystery, Thriller and Romance titles.",
+      "start": "2026-10-23T10:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17628920",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "sale",
+        "fiction",
+        "romance"
+      ]
+    },
+    {
+      "title": "C.A.F.E. Cancer and Community: A Forum for Exchange",
+      "description": "Join CU's Cancer Center. Pull up a chair. Let's talk cancer research, together.",
+      "start": "2026-10-23T10:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/15407161",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "exchange"
+      ]
+    },
+    {
+      "title": "Mysteries with a Cup of Tea Bookclub",
+      "description": "A Cozy Mystery Book Club",
+      "start": "2026-10-23T12:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/17504320",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Author Talk: Breaking Ice, Sonali Kolhatkar on Immigration, Identity, & Belonging October…",
+      "description": "Author Talk: Breaking Ice, Sonali Kolhatkar on Immigration, Identity, & Belonging October 23, 2026 2:00 pm - 4:00 pm The Shop at MATTER, 2114 Market St, Denver, CO 80205, USA We’d love for you to join us for a special afternoon with Free Speech TV host and author Sonali Kolhatkar at The Shop at MATTER in Denver. Sonali will share insights from her book, Breaking Ice, and be joined by an immigration justice activist for a timely and thought-provoking conversation about immigration, the human stories behind today's headlines, and an account of the growing immigration movement. There will also be plenty of time for your questions, conversation, and connection. Following the discussion, Sonali will sign books during an informal reception, where refreshments will be served. The event is free, but space is limited to 50 guests and advance registration is required. When you register, you'll also have the option to purchase copies of Breaking Ice. Your book will be waiting for you at the event, where Sonali will be happy to personally sign it.",
+      "start": "2026-10-23T14:00:00",
+      "end": null,
+      "location": "2114 Market St",
+      "url": "https://www.eventbrite.com/e/breaking-ice-sonali-kolhatkar-on-immigration-identity-belonging-tickets-2000222889507",
+      "source": "Matter Bookstore",
+      "extractor": "heuristic",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "author",
+        "book*"
+      ]
+    },
+    {
+      "title": "\"I've Been Meaning to Read That...\" Adult Book Club: My Sister, The Serial Killer",
+      "description": "Join us for a relaxed, one-hour book discussion series dedicated to the books you’ve always meant to read but haven’t gotten to yet! My Sister, the Serial Killer By Oyinkan Braithwaite Korede’s sister Ayoola is many things: the favorite child, the beautiful one, possibly sociopathic. And now Ayoola’s third boyfriend in a row is dead, stabbed through the heart with Ayoola’s knife. Korede’s practicality is the sisters’ saving grace. She knows the best solutions for cleaning blood (bleach, bleach, and more bleach), the best way to move a body (wrap it in sheets like a mummy), and she keeps Ayoola from posting pictures to Instagram when she should be mourning her “missing” boyfriend. Not that she gets any credit. Korede has long been in love with a kind, handsome doctor at the hospital where she works. She dreams of the day when he will realize that she’s exactly what he needs. But when he asks Korede for Ayoola’s phone number, she must reckon with what her sister has become and how far she’s willing to go to protect her. Whether you’re discovering this title for the first time or revisiting it, join the conversation and connect with fellow book lovers. We can’t wait to see you there!",
+      "start": "2026-10-23T16:00:00",
+      "end": null,
+      "location": "LINC Library Innovation Center",
+      "url": "https://highplains.libcal.com/event/16619878",
+      "source": "High Plains Library District",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Author Showcase & Book Fair",
+      "description": "TriArts Project event bringing authors and readers together for a day of inspiration and discovery.",
+      "start": "2026-10-23T16:30:00",
+      "end": "2026-10-23T19:30:00",
+      "location": "Cantril School Building, 312 Cantril St., Castle Rock, CO 80104",
+      "url": "https://triartsproject.org/event/author-showcase-book-fair-click-here-for-more-info/",
+      "source": "TriArts Project",
+      "extractor": "static",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "author",
+        "book*"
+      ]
+    },
+    {
+      "title": "Poetry event with Robert Cooperman and Lynda LaRocca",
+      "description": "Join us for a live poetry reading from Robert Cooperman and Lynda La Rocca. These local poets are frequent guests of The Bookies and always bring in a crowd! We're excited to welcome them back to read from their latest books. Books will be available to purchase at the event.",
+      "start": "2026-10-23T17:30:00",
+      "end": "2026-10-23T19:00:00",
+      "location": "The Bookies",
+      "url": "https://thebookies.com/events/6488420261023",
+      "source": "The Bookies",
+      "extractor": "bookmanager",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "poetry",
+        "reading"
+      ]
+    },
+    {
+      "title": "Dusti Bowling with Fleur Bradley Live at Tattered Cover Colfax",
+      "description": "Join us for a great conversation with award-winning, bestselling authors Dusti Bowling and Fleur Bradley about Dusti's new book!",
+      "start": "2026-10-23T18:00:00",
+      "end": "2026-10-23T20:00:00",
+      "location": "Tattered Cover Colfax — 2526 East Colfax Avenue, Denver, CO 80206",
+      "url": "https://www.eventbrite.com/e/dusti-bowling-with-fleur-bradley-live-at-tattered-cover-colfax-tickets-1999063522810",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T17:17:15.574Z",
+      "matchedKeywords": [
+        "author",
+        "book*"
+      ]
+    },
+    {
+      "title": "The Great Pumpkin Book Hunt",
+      "description": "Join us for The Great LBP Pumpkin Book Hunt, where every book purchase gives you the chance to hunt for a hidden pigeon and reveal a surprise prize—including the coveted Golden Pigeon.",
+      "start": "2026-10-24T10:00:00",
+      "end": "2026-10-31T17:00:00",
+      "location": "Little Blue Pigeon — 1413 Larimer St, Denver, CO 80202, USA",
+      "url": "https://www.littlebluepigeonbooks.com/event-details/the-great-pumpkin-book-hunt",
+      "source": "Little Blue Pigeon Books",
+      "extractor": "wix",
+      "firstSeen": "2026-10-19T16:47:41.425Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Paper&Spine Used Bookstore: Spooky Season Pop-up Sale!",
+      "description": "October 23-24 during regular library hours! Paper & Spine Used Book Store is hosting a special pop-up sale of Fiction including Mystery, Thriller and Romance titles.",
+      "start": "2026-10-24T10:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17628921",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "sale",
+        "fiction",
+        "romance"
+      ]
+    },
+    {
+      "title": "Arts and Crafts Supply Swap",
+      "description": "Bring your new or gently used arts and crafts items to swap. Discover new types of crafts, get inspired, and connect with other crafters!",
+      "start": "2026-10-24T13:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/17311711",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "swap"
+      ]
+    },
+    {
+      "title": "Nan's Homestead Books & Bread Society - Local Woman Missing 10/24/26",
+      "description": "Secrets, Sourdough & Suspense - Local Woman Missing By Mary Kubica",
+      "start": "2026-10-24T13:00:00",
+      "end": "2026-10-24T15:00:00",
+      "location": "Urban Symbiosis — 10255 East 25th Avenue Unit 9, Aurora, CO 80010",
+      "url": "https://www.eventbrite.com/e/nans-homestead-books-bread-society-local-woman-missing-102426-tickets-2002292979201",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T17:17:15.574Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Confluence: The Story of Greeley Water",
+      "description": "Water is one of our most important resources, but what's its story? Join author, historian, and retired University of Northern Colorado professor Dr. Welsh on a presentation of the second edition of Confluence: The Story of Greeley Water , cowritten with the late Gregory J. Hobbs. Learn about water's history, ongoing impact, and local legacy. Q and A will follow the presentation. While no registration is required, space is limited to this FREE event.",
+      "start": "2026-10-24T13:00:00",
+      "end": null,
+      "location": "HPLD Library & Archive",
+      "url": "https://highplains.libcal.com/event/17761192",
+      "source": "High Plains Library District",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "author"
+      ]
+    },
+    {
+      "title": "Meet the Author with Jack Mauck",
+      "description": "Meet local author Jack Mauck as he discusses his new book, For the Love of a Horse.",
+      "start": "2026-10-24T13:30:00",
+      "end": null,
+      "location": "Grover Library",
+      "url": "https://highplains.libcal.com/event/17388174",
+      "source": "High Plains Library District",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "author",
+        "book*"
+      ]
+    },
+    {
+      "title": "Learn to Play Chess",
+      "description": "The Bookies is happy to host a chess meetup with David Costantino for people of all ages and levels. Never played chess before? Come learn to play! Already play? Come make new friends who love the game! Beginner lessons are $10 and registration is required. Experienced players can play casual or blitz games for free.",
+      "start": "2026-10-24T14:00:00",
+      "end": "2026-10-24T17:00:00",
+      "location": "The Bookies",
+      "url": "https://thebookies.com/events/4472220261024",
+      "source": "The Bookies",
+      "extractor": "bookmanager",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "RE May Signing",
+      "description": "RE May will be in store signing!",
+      "start": "2026-10-24T14:00:00",
+      "end": "2026-10-24T16:00:00",
+      "location": "Spicy Librarian — 3040 Blake Street, #110, Denver, CO 80205",
+      "url": "https://www.eventbrite.com/e/re-may-signing-tickets-2002760255838",
+      "source": "Spicy Librarian / Romance Discovery",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "signing"
+      ]
+    },
+    {
+      "title": "Observe the Moon",
+      "description": "Observe the moon and other wonders of the night sky with HPLD, and UNC's Physics and Astronomy Department! International Observe the Moon Night will be hosted at the Astronomy Lab located at the UNC Xeric Garden on the University of Northern Colorado campus (1200 20th Street, Greeley). Telescopes will be provided or you may bring your own. Parking is available in parking lot Y, north of the Nottingham Field, no parking pass needed. Click here to see event/parking map. To get weather status updates on the evening of the event, follow University of Northern Colorado Physics and Astronomy on Facebook or X @UNCO_Physics . For more information on International Observe the Moon Night, click here .",
+      "start": "2026-10-24T19:00:00",
+      "end": null,
+      "location": "Offsite",
+      "url": "https://highplains.libcal.com/event/17346561",
+      "source": "High Plains Library District",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Gift Economy In Action!",
+      "description": "October 25, 2026 11:00 am - 1:00 pm The Shop at MATTER, 2114 Market St, Denver, CO 80205, USA It's like a birthday. For everyone. All the time. Hosted by MATTER's Debra, Vania, and Laia on the last Sunday of most months Bring up to 10 (TEN!) things you'd like to gift to someone else. Once treasured but no longer wanted or needed. Art, jewelry, clothes, appliances, gerbils, albums, ... We'll most likely have conversations about value, economics, kindness, and maybe donuts Rules: - No US or foreign currency can be exchanged. - Must be present to gift. - Donuts will be gifted from MATTER. - What comes in, must go out. A direct action inspired by The Serviceberry , by Robin Wall Kimmerer No",
+      "start": "2026-10-25T11:00:00",
+      "end": null,
+      "location": "2114 Market St",
+      "url": "http://morematter.com/",
+      "source": "Matter Bookstore",
+      "extractor": "heuristic",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "exchange"
+      ]
+    },
+    {
+      "title": "Grown-Up Book Fair @ Fiction",
+      "description": "Join us for a Grown-Up Book Fair at Fiction Beer",
+      "start": "2026-10-25T15:00:00",
+      "end": "2026-10-25T18:00:00",
+      "location": "Fiction Beer Company — 7101 East Colfax Avenue, Denver, CO 80220",
+      "url": "https://www.eventbrite.com/e/grown-up-book-fair-fiction-tickets-2000316744229",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "fiction"
+      ]
+    },
+    {
+      "title": "Sunday Soundtrack October 25, 2026 3:00 pm - 6:00 pm The Shop at MATTER, 2114 Market St, D…",
+      "description": "Sunday Soundtrack October 25, 2026 3:00 pm - 6:00 pm The Shop at MATTER, 2114 Market St, Denver, CO 80205, USA Live Sound + Craft Enjoy zines, speculative fiction, queer non-fiction, black intellectuals, history, activism, design, futuring, typography, art, healing, and more, all to the sound of a live DJ. No",
+      "start": "2026-10-25T15:00:00",
+      "end": null,
+      "location": "2114 Market St",
+      "url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Sunday%20Soundtrack&dates=20261025T150000/20261025T180000&details=Live%20Sound%20%2B%20Craft%0A%0AEnjoy%20zines%2C%20speculative%20fiction%2C%20queer%20non-fiction%2C%20black%20intellectuals%2C%20history%2C%20activism%2C%20design%2C%20futuring%2C%20typography%2C%20art%2C%20healing%2C%20and%20more%2C%20all%20to%20the%20sound%20of%20a%20live%20DJ.%0A%0ANo%20RSVP%20required.%20All%20are%20welcome.&location=The%20Shop%20at%20MATTER%2C%202114%20Market%20St%2C%20Denver%2C%20CO%2080205%2C%20USA&trp=false&ctz=America%2FDenver",
+      "source": "Matter Bookstore",
+      "extractor": "heuristic",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "fiction"
+      ]
+    },
+    {
+      "title": "To Be Perfectly Queer Book Club",
+      "description": "A queer book club. This month we are discussing the sapphic horror \"This Movie Doesn't End The Way We Want.\" Grab a coffee and chat!",
+      "start": "2026-10-25T16:00:00",
+      "end": "2026-10-25T17:30:00",
+      "location": "1700 N Humboldt St — 1700 North Humboldt Street, Denver, CO 80218",
+      "url": "https://www.eventbrite.com/e/to-be-perfectly-queer-book-club-tickets-2001780114208",
+      "source": "Denver Book Society",
+      "extractor": "jsonld",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Book club “The Art Thief”",
+      "description": "Sunday 10/25, 5:30-6:30 p.m. Edgewater Books inside Edgewater Public Market No RSVP needed — all are welcome! From Bookshop.org : Stéphane Bréitwieser is the most prolific art thief of all time. He pulled off more than 200 heists, often in crowded museums in broad daylight.",
+      "start": "2026-10-25T17:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://edgewaterbooksofcolorado.com/events/",
+      "source": "Edgewater Books",
+      "extractor": "heuristic",
+      "firstSeen": "2026-10-19T17:17:15.574Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Reading Buddies at Meadows",
+      "description": "Reading Buddies program helps children build positive relationships with reading and writing.",
+      "start": "2026-10-26T16:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17462293",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Riverside Readers",
+      "description": "There are many reasons to join a book club. Some folks want to read more, meet people, or broaden their perspectives. Whatever the reason, everyone is welcome at Riverside Readers! The club meets at the Riverside Library on the 4th Monday of each month. Online attendance is available for those who wish to join from the comfort of their own home.",
+      "start": "2026-10-26T18:30:00",
+      "end": null,
+      "location": "Riverside Library and Cultural Center",
+      "url": "https://highplains.libcal.com/event/16794746",
+      "source": "High Plains Library District",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "ACOTAR 6 A Court of Splintered Harmony Release Party",
+      "description": "Dress up and celebrate ACOTAR 6's release with a craft mocktail/cocktail, themed craft and of course the book!",
+      "start": "2026-10-26T21:00:00",
+      "end": "2026-10-26T23:59:00",
+      "location": "Method & Muse Spirits — 7513 Grandview Avenue, Arvada, CO 80002",
+      "url": "https://www.eventbrite.com/e/acotar-6-a-court-of-splintered-harmony-release-party-tickets-2000275621229",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T17:17:15.574Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "ACOTAR 6 Midnight Release Party with Denver Book Society",
+      "description": "We'll be ringing in the release of the next book in the ACOTAR series! Ticket includes the book & free drink.",
+      "start": "2026-10-26T22:30:00",
+      "end": "2026-10-27T00:30:00",
+      "location": "1700 N Humboldt St — 1700 North Humboldt Street, Denver, CO 80218",
+      "url": "https://www.eventbrite.com/e/acotar-6-midnight-release-party-with-denver-book-society-tickets-2003386315399",
+      "source": "Denver Book Society",
+      "extractor": "jsonld",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Tallyn's Reach Library For All",
+      "description": "A weekly, themed library experience for adults with I/DD and caregivers. Build literacy and life skills through group reading, writing, games, and community knowledge-sharing.",
+      "start": "2026-10-27T10:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/14893875",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Book of the Month Club",
+      "description": "Try out a new book and join us for tea and snacks to tell us what you think! October: The House Riverton by Katy Morton",
+      "start": "2026-10-27T12:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/16894833",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Discover Your Next Great Read on Social Media",
+      "description": "Join the library every Tuesday on Instagram and Facebook to discover great books!",
+      "start": "2026-10-27T13:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17462325",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "The Skeleton Key Horror Book Club",
+      "description": "Join The Skeleton Key Horror Book Club for a monthly, in-person gathering from readers of the horrific, fantastic and macabre. Each meeting will invite participants to explore the deep themes of horror literature from classics, to the modern, from the short story to the graphic novel. We’re a place where seasoned horror readers can mingle with those who are trying the genre for the first time. The graphic novel for this month is Bad Dreams in the Night by Adam Ellis (Available on Hoopla). The last Tuesday of every month throughout 2026 at LINC Library",
+      "start": "2026-10-27T17:30:00",
+      "end": null,
+      "location": "LINC Library Innovation Center",
+      "url": "https://highplains.libcal.com/event/15726106",
+      "source": "High Plains Library District",
+      "extractor": "rss",
+      "firstSeen": "2026-10-19T16:34:37.548Z",
+      "matchedKeywords": [
+        "book*",
+        "novel"
+      ]
+    },
+    {
+      "title": "DBS Book Club: Parable of the Sower",
+      "description": "Discussion of Octavia's Butler classic novel. Show your $10 ticket at the counter to be redeemed on a drink/snack/book purchase!",
+      "start": "2026-10-27T18:00:00",
+      "end": "2026-10-27T19:30:00",
+      "location": "1700 N Humboldt St — 1700 North Humboldt Street, Denver, CO 80218",
+      "url": "https://www.eventbrite.com/e/dbs-book-club-parable-of-the-sower-tickets-1994594070558",
+      "source": "Denver Book Society",
+      "extractor": "jsonld",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "novel"
+      ]
+    },
+    {
+      "title": "ACOTAR 6 BOOK RELEASE PARTY AND BINGO NIGHT",
+      "description": "Celebrate the release of A Court of Splintered Harmony with ACOTAR themed bingo and prizes!",
+      "start": "2026-10-27T18:00:00",
+      "end": "2026-10-27T20:00:00",
+      "location": "Barquentine Brewing Company — 5505 West 20th Avenue #Suite 178, Edgewater, CO 80214",
+      "url": "https://www.eventbrite.com/e/acotar-6-book-release-party-and-bingo-night-tickets-2002347596563",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T16:51:06.673Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Awakening Book Club: Halloween Edition",
+      "description": "Oct. Book Club - 'Bury Your Gays' by Chuck Tingle",
+      "start": "2026-10-27T18:30:00",
+      "end": "2026-10-27T20:30:00",
+      "location": "Awakening Boutique Broadway — 38 North Broadway, Denver, CO 80203",
+      "url": "https://www.eventbrite.com/e/awakening-book-club-halloween-edition-tickets-2001707353579",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Rebel Book Club Denver x EXTREME DREAMS",
+      "description": "Join us for RBC's October event as we explore this month's theme, Extreme Dreams, via Eva Zu Beck's book, \"The Wilder Way\".",
+      "start": "2026-10-27T19:00:00",
+      "end": "2026-10-27T21:00:00",
+      "location": "Fiction Beer Company — 7101 East Colfax Avenue, Denver, CO 80220",
+      "url": "https://www.eventbrite.co.uk/e/rebel-book-club-denver-x-extreme-dreams-tickets-2002755130508",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T16:51:06.673Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "20 Mile Book Club",
+      "description": "Adults meet monthly to discuss fiction and nonfiction title",
+      "start": "2026-10-28T09:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://go.dcl.org/event/14325344",
+      "source": "Douglas County Libraries",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "fiction"
+      ]
+    },
+    {
+      "title": "Daytime Book Club",
+      "description": "Adults meet monthly to discuss titles from a variety of genres. No registration required. Meets the fourth Wednesday of each month.",
+      "start": "2026-10-28T13:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://go.dcl.org/event/14647676",
+      "source": "Douglas County Libraries",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Inspirational Book Club",
+      "description": "Read and discuss books that inspire and uplift. The book of the month can be picked up at the meeting prior or at the front desk!",
+      "start": "2026-10-28T13:00:00",
+      "end": null,
+      "location": "Eaton Public Library",
+      "url": "https://highplains.libcal.com/event/15928389",
+      "source": "High Plains Library District",
+      "extractor": "rss",
+      "firstSeen": "2026-10-19T16:34:37.548Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Read, Build, Create! (Ages 5-8)",
+      "description": "Join us for Read, Build, Create! — a fun, hands-on program designed to spark kids’ imaginations through stories, building, and crafts! Each session begins with a lively read-aloud of a picture book that brings the story to life with expression and excitement. After the story, kids can head to two creative stations: Building Challenge – Build something inspired by the story using your imagination and problem-solving skills. Craft Time – Create a themed art project that strengthens fine motor skills and lets kids take home a piece of the story. From pirate ships to magical animals, each month brings a new theme to explore. Whether you love listening to stories, building with Lego bricks, or making art, this program has something for everyone This program is designed for kids (ages 5-8) based on the skills we'll be practicing or the tools used. Offering age-appropriate programming allows us to craft memorable and personalized experiences for all our patrons, no matter their age. Manage your event registration through \" My Events \" when signed in to a library account. DISCOVER MORE Explore the fun ideas from this Great Books for Brick Builders List . Visit the Kids Page to discover additional recommendations and resources.",
+      "start": "2026-10-28T16:00:00",
+      "end": "2026-10-28T17:00:00",
+      "location": "Eloise May Library",
+      "url": "https://arapahoelibraries.bibliocommons.com/events/6a96d56e29a7dd0d67482f47",
+      "source": "Arapahoe Libraries",
+      "extractor": "bibliocommons",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Reading Buddies at Main",
+      "description": "Reading Buddies program helps children build positive relationships with reading and writing.",
+      "start": "2026-10-28T16:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17462465",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "The Luxe Chapter Book Club",
+      "description": "Luxe Chapter Book Club blends books and bites in a playful monthly escape. Each month brings a new read plus a curated food & beverage menu.",
+      "start": "2026-10-28T17:30:00",
+      "end": "2026-10-28T19:30:00",
+      "location": "Sheraton Denver Downtown Hotel — 1550 Court Place, Denver, CO 80202",
+      "url": "https://www.eventbrite.com/e/the-luxe-chapter-book-club-tickets-2003166196016",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T16:51:06.673Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Short Story Book Club",
+      "description": "Love great books but short on time? You are in the right spot. Gather with fellow readers to discuss exceptional short fiction, the ideas that inspires, and the long-lasting impressions they make.",
+      "start": "2026-10-28T17:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17462629",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "fiction"
+      ]
+    },
+    {
+      "title": "Romance and Recs Book Club",
+      "description": "Looking for a book club without the pressure of assigned reading? Join us for our first BYO Book Club at Sugar & Spice Books, Romance & Recs",
+      "start": "2026-10-28T18:00:00",
+      "end": "2026-10-28T20:00:00",
+      "location": "1909 9th Street, Boulder, CO 80302",
+      "url": "https://www.eventbrite.com/e/romance-and-recs-book-club-tickets-1997390574978",
+      "source": "The Romance Section",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "reading",
+        "romance"
+      ]
+    },
+    {
+      "title": "Next Chapter",
+      "description": "Adults meet the fourth Wednesday of each month to read and discuss books with protagonists in early adulthood. Register now.",
+      "start": "2026-10-28T18:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://go.dcl.org/event/14452503",
+      "source": "Douglas County Libraries",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Spooky Pottery Painting & Book Swap - Night 2 (Denver)",
+      "description": "Denver Book Swap Society hosts book swap events for people to pass along their books in exchange for new (to them) books to take home.",
+      "start": "2026-10-28T18:00:00",
+      "end": "2026-10-28T21:00:00",
+      "location": "Glaze & Phase — 5174 South Broadway, Englewood, CO 80113",
+      "url": "https://www.eventbrite.com/e/spooky-pottery-painting-book-swap-night-2-denver-tickets-1999613308233",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "swap",
+        "exchange"
+      ]
+    },
+    {
+      "title": "Pitch a Book Club",
+      "description": "Come pitch your favorite book or current read and learn about new books!",
+      "start": "2026-10-28T18:00:00",
+      "end": "2026-10-28T20:00:00",
+      "location": "2807 S Broadway — 2807 South Broadway, Englewood, CO 80113",
+      "url": "https://www.eventbrite.com/e/pitch-a-book-club-tickets-2002084714275",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Reading Buddies at NoBo",
+      "description": "Reading Buddies program helps children build positive relationships with reading and writing.",
+      "start": "2026-10-29T16:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17460861",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Guilty Pleasures: Books and Cake",
+      "description": "Let's make sweet treats and talk about the books you love but would never take to book club.",
+      "start": "2026-10-29T17:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17460403",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Holiday Shopping Night",
+      "description": "Join us October 29 at 6pm to kick off the holiday season with a look at some of the hottest books to add to your shopping list. Our reps from Penguin Random House will be here sharing their personal recommendations for gifting (or keeping for yourself!) Our resident storyteller, Judy, will also be sharing her children's book picks. What to Expect: Light refreshments Personal recommendations from industry pros Previews of upcoming books Books available for purchase and preorder First 20 people will receive a special gift! Please RSVP to this FREE event to help us with planning.",
+      "start": "2026-10-29T18:00:00",
+      "end": null,
+      "location": "The Bookies",
+      "url": "https://thebookies.com/events/6579720261029",
+      "source": "The Bookies",
+      "extractor": "bookmanager",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Rob Samborn with Caleb Stephens Live at Tattered Cover Colfax",
+      "description": "Join us for a great conversation with local authors Rob Samborn and Caleb Stephens to celebrate Rob's new book!",
+      "start": "2026-10-29T18:00:00",
+      "end": "2026-10-29T20:00:00",
+      "location": "Tattered Cover Colfax — 2526 East Colfax Avenue, Denver, CO 80206",
+      "url": "https://www.eventbrite.com/e/rob-samborn-with-caleb-stephens-live-at-tattered-cover-colfax-tickets-1999122451066",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T17:17:15.574Z",
+      "matchedKeywords": [
+        "author",
+        "book*"
+      ]
+    },
+    {
+      "title": "Halloween Book Bash",
+      "description": "Join us for a day of treats, drinks, minifacials, crafts, & live music. Enter our costume contest (kids & dogs!) and chalk-drawing contest.",
+      "start": "2026-10-31T09:00:00",
+      "end": "2026-10-31T20:00:00",
+      "location": "1700 N Humboldt St — 1700 North Humboldt Street, Denver, CO 80218",
+      "url": "https://www.eventbrite.com/e/halloween-book-bash-tickets-2002386609251",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T16:51:06.673Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Halloween Local Author Pop-Up: Lynn Becker",
+      "description": "Celebrate Halloween with Colorado author Lynn Becker and her delightfully spooky picture book, Ghost Town in the Mountains! Stop by Little Blue Pigeon from 11 AM–1 PM to meet Lynn, discover this hauntingly hilarious story, and take home a signed copy.",
+      "start": "2026-10-31T11:00:00",
+      "end": "2026-10-31T13:00:00",
+      "location": "Little Blue Pigeon Books — 1413 Larimer St, Denver, CO 80202, USA",
+      "url": "https://www.littlebluepigeonbooks.com/event-details/halloween-local-author-pop-up-lynn-becker",
+      "source": "Little Blue Pigeon Books",
+      "extractor": "wix",
+      "firstSeen": "2026-10-19T16:47:41.425Z",
+      "matchedKeywords": [
+        "author",
+        "book*"
+      ]
+    },
+    {
+      "title": "Build a Cozy Book Nook",
+      "description": "Build a Cozy Book Nook using books, beads, trinkets, and other accessories and arrange them in a hanging frame!",
+      "start": "2026-10-31T13:00:00",
+      "end": "2026-10-31T15:00:00",
+      "location": "Denver Book Society — 1700 North Humboldt Street, Denver, CO 80218",
+      "url": "https://www.eventbrite.com/e/build-a-cozy-book-nook-tickets-2002929178089",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T16:51:06.673Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Book Swap",
+      "description": "Swap a book you’ve loved for a new read at our online Book Swap—come meet fellow book lovers!",
+      "start": "2026-11-01T10:00:00",
+      "end": "2026-11-01T12:00:00",
+      "location": "2632 Blake St — 2632 Blake Street, Denver, CO 80205",
+      "url": "https://www.eventbrite.com/e/book-swap-tickets-2003065063526",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "swap"
+      ]
+    },
+    {
+      "title": "Speculative Fiction Book Club",
+      "description": "Join us for our speculative fiction book club! Delving into fiction touched with fantastical elements, we will discuss books that go beyond the world we know. Every first Sunday of the month, at 1:30 pm. November's book is This Gilded Abyss by Rebecca Thorne",
+      "start": "2026-11-01T13:30:00",
+      "end": "2026-11-01T15:00:00",
+      "location": "Bookies Bookstore",
+      "url": "https://thebookies.com/events/4360520261101",
+      "source": "The Bookies",
+      "extractor": "bookmanager",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "fiction"
+      ]
+    },
+    {
+      "title": "Romance Lovers Private Theatre Showing of Wicker",
+      "description": "We choose the basket! Join fellow romance lovers in a private showing of Wicker!",
+      "start": "2026-11-01T18:30:00",
+      "end": "2026-11-01T20:30:00",
+      "location": "AMC Flatiron Crossing 14 — 61 West Flatiron Crossing Drive, Broomfield, CO 80021",
+      "url": "https://www.eventbrite.com/e/romance-lovers-private-theatre-showing-of-wicker-tickets-1998511592973",
+      "source": "The Romance Section",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "romance"
+      ]
+    },
+    {
+      "title": "Reading Buddies at Meadows",
+      "description": "Reading Buddies program helps children build positive relationships with reading and writing.",
+      "start": "2026-11-02T16:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17461078",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Banned Books Club",
+      "description": "Read and discuss books that have been challenged or banned in this monthly book club celebrating the freedom to read.",
+      "start": "2026-11-02T17:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17460714",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Novel Strand MYSTERY Book Club",
+      "description": "Come hang out with us at Novel Strand for our monthly MYSTERY book club meet-up!",
+      "start": "2026-11-02T18:30:00",
+      "end": "2026-11-02T20:00:00",
+      "location": "Novel Strand Brewing Company — 305 1st ave, Denver, CO 80223",
+      "url": "https://www.eventbrite.com/e/novel-strand-mystery-book-club-tickets-1992019255216",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T17:17:15.574Z",
+      "matchedKeywords": [
+        "book*",
+        "novel"
+      ]
+    },
+    {
+      "title": "Daytime Book Club",
+      "description": "Adults meet monthly to discuss fiction and nonfiction titles. Meets upstairs in the Event Hall. This book club is filled to capacity.",
+      "start": "2026-11-03T10:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://go.dcl.org/event/14332281",
+      "source": "Douglas County Libraries",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "fiction"
+      ]
+    },
+    {
+      "title": "English 5 Class",
+      "description": "Advanced English class for adult speakers of other languages. The focus is on improving reading, writing, oral language skills and understanding social and cultural topics.",
+      "start": "2026-11-03T10:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17460709",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Tallyn's Reach Library For All",
+      "description": "A weekly, themed library experience for adults with I/DD and caregivers. Build literacy and life skills through group reading, writing, games, and community knowledge-sharing.",
+      "start": "2026-11-03T10:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/14893876",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Non-Fiction Book Club",
+      "description": "Join us the 1st Tuesday of every month for a lively book discussion. November's book: Demon of Unrest, Erik Larson",
+      "start": "2026-11-03T13:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/14502672",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "fiction"
+      ]
+    },
+    {
+      "title": "Discover Your Next Great Read on Social Media",
+      "description": "Join the library every Tuesday on Instagram and Facebook to discover great books!",
+      "start": "2026-11-03T13:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17462419",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Citizenship Study Group",
+      "description": "Join a study group to learn about the citizenship process. Explore free online and library resources for civics knowledge plus increase your reading and writing skills. Note: The study group is designed to help advanced English learners prepare for citizenship interviews. Staff are unable to provide legal advice, assistance with completing USCIS forms or teach English to those with beginner or intermediate knowledge.",
+      "start": "2026-11-03T13:30:00",
+      "end": "2026-11-03T15:00:00",
+      "location": "Eloise May Library",
+      "url": "https://arapahoelibraries.bibliocommons.com/events/6957fa9c1e64afd01e51eae6",
+      "source": "Arapahoe Libraries",
+      "extractor": "bibliocommons",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Tallyn's Reach Cookbook Club",
+      "description": "Join our monthly cookbook potluck! This month, pick a recipe from Bonnie Frumkin Morales' Kachka: A Return to Russian Cooking, make it at home, and join us to share delicious food and conversation.",
+      "start": "2026-11-03T17:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/16089041",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Quiet Reading Group",
+      "description": "Drop in for quiet reading with other adults. Bring a book from home or from our shelves.",
+      "start": "2026-11-03T18:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://go.dcl.org/event/14854528",
+      "source": "Douglas County Libraries",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "reading"
+      ]
+    },
+    {
+      "title": "Inklings",
+      "description": "Adults meet monthly to discuss fiction and nonfiction titles.",
+      "start": "2026-11-03T18:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://go.dcl.org/event/14218989",
+      "source": "Douglas County Libraries",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "fiction"
+      ]
+    },
+    {
+      "title": "Novel Strand NON-FICTION Book Club",
+      "description": "Come hang out with us at Novel Strand for our monthly NON-FICTION book club meet-up!",
+      "start": "2026-11-03T18:30:00",
+      "end": "2026-11-03T20:00:00",
+      "location": "Novel Strand Brewing Company — 305 1st ave, Denver, CO 80223",
+      "url": "https://www.eventbrite.com/e/novel-strand-non-fiction-book-club-tickets-1992019169961",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T16:51:06.673Z",
+      "matchedKeywords": [
+        "book*",
+        "fiction",
+        "novel"
+      ]
+    },
+    {
+      "title": "Romance Fantasy Book Club- The Isle in the Silver Sea by Tasha Suri",
+      "description": "Spicy Librarian presents a romance fantasy book club. Each month will be a different book.",
+      "start": "2026-11-03T18:30:00",
+      "end": "2026-11-03T19:30:00",
+      "location": "Spicy Librarian — 3040 Blake Street #110, Denver, CO 80205",
+      "url": "https://www.eventbrite.com/e/romance-fantasy-book-club-the-isle-in-the-silver-sea-by-tasha-suri-tickets-1991736605804",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "romance"
+      ]
+    },
+    {
+      "title": "Reading Buddies at Main",
+      "description": "Reading Buddies program helps children build positive relationships with reading and writing.",
+      "start": "2026-11-04T16:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17460954",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "ESL Book Club",
+      "description": "Adults who are intermediate or advanced English speakers meet on the first Wednesday of each month to discuss essays, novels, and memoirs relating to immigrant experiences. Registration required.",
+      "start": "2026-11-04T17:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://go.dcl.org/event/14969833",
+      "source": "Douglas County Libraries",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "novel"
+      ]
+    },
+    {
+      "title": "Fresh Reads",
+      "description": "Book lovers unite! Explore new releases, share recommendations, and discover staff favorites. It's all about celebrating the books you love and finding your next great read.",
+      "start": "2026-11-04T17:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17461648",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "The Book Was Better",
+      "description": "Adults meet the first Wednesday of the month to compare a film with its original novel.",
+      "start": "2026-11-04T18:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://go.dcl.org/event/14476299",
+      "source": "Douglas County Libraries",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "novel"
+      ]
+    },
+    {
+      "title": "Book Swap @ Prost Brewing (Broomfield)",
+      "description": "Broomfield Book Swap Society hosts book swap events for people to pass along their books in exchange for new (to them) books to take home.",
+      "start": "2026-11-04T18:00:00",
+      "end": "2026-11-04T19:30:00",
+      "location": "Prost Brewing Company — 351 West 104th Avenue #Unit A, Northglenn, CO 80234",
+      "url": "https://www.eventbrite.com/e/book-swap-prost-brewing-broomfield-tickets-2001886206533",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "swap",
+        "exchange"
+      ]
+    },
+    {
+      "title": "Book Banter",
+      "description": "Adults meet the first Wednesday of each month to discuss fiction and nonfiction titles. Meets upstairs in the event hall.",
+      "start": "2026-11-04T18:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://go.dcl.org/event/14451687",
+      "source": "Douglas County Libraries",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "fiction"
+      ]
+    },
+    {
+      "title": "Radio Book Club LIVE: Stephen Graham Jones [Full Reg]",
+      "description": "Stephen Graham Jones will speak about and sign \"Off the Reservation.\"",
+      "start": "2026-11-04T18:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17461516",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "State of the Library",
+      "description": "State of the Library We are thrilled to invite you to the second annual State of the Library. Enjoy coffee as we explore the special collections and archives through conversation with Rachel Vagts. We will also be presenting the Volunteer and Friend of the Year awards! Register now to secure your place for this special morning. Thursday, November 5th, 2026 | 8:30 am – 10:00 am Park View, Central Library 8:30-9:00 AM – Networking 9:00-9:15 AM – Award Presentation 9:15-10:00 AM – Fireside Chat 📕 Exclusive Access to the Red Chair Bookshop Check out the freshly curated collection with an early-hours pass to the Red Chair Bookshop in the Central Library. Questions? Please contact us at 720-865-3453 or friends@denverlibrary.org",
+      "start": "2026-11-05T08:30:00",
+      "end": "2026-11-05T10:00:00",
+      "location": "Central Library — 10 W 14th Avenue Parkway, Denver, CO, 80204",
+      "url": "https://www.dplfriends.org/event/state-of-the-library/",
+      "source": "Denver Public Library Friends",
+      "extractor": "tribe",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Readers' Roost",
+      "description": "Adults meet the first Thursday of each month to discuss fiction and nonfiction titles. Meets in upstairs event hall.",
+      "start": "2026-11-05T11:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://go.dcl.org/event/14451977",
+      "source": "Douglas County Libraries",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "fiction"
+      ]
+    },
+    {
+      "title": "Design a Book Cover with Author-Illustrator Olga Herrera",
+      "description": "A lot of thought, planning, and creativity goes into designing the perfect book cover. Join award-winning author-illustrator Olga Herrera, creator of The Unwelcome Surprise, to explore the process behind book covers, from the first sketch to the finished design. Then create your own! Design a cover for a favorite book or an imaginary story, and learn how simple shapes can help you draw just about anything. Email addresses are required to receive Zoom information. Have questions about attending an online event? Visit Online Event FAQs . Writing a book? Check out our Writers’ Resources page for free resources on writing, research and formatting and to submit your original work for publishing. Manage your event registration using \" My Events \" in your library dashboard.",
+      "start": "2026-11-05T16:00:00",
+      "end": "2026-11-05T17:00:00",
+      "location": null,
+      "url": "https://arapahoelibraries.bibliocommons.com/events/6abe676d754bb0003ac29140",
+      "source": "Arapahoe Libraries",
+      "extractor": "bibliocommons",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "author",
+        "book*",
+        "signing"
+      ]
+    },
+    {
+      "title": "Reading Buddies at NoBo",
+      "description": "Reading Buddies program helps children build positive relationships with reading and writing.",
+      "start": "2026-11-05T16:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17461415",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Creative Writer's Critique Group",
+      "description": "This is for anyone working on a creative piece -- whether it be fiction, non-fiction, poetry, screen plays, etc. Participants will read through the pieces ahead of time, come up with helpful critiques, and discuss them at the meet up. Authors will need a copy of the critiques, whether through email or hard copy, so be prepared.",
+      "start": "2026-11-05T16:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17462186",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "author",
+        "poetry",
+        "fiction"
+      ]
+    },
+    {
+      "title": "Philosophy Book Club: The Agony of Eros",
+      "description": "Join for a convo about some big ideas from Byung-Chul Han. All are welcome!",
+      "start": "2026-11-05T18:00:00",
+      "end": "2026-11-05T19:30:00",
+      "location": "1700 N Humboldt St — 1700 North Humboldt Street, Denver, CO 80218",
+      "url": "https://www.eventbrite.com/e/philosophy-book-club-the-agony-of-eros-tickets-2003409406465",
+      "source": "Denver Book Society",
+      "extractor": "jsonld",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Quiet Reading Group",
+      "description": "Drop in for quiet reading with other adults. Bring a book from home or from our shelves.",
+      "start": "2026-11-05T18:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://go.dcl.org/event/14989563",
+      "source": "Douglas County Libraries",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "reading"
+      ]
+    },
+    {
+      "title": "Curl Up & Read with Cats!",
+      "description": "Book swap + adoptable cats! Join us for a cozy night of cat cuddles & books with Teddy Cat & Denver Book Swap Society.",
+      "start": "2026-11-05T18:00:00",
+      "end": "2026-11-05T19:30:00",
+      "location": "Teddy Cat Cafe — 39 East Florida Avenue, Denver, CO 80210",
+      "url": "https://www.eventbrite.com/e/curl-up-read-with-cats-tickets-1993623889721",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T16:51:06.673Z",
+      "matchedKeywords": [
+        "book*",
+        "swap"
+      ]
+    },
+    {
+      "title": "Mystery Loves Company",
+      "description": "Adults. Mystery lovers meet the first Thursday of each month to discuss a new book. Meets upstairs in the event hall.",
+      "start": "2026-11-05T18:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://go.dcl.org/event/14104941",
+      "source": "Douglas County Libraries",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Novel Strand ROMANCE Book Club",
+      "description": "Come hang out with us at Novel Strand for our monthly ROMANCE book club meet-up!",
+      "start": "2026-11-05T18:30:00",
+      "end": "2026-11-05T20:00:00",
+      "location": "Novel Strand Brewing Company — 305 1st ave, Denver, CO 80223",
+      "url": "https://www.eventbrite.com/e/novel-strand-romance-book-club-tickets-1992019014496",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T17:17:15.574Z",
+      "matchedKeywords": [
+        "book*",
+        "romance",
+        "novel"
+      ]
+    },
+    {
+      "title": "Great Books - Virtual Book Club",
+      "description": "Join Great Book Discussion group. Meets the 1st and 3rd Thursdays each month online.",
+      "start": "2026-11-05T19:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://go.dcl.org/event/17253533",
+      "source": "Douglas County Libraries",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Guilty Pleasure Book Club - GAME ON By Navessa Allen",
+      "description": "In person book club dedicated to dark and spicy romance novels.",
+      "start": "2026-11-05T19:00:00",
+      "end": "2026-11-05T20:00:00",
+      "location": "Belmar Library - Jefferson County Public Library — 555 South Allison Parkway, Lakewood, CO 80226",
+      "url": "https://www.eventbrite.com/e/guilty-pleasure-book-club-game-on-by-navessa-allen-tickets-2001401152724",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T16:51:06.673Z",
+      "matchedKeywords": [
+        "book*",
+        "romance",
+        "novel"
+      ]
+    },
+    {
+      "title": "Coffee & Coloring",
+      "description": "Come enjoy some adult coloring books, coffee, tea and other warm beverages.",
+      "start": "2026-11-06T11:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/17316180",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Books, Blends & Bling",
+      "description": "Bedazzle a cup or book cover, chat books, and enjoy a PHN blend on Nov. 6th.",
+      "start": "2026-11-06T18:00:00",
+      "end": "2026-11-06T21:00:00",
+      "location": "Park Hill Nutrition — 2855 Colorado Boulevard, Denver, CO 80207",
+      "url": "https://www.eventbrite.com/e/books-blends-bling-tickets-2003322154492",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T16:34:37.548Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Pop-Up Used Book Sale Kelver Library",
+      "description": "Browse for your next great read at our pop-up used book sale! Shop a selection of gently used books and media for all ages. Proceeds support library programs and services through The Friends of Arapahoe Libraries.",
+      "start": "2026-11-07T09:00:00",
+      "end": "2026-11-07T16:30:00",
+      "location": "Kelver Library",
+      "url": "https://arapahoelibraries.bibliocommons.com/events/6aac049aa5dbde002aa53faf",
+      "source": "Arapahoe Libraries",
+      "extractor": "bibliocommons",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "sale"
+      ]
+    },
+    {
+      "title": "Children's Book Festival",
+      "description": "Award-winning children's authors and illustrators will be featured in 30-minute sessions to share their newest books.",
+      "start": "2026-11-07T10:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17460440",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "author",
+        "book*"
+      ]
+    },
+    {
+      "title": "Booked for the Holidays",
+      "description": "Houseplants make wonderful gifts - and can brighten your own home for the season!",
+      "start": "2026-11-07T10:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://go.dcl.org/event/17268967",
+      "source": "Douglas County Libraries",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Comic-Con: Making it Scary!",
+      "description": "Would you like to learn to draw monsters? Children's author and illustrator Stan Yan will demonstrate how shapes, letters, numbers, and even words can be used to create scary characters. Ages 6-12.",
+      "start": "2026-11-07T12:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17632783",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "author"
+      ]
+    },
+    {
+      "title": "Panel for Educators and Librarians",
+      "description": "Award-winning authors and illustrators will come together in an engaging panel discussion in the Main Library Canyon Theater.",
+      "start": "2026-11-07T13:35:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17460814",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "author"
+      ]
+    },
+    {
+      "title": "Learn to Play Chess",
+      "description": "The Bookies is happy to host a chess meetup with David Costantino for people of all ages and levels. Never played chess before? Come learn to play! Already play? Come make new friends who love the game! Beginner lessons are $10 and registration is required. Experienced players can play casual or blitz games for free.",
+      "start": "2026-11-07T14:00:00",
+      "end": "2026-11-07T17:00:00",
+      "location": "The Bookies",
+      "url": "https://thebookies.com/events/4472220261107",
+      "source": "The Bookies",
+      "extractor": "bookmanager",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Steven J. Reese Live at Tattered Cover Colfax",
+      "description": "Join local author Steven J. Reese share about the his new radical guide to shelf-improvement: Read Your Color!",
+      "start": "2026-11-08T13:00:00",
+      "end": "2026-11-08T15:00:00",
+      "location": "Tattered Cover Colfax — 2526 East Colfax Avenue, Denver, CO 80206",
+      "url": "https://www.eventbrite.com/e/steven-j-reese-live-at-tattered-cover-colfax-tickets-2002921814063",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T17:17:15.574Z",
+      "matchedKeywords": [
+        "author"
+      ]
+    },
+    {
+      "title": "Sunday Afternoon Book Club",
+      "description": "Please join us for The Bookies Sunday Book Club in a relaxed, friendly environment. Held each first Sunday of the month, this is simply a space for book-lovers to gather, share their thoughts, and read good books. Everyone is welcome! November's book is Be Ready when the Luck Comes by Ina Garten.",
+      "start": "2026-11-08T13:30:00",
+      "end": "2026-11-08T15:00:00",
+      "location": "The Bookies",
+      "url": "https://thebookies.com/events/3191420261108",
+      "source": "The Bookies",
+      "extractor": "bookmanager",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "The Boozy Book Fair – Castle Rock Edition",
+      "description": "Early holiday shopping starts here. Give the gift of stories. Kick off your holiday shopping at The Boozy Book Fair™—where every purchase helps put books into the hands of local kids. Join us at Sinners & Saints, in partnership with Sudden Fiction Books, for a grown-up book fair featuring curated books, bookish gifts, craft cocktails, and plenty of N/A options. Shop with impact while finding meaningful gifts for every reader on your list (or yourself!). 🎟 Tickets • $10 includes one drink 💛 Shop With Impact Sinners & Saints is donating 10% of sales, and Sudden Fiction is donating 10% of book and gift sales to Burning Through Pages. Burning Through Pages is a Denver-based youth literacy nonprofit empowering young minds through peer-led book clubs, Teacher Support Grants, and community library builds.",
+      "start": "2026-11-08T14:00:00",
+      "end": "2026-11-08T18:00:00",
+      "location": "Sinners & Saints — 221 Perry Street, Castle Rock, CO, 80104",
+      "url": "https://burningthroughpages.org/event/the-boozy-book-fair-castle-rock-edition-2/",
+      "source": "Burning Through Pages",
+      "extractor": "tribe",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "sale",
+        "fiction"
+      ]
+    },
+    {
+      "title": "Beyond Academia Free Skool \"Second Sunday\" Poetry Class",
+      "description": "We invite you to join us for our monthly second Sunday poetry class! Since 2018, Beyond Academia has offered a monthly Socratic seminar style poetry class at the Boulder Public Library. Each class includes a mix of discussion questions, writing prompts, and experiential exercises. Every month features a different teacher with a unique lesson plan aligned with BAFS' Curriculum Tracks - Poetic Constructs (poetic forms and techniques) Ontological Engineering (developing one",
+      "start": "2026-11-08T14:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17460839",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "poetry"
+      ]
+    },
+    {
+      "title": "Book Swap @ Denver Milk Market (Denver)",
+      "description": "Denver Book Swap Society hosts book swap events for people to pass along their books in exchange for new (to them) books to take home.",
+      "start": "2026-11-08T15:00:00",
+      "end": "2026-11-08T16:30:00",
+      "location": "Denver Milk Market — 1800 Wazee Street #Suite 100, Denver, CO 80202",
+      "url": "https://www.eventbrite.com/e/book-swap-denver-milk-market-denver-tickets-2001000794241",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "swap",
+        "exchange"
+      ]
+    },
+    {
+      "title": "Reading Buddies at Meadows",
+      "description": "Reading Buddies program helps children build positive relationships with reading and writing.",
+      "start": "2026-11-09T16:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17462143",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Grab & Go: Brain Games (Denver Metro)",
+      "description": "Pick up your craft supplies at Koelbel Library or Smoky Hill Library! Take the fun with you! This month’s kit features brain-teasing puzzles, games, and a hidden picture book for fun on the go. Registration includes a spot in the virtual event and reserves your craft kit at one of our scheduled curbside pickup locations. Supplies are limited, maximum 4 per household. Must register by November 6. Have questions about attending an online event? Visit Online Event FAQs .",
+      "start": "2026-11-09T16:30:00",
+      "end": "2026-11-09T17:00:00",
+      "location": null,
+      "url": "https://arapahoelibraries.bibliocommons.com/events/6abe678ae8cf1c005cb01a51",
+      "source": "Arapahoe Libraries",
+      "extractor": "bibliocommons",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Book Rant PowerPoint Party",
+      "description": "Share your thoughts on a bookish topic of your choice in a 5-minute PowerPoint presentation.",
+      "start": "2026-11-09T17:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17537551",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Know Thy Shelf",
+      "description": "Adults meet the second Monday of each month to discuss graphic novels and fiction.",
+      "start": "2026-11-09T18:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://go.dcl.org/event/14646659",
+      "source": "Douglas County Libraries",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "fiction",
+        "novel"
+      ]
+    },
+    {
+      "title": "Highlands Ranch Book Club",
+      "description": "Adults meet monthly to discuss fiction and nonfiction titles. Meets upstairs in the Event Hall. This club is filled to capacity.",
+      "start": "2026-11-09T18:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://go.dcl.org/event/14091009",
+      "source": "Douglas County Libraries",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "fiction"
+      ]
+    },
+    {
+      "title": "Romance Discovery Book Club - Carmilla by Sheridan Le Fanu",
+      "description": "Spicy Librarian presents a romance discovery book club. Each month will be a different book from a different romance sub-genre.",
+      "start": "2026-11-09T18:30:00",
+      "end": "2026-11-09T19:30:00",
+      "location": "Spicy Librarian — 3040 Blake Street #110, Denver, CO 80205",
+      "url": "https://www.eventbrite.com/e/romance-discovery-book-club-carmilla-by-sheridan-le-fanu-tickets-2001072610044",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "romance"
+      ]
+    },
+    {
+      "title": "English 5 Class",
+      "description": "Advanced English class for adult speakers of other languages. The focus is on improving reading, writing, oral language skills and understanding social and cultural topics.",
+      "start": "2026-11-10T10:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17461172",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Tallyn's Reach Library For All",
+      "description": "A weekly, themed library experience for adults with I/DD and caregivers. Build literacy and life skills through group reading, writing, games, and community knowledge-sharing.",
+      "start": "2026-11-10T10:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/14893877",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Digital Literacy Class: Libby, Hoopla, and Kanopy (Oh My!)",
+      "description": "Get more out of your library card. Learn how to maneuver around our free digital services Hoopla, Libby, and Kanopy for eBooks, audiobooks, movies, music, and so much more.",
+      "start": "2026-11-10T13:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17494286",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Discover Your Next Great Read on Social Media",
+      "description": "Join the library every Tuesday on Instagram and Facebook to discover great books!",
+      "start": "2026-11-10T13:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17462429",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Diversity Book Club",
+      "description": "Read books by diverse authors and discuss them over tea and coffee. Diversity Book Club meets the second Tuesday of the month.",
+      "start": "2026-11-10T14:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17461549",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "author",
+        "book*"
+      ]
+    },
+    {
+      "title": "Prudence Marsh is Not a Nobody Anymore Book Release Party",
+      "description": "Book Release Party for Prudence Marsh is Not a Nobody Anymore",
+      "start": "2026-11-10T17:30:00",
+      "end": "2026-11-10T21:00:00",
+      "location": "Novel Strand Brewing Company — 305 West 1st Avenue, Denver, CO 80223",
+      "url": "https://www.eventbrite.com/e/prudence-marsh-is-not-a-nobody-anymore-book-release-party-tickets-2001012270567",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Виктор Шендерович. ДЕРЕВНЯ ГАДЮКИНО: ПРОГНОЗ ПОГОДЫ/Victor Shenderovich",
+      "description": "\"Деревня Гадюкино\" давно вошла в российский фольклор. Автор этой миниатюры, Виктор Шендерович, с тех пор успел стать телезвездой, маргиналом, \"иноагентом\" и, наконец, террористом... 10 ноября он выступит в новом пространстве \"The Space by Arapahoe libraries\" с новыми и старыми (в том числе малоизвестными) текстами про родную \"деревню\". Затем - прямое общение со зрителями, ответы на вопросы. По окончании вечера - автограф-сессия с презентацией новых книг Виктора Шендеровича. Join writer and satirist Viktor Shenderovich for an evening of new and classic works, followed by a Q&A and book signing. Russian language event.",
+      "start": "2026-11-10T18:00:00",
+      "end": "2026-11-10T20:00:00",
+      "location": "The Space by Arapahoe Libraries",
+      "url": "https://arapahoelibraries.bibliocommons.com/events/6abe7e76de300e00451768ed",
+      "source": "Arapahoe Libraries",
+      "extractor": "bibliocommons",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "signing"
+      ]
+    },
+    {
+      "title": "Reading Buddies at Main",
+      "description": "Reading Buddies program helps children build positive relationships with reading and writing.",
+      "start": "2026-11-11T16:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17461644",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Fiction Fusion",
+      "description": "Adults. Come discuss a variety of blended genre fiction which combines elements from mystery, romance, fantasy, horror, science fiction, or historical fiction.",
+      "start": "2026-11-11T18:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://go.dcl.org/event/14881566",
+      "source": "Douglas County Libraries",
+      "extractor": "rss",
+      "firstSeen": "2026-10-19T16:34:37.548Z",
+      "matchedKeywords": [
+        "fiction",
+        "romance"
+      ]
+    },
+    {
+      "title": "Candle Making & Book Swap @ Paddywax Candle Bar (Denver)",
+      "description": "Enjoy a cozy night of book swapping and candle making. Discover new reads, craft a custom candle, and unwind with snacks and good company.",
+      "start": "2026-11-11T18:00:00",
+      "end": "2026-11-11T20:00:00",
+      "location": "Paddywax Candle Bar — 2654 Walnut Street #Suite 520, Denver, CO 80205",
+      "url": "https://www.eventbrite.com/e/candle-making-book-swap-paddywax-candle-bar-denver-tickets-1993623767355",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "swap"
+      ]
+    },
+    {
+      "title": "Book Club to Remake the World",
+      "description": "This book club is a post-colonial-futuristic-literary discussion portal to activate our imagination to “reworld” the world.",
+      "start": "2026-11-11T18:00:00",
+      "end": "2026-11-11T19:30:00",
+      "location": "The Shop at MATTER — 2114 Market Street, Denver, CO 80205",
+      "url": "https://www.eventbrite.com/e/book-club-to-remake-the-world-tickets-1977106932056",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T16:51:06.673Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Queer Romance Book Club",
+      "description": "Join fellow romance readers to celebrate stories of queer joy and love!",
+      "start": "2026-11-11T18:00:00",
+      "end": "2026-11-11T19:30:00",
+      "location": "1909 9th Street, Boulder, CO 80302",
+      "url": "https://www.eventbrite.com/e/queer-romance-book-club-tickets-1997390062445",
+      "source": "The Romance Section",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T16:34:37.548Z",
+      "matchedKeywords": [
+        "book*",
+        "romance"
+      ]
+    },
+    {
+      "title": "Reading Buddies at NoBo",
+      "description": "Reading Buddies program helps children build positive relationships with reading and writing.",
+      "start": "2026-11-12T16:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17461844",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Great Indian Novel",
+      "description": "We read books written in English, about the history, culture and contemporary life in the Indian subcontinent. Many of the authors are Indian or belong to the Indian diaspora across the world. The books we read enhance our understanding of ways of living that may be very different from ours, and yet represent the universality of human experience. Some of the authors we read visit Boulder during the Jaipur Literature Festival at the library. For more information or to join online please contact:",
+      "start": "2026-11-12T16:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17460600",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "author",
+        "book*",
+        "novel"
+      ]
+    },
+    {
+      "title": "Meet the Author Kristin Koval",
+      "description": "An Evening with “Penitence” Author Kristin Koval Join us for an evening with Colorado author Kristin Koval, former attorney and author of the award‑winning debut novel “Penitence. ” This literary thriller delves into the complexities of familial loyalty, the pursuit of redemption, and the transformative power of forgiveness. Don’t miss this insightful author talk and book signing.",
+      "start": "2026-11-12T18:30:00",
+      "end": "2026-11-12T19:30:00",
+      "location": "Lafayette Public Library — 775 Baseline Road, Lafayette, 80026",
+      "url": "https://thereadqueen.com/event/meet-the-author-kristin-koval/",
+      "source": "Read Queen Bookstore",
+      "extractor": "tribe",
+      "firstSeen": "2026-10-19T16:34:37.548Z",
+      "matchedKeywords": [
+        "author",
+        "book*",
+        "signing",
+        "novel"
+      ]
+    },
+    {
+      "title": "Open Mic Night",
+      "description": "Join us for an open mic night at Koelbel Library in the Forum Theater! Poetry, music and comedy are all encouraged. Sign up for a five-minute slot upon arrival. Light refreshments will be provided. Please register yourself and guests online to reserve seats in the room.",
+      "start": "2026-11-12T18:30:00",
+      "end": "2026-11-12T20:00:00",
+      "location": "Koelbel Library",
+      "url": "https://arapahoelibraries.bibliocommons.com/events/6abe7e67e06996003a807de5",
+      "source": "Arapahoe Libraries",
+      "extractor": "bibliocommons",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "poetry"
+      ]
+    },
+    {
+      "title": "The Red Chair Bookshop 3-Day Used Book Sale",
+      "description": "The Red Chair Bookshop 3-Day Used Book Sale The Red Chair Bookshop 3-Day Used Book Sale Returns to Park View! The Denver Public Library Friends Foundation is thrilled to announce the return of our beloved Central Library Used Book Sale ! Don’t miss this chance to browse thousands of gently loved books, CDs, DVDs, and more at unbeatable prices. Event Details 📍 Location: Park View at the Denver Central Library 📅 Dates: Friday, November 13 : 10 a.m.–4:30 p.m. Saturday, November 14 : 11 a.m.–4:30 p.m. Sunday, November 15 : 11 a.m.–3 p.m. ($15 Bag Sale!) 🛍️ Bring Your Own Tote Bag! We encourage all shoppers to bring their own bags to carry their treasures. Special Opportunities Bag Sale: Fill a tote bag with books for one low price. Volunteer with Us: Help make this event a success! Contact Andrea ahamilton@denverlibrary.org Corporate Teams: Interested in volunteering as a group? Contact Liz at lguillebaud@denverlibrary.org to schedule your shift. Proceeds from the sale directly support the Denver Public Library Friends Foundation, helping fund the programs and services that make our library a cornerstone of our community. Red Chair Bookshop will be closed during the sale. Head across Schlessman Hall to the Park View space to shop our inventory at the mega sale! 📚 Mark your calendar and join us for this exciting celebration of books and community! Have questions? Please contact Andrea Hamilton, Manager of Philanthropy—Used Book Sales ahamilton@denverlibrary.org .",
+      "start": "2026-11-13T10:00:00",
+      "end": "2026-11-15T15:00:00",
+      "location": "Central Library — 10 W 14th Avenue Parkway, Denver, CO, 80204",
+      "url": "https://www.dplfriends.org/event/the-red-chair-bookshop-3-day-used-book-sale-3/",
+      "source": "Denver Public Library Friends",
+      "extractor": "tribe",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "sale"
+      ]
+    },
+    {
+      "title": "C.A.F.E. Cancer and Community: A Forum for Exchange",
+      "description": "Join CU's Cancer Center. Pull up a chair. Let's talk cancer research, together.",
+      "start": "2026-11-13T10:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/15407182",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "exchange"
+      ]
+    },
+    {
+      "title": "Jamie Siebrase Live at Tattered Cover Aspen Grove",
+      "description": "Join us as we celebrate local author Jamie Siebrase's newest book: Trail Therapy: Finding Wholeness in Nature",
+      "start": "2026-11-13T18:00:00",
+      "end": "2026-11-13T19:30:00",
+      "location": "Tattered Cover Aspen Grove — 7301 South Santa Fe Drive #240, Littleton, CO 80120",
+      "url": "https://www.eventbrite.com/e/jamie-siebrase-live-at-tattered-cover-aspen-grove-tickets-2002968376332",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T17:17:15.574Z",
+      "matchedKeywords": [
+        "author",
+        "book*"
+      ]
+    },
+    {
+      "title": "Western Views Book Club",
+      "description": "The group continues the tradition of the Saturday Women of the West Group with a slightly wider range of book choices.",
+      "start": "2026-11-14T10:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17461849",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Books at the Bar",
+      "description": "Title: \"You Didn't Hear This from Me: (Mostly) True Notes on Gossip\" by Kelsey McKinney Location: A Bit Twisted Brewery & BBQ - 3095 S Peoria St # B, Aurora, CO 80014",
+      "start": "2026-11-14T13:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/17603304",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Silent Book Club",
+      "description": "We're proud hosts of Silent Book Club! Join us at The Shop at MATTER to read in quiet camaraderie.",
+      "start": "2026-11-14T13:00:00",
+      "end": "2026-11-14T15:00:00",
+      "location": "The Shop at MATTER — 2114 Market Street, Denver, CO 80205",
+      "url": "https://www.eventbrite.com/e/silent-book-club-tickets-1977105804684",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T16:51:06.673Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "LGBTQ+ Book Club",
+      "description": "Read and discuss queer stories in a variety of genres! November's book: Bury Our Bones in the Midnight Soil by V. E. Schwab.",
+      "start": "2026-11-14T15:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/17336536",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Book Rebinding Workshop w/ Bookish.and.Blissful",
+      "description": "Come with a paperback, and leave with a book you actually want to display! I promise to hold your hand every step of the way!",
+      "start": "2026-11-15T12:00:00",
+      "end": "2026-11-15T15:30:00",
+      "location": "EdCor - Medical Education & Training — 195 South Union Boulevard #Suite 200, Lakewood, CO 80228",
+      "url": "https://www.eventbrite.com/e/book-rebinding-workshop-w-bookishandblissful-tickets-2001777996875",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Book Fair at Rails End Brewery",
+      "description": "Grab a brew and browse awesome books at the Book Fair happening live at Rails End Brewery!",
+      "start": "2026-11-15T12:00:00",
+      "end": "2026-11-15T16:00:00",
+      "location": "Rails End Beer Company — 11625 Reed Court #B, Broomfield, CO 80020",
+      "url": "https://www.eventbrite.com/e/book-fair-at-rails-end-brewery-tickets-2002620586082",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T17:17:15.574Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Book Swap @ 4 Noses Brewing (North Metro-Denver)",
+      "description": "Denver Book Swap Society hosts book swap events for people to pass along their books in exchange for new (to them) books to take home.",
+      "start": "2026-11-15T12:30:00",
+      "end": "2026-11-15T14:00:00",
+      "location": "4 Noses Brewing Company — 4040 Dahlia Street, Denver, CO 80216",
+      "url": "https://www.eventbrite.com/e/book-swap-4-noses-brewing-north-metro-denver-tickets-2002639253918",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "swap",
+        "exchange"
+      ]
+    },
+    {
+      "title": "Fetish: Smash Taboos and Celebrate What Turns You On",
+      "description": "Celebrate the launch of the book Fetish: Smash Taboos and Celebrate What Turns You On with Niki Fainbloom hosted by The Romance Section.",
+      "start": "2026-11-15T18:30:00",
+      "end": "2026-11-15T20:00:00",
+      "location": "1909 9th Street, Boulder, CO 80302",
+      "url": "https://www.eventbrite.com/e/fetish-smash-taboos-and-celebrate-what-turns-you-on-tickets-2002590670604",
+      "source": "The Romance Section",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "romance"
+      ]
+    },
+    {
+      "title": "Reading Buddies at Meadows",
+      "description": "Reading Buddies program helps children build positive relationships with reading and writing.",
+      "start": "2026-11-16T16:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17461465",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-19T16:34:37.548Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Spoilers Ahead: Prepare for Sunrise on the Reaping",
+      "description": "Explore the world of Panem and its characters, discuss the books and upcoming movie release while snacking, and test your knowledge of the Hunger Games franchise. May the odds be ever in your favor.",
+      "start": "2026-11-16T17:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17531030",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-19T16:34:37.548Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Boulder Cosmology Group Online",
+      "description": "We discuss about six books per year, with 1-4 meetings per book. We do not choose the books far in advance, as each book raises new questions that we want to study.",
+      "start": "2026-11-16T18:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17494593",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-19T16:34:37.548Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Guilty Pleasure Book Club - GAME ON By Navessa Allen",
+      "description": "In person book club dedicated to dark and spicy romance novels.",
+      "start": "2026-11-16T19:00:00",
+      "end": "2026-11-16T20:00:00",
+      "location": "10200 W 20th Ave — 10200 West 20th Avenue, Lakewood, CO 80215",
+      "url": "https://www.eventbrite.com/e/guilty-pleasure-book-club-game-on-by-navessa-allen-tickets-2001401204880",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T17:17:15.574Z",
+      "matchedKeywords": [
+        "book*",
+        "romance",
+        "novel"
+      ]
+    },
+    {
+      "title": "English 5 Class",
+      "description": "Advanced English class for adult speakers of other languages. The focus is on improving reading, writing, oral language skills and understanding social and cultural topics.",
+      "start": "2026-11-17T10:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17461731",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-19T16:34:37.548Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Tallyn's Reach Library For All",
+      "description": "A weekly, themed library experience for adults with I/DD and caregivers. Build literacy and life skills through group reading, writing, games, and community knowledge-sharing.",
+      "start": "2026-11-17T10:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/14893878",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Discover Your Next Great Read on Social Media",
+      "description": "Join the library every Tuesday on Instagram and Facebook to discover great books!",
+      "start": "2026-11-17T13:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17460339",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-19T16:34:37.548Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Fiction Book Club: Book TBD",
+      "description": "Discussion of a fiction pick by staff. Show your $5 ticket at the counter to be redeemed on a drink or snack purchase!",
+      "start": "2026-11-17T18:00:00",
+      "end": "2026-11-17T19:30:00",
+      "location": "1700 N Humboldt St — 1700 North Humboldt Street, Denver, CO 80218",
+      "url": "https://www.eventbrite.com/e/fiction-book-club-book-tbd-tickets-2003409877875",
+      "source": "Denver Book Society",
+      "extractor": "jsonld",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "fiction"
+      ]
+    },
+    {
+      "title": "Boulder Writer's Alliance",
+      "description": "This is for anyone working on a creative piece -- whether it be fiction, non-fiction, poetry, screen plays, etc. Participants will read through the pieces ahead of time, come up with helpful critiques, and discuss them at the meet up. Authors will need a copy of the critiques, whether through email or hard copy, so be prepared. This event is not hosted by the Boulder Public Library and may be updated, changed, or canceled with little notice.",
+      "start": "2026-11-18T10:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17462480",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-19T16:34:37.548Z",
+      "matchedKeywords": [
+        "author",
+        "poetry",
+        "fiction"
+      ]
+    },
+    {
+      "title": "Daytime Booklovers Book Club",
+      "description": "Join us the 3rd Wednesday of each month for a lively book discussion. November's book: TBD",
+      "start": "2026-11-18T10:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/14502138",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Reading Buddies at Main",
+      "description": "Reading Buddies program helps children build positive relationships with reading and writing.",
+      "start": "2026-11-18T16:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17460849",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-19T16:34:37.548Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Shelf Talkers Book Club",
+      "description": "Great stories lead to great conversations. Share perspectives, hear new insights, and connect with fellow readers in a lively book discussion. Book of the month: Will be announced at October meetup",
+      "start": "2026-11-18T17:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://calendar.boulderlibrary.org/event/17494897",
+      "source": "Boulder Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-19T16:34:37.548Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Early Birds Book Club and Social",
+      "description": "Join us each month for refreshments, conversation, and to discuss books we've read!",
+      "start": "2026-11-19T09:00:00",
+      "end": "2026-11-19T10:30:00",
+      "location": "Southglenn Library",
+      "url": "https://arapahoelibraries.bibliocommons.com/events/6a96f02e392e9c02993d3ddb",
+      "source": "Arapahoe Libraries",
+      "extractor": "bibliocommons",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "MATTERbeta Book Club",
+      "description": "A vital book club to include our community in our bookstore's curation.",
+      "start": "2026-11-19T18:00:00",
+      "end": "2026-11-19T19:30:00",
+      "location": "The Shop at MATTER — 2114 Market Street, Denver, CO 80205",
+      "url": "https://www.eventbrite.com/e/matterbeta-book-club-tickets-1977106859840",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T16:51:06.673Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Sapphic Salon Book Club",
+      "description": "Join us for our sapphic salon book club! We'll be discussing a new book each month. No RSVP needed. Every third Thursday of the month, at 6:30 pm. November's book is Hexcellent Chance to Fall in Love by Ann Rose",
+      "start": "2026-11-19T18:30:00",
+      "end": "2026-11-19T20:00:00",
+      "location": "Bookies Bookstore",
+      "url": "https://thebookies.com/events/6435120261119",
+      "source": "The Bookies",
+      "extractor": "bookmanager",
+      "firstSeen": "2026-10-19T16:34:37.548Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Dark Romance Book Club - Haunting Adeline by H.D. Carlton",
+      "description": "Join Spicy Librarian once a month to discuss dark romance books.",
+      "start": "2026-11-19T18:30:00",
+      "end": "2026-11-19T19:30:00",
+      "location": "Spicy Librarian — 3040 Blake Street #110, Denver, CO 80205",
+      "url": "https://www.eventbrite.com/e/dark-romance-book-club-haunting-adeline-by-hd-carlton-tickets-1999064853791",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "romance"
+      ]
+    },
+    {
+      "title": "C.A.F.E. Series: Cancer and Community a Forum for Exchange",
+      "description": "Pull up a chair. Lets talk cancer research together, with CUs Cancer Center.",
+      "start": "2026-11-20T10:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/17322481",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "exchange"
+      ]
+    },
+    {
+      "title": "Coffee & Coloring",
+      "description": "Come enjoy some adult coloring books, coffee, tea and other warm beverages.",
+      "start": "2026-11-20T11:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/17316181",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Mysteries with a Cup of Tea Bookclub",
+      "description": "A Cozy Mystery Book Club",
+      "start": "2026-11-20T12:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/17504924",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Native Plant Seed Swap",
+      "description": "Join us for a free community event bring your collected native seeds, or just your curiosity, and swap them with fellow gardeners, naturalists and plant enthusiasts.",
+      "start": "2026-11-21T10:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/15270767",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "swap"
+      ]
+    },
+    {
+      "title": "Learn to Play Chess",
+      "description": "The Bookies is happy to host a chess meetup with David Costantino for people of all ages and levels. Never played chess before? Come learn to play! Already play? Come make new friends who love the game! Beginner lessons are $10 and registration is required. Experienced players can play casual or blitz games for free.",
+      "start": "2026-11-21T14:00:00",
+      "end": "2026-11-21T17:00:00",
+      "location": "The Bookies",
+      "url": "https://thebookies.com/events/4472220261121",
+      "source": "The Bookies",
+      "extractor": "bookmanager",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Book Swap & Sake 101",
+      "description": "Swap books, discover Japanese sake, enjoy poetry, and explore the freedom to read at a Warm Cookies Civic House Party!",
+      "start": "2026-11-21T14:00:00",
+      "end": "2026-11-21T16:00:00",
+      "location": "4045 N Pecos St — 4045 North Pecos Street, Denver, CO 80211",
+      "url": "https://www.eventbrite.com/e/book-swap-sake-101-tickets-2003478602432",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T17:17:15.574Z",
+      "matchedKeywords": [
+        "book*",
+        "poetry",
+        "swap"
+      ]
+    },
+    {
+      "title": "Pitch-A-Book Night | Denver",
+      "description": "Pitch a book you loved, hear ones you'd never pick up, and meet Denver readers who are just as passionate about books as you are.",
+      "start": "2026-11-22T17:00:00",
+      "end": "2026-11-22T20:00:00",
+      "location": "Fiction Beer Company — 7101 East Colfax Avenue, Denver, CO 80220",
+      "url": "https://www.eventbrite.com/e/pitch-a-book-night-denver-tickets-2002667594686",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T16:51:06.673Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Tallyn's Reach Library For All",
+      "description": "A weekly, themed library experience for adults with I/DD and caregivers. Build literacy and life skills through group reading, writing, games, and community knowledge-sharing.",
+      "start": "2026-11-24T10:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/14893879",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Book of the Month Club",
+      "description": "Try out a new book and join us for tea and snacks to tell us what you think! November: The Whistler\" by Ann Patchett",
+      "start": "2026-11-24T12:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/16894840",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Afternoon Activity: BINGO",
+      "description": "Play BINGO and win books!",
+      "start": "2026-11-24T16:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/17643466",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Book Swap @ Launch Pad Brewery (Aurora)",
+      "description": "Aurora Book Swap Society hosts book swap events for people to pass along their books in exchange for new (to them) books to take home.",
+      "start": "2026-11-28T17:00:00",
+      "end": "2026-11-28T19:00:00",
+      "location": "Launch Pad Brewery — 884 South Buckley Road, Aurora, CO 80017",
+      "url": "https://www.eventbrite.com/e/book-swap-launch-pad-brewery-aurora-tickets-2002080707290",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "swap",
+        "exchange"
+      ]
+    },
+    {
+      "title": "Tallyn's Reach Library For All",
+      "description": "A weekly, themed library experience for adults with I/DD and caregivers. Build literacy and life skills through group reading, writing, games, and community knowledge-sharing.",
+      "start": "2026-12-01T10:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/14893880",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Non-Fiction Book Club",
+      "description": "Join us the 1st Tuesday of every month for a lively book discussion. December's book: Plato and a Platypus Walk Into a Bar, Cathcart & Klein",
+      "start": "2026-12-01T13:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/14502658",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "fiction"
+      ]
+    },
+    {
+      "title": "Citizenship Study Group",
+      "description": "Join a study group to learn about the citizenship process. Explore free online and library resources for civics knowledge plus increase your reading and writing skills. Note: The study group is designed to help advanced English learners prepare for citizenship interviews. Staff are unable to provide legal advice, assistance with completing USCIS forms or teach English to those with beginner or intermediate knowledge.",
+      "start": "2026-12-01T13:30:00",
+      "end": "2026-12-01T15:00:00",
+      "location": "Eloise May Library",
+      "url": "https://arapahoelibraries.bibliocommons.com/events/6957fa9c1e64afd01e51eae7",
+      "source": "Arapahoe Libraries",
+      "extractor": "bibliocommons",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Castlewood Afternoon Book Club",
+      "description": "We'll talk about Look Again by Lisa Scottoline. The list of books for the year is here.",
+      "start": "2026-12-01T14:00:00",
+      "end": "2026-12-01T15:00:00",
+      "location": "Castlewood Library",
+      "url": "https://arapahoelibraries.bibliocommons.com/events/6abe7f7ce06996003a807e79",
+      "source": "Arapahoe Libraries",
+      "extractor": "bibliocommons",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Tallyn's Reach Cookbook Club",
+      "description": "Join our monthly cookbook potluck! This month, pick a recipe from Andre Fowles' My Jamaican Table, make it at home, and join us to share delicious food and conversation.",
+      "start": "2026-12-01T17:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/16089036",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Romance Fantasy Book Club - Book Swap",
+      "description": "Spicy Librarian presents a romance fantasy book club. Each month will be a different book.",
+      "start": "2026-12-01T18:30:00",
+      "end": "2026-12-01T19:30:00",
+      "location": "Spicy Librarian — 3040 Blake Street #110, Denver, CO 80205",
+      "url": "https://www.eventbrite.com/e/romance-fantasy-book-club-book-swap-tickets-1991736688050",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "swap",
+        "romance"
+      ]
+    },
+    {
+      "title": "Learn to Play Chess",
+      "description": "The Bookies is happy to host a chess meetup with David Costantino for people of all ages and levels. Never played chess before? Come learn to play! Already play? Come make new friends who love the game! Beginner lessons are $10 and registration is required. Experienced players can play casual or blitz games for free.",
+      "start": "2026-12-05T14:00:00",
+      "end": "2026-12-05T17:00:00",
+      "location": "The Bookies",
+      "url": "https://thebookies.com/events/4472220261205",
+      "source": "The Bookies",
+      "extractor": "bookmanager",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Romance Discovery Book Club - Overdue by Stephanie Perkins",
+      "description": "Spicy Librarian presents a romance discovery book club. Each month will be a different book from a different romance sub-genre.",
+      "start": "2026-12-07T18:30:00",
+      "end": "2026-12-07T19:30:00",
+      "location": "Spicy Librarian — 3040 Blake Street, #110, Denver, CO 80205",
+      "url": "https://www.eventbrite.com/e/romance-discovery-book-club-overdue-by-stephanie-perkins-tickets-2003364163141",
+      "source": "Spicy Librarian / Romance Discovery",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "romance"
+      ]
+    },
+    {
+      "title": "Smoky Hill Evening Book Club",
+      "description": "We'll talk about The Correspondent by Virginia Evans. Our list of books for the year is here.",
+      "start": "2026-12-07T19:00:00",
+      "end": "2026-12-07T20:00:00",
+      "location": "Smoky Hill Library",
+      "url": "https://arapahoelibraries.bibliocommons.com/events/6abe7f77e06996003a807e73",
+      "source": "Arapahoe Libraries",
+      "extractor": "bibliocommons",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Tallyn's Reach Library For All",
+      "description": "A weekly, themed library experience for adults with I/DD and caregivers. Build literacy and life skills through group reading, writing, games, and community knowledge-sharing.",
+      "start": "2026-12-08T10:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/14893881",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Holiday Pottery Painting & Book Swap (Denver)",
+      "description": "Denver Book Swap Society hosts book swap events for people to pass along their books in exchange for new (to them) books to take home.",
+      "start": "2026-12-09T18:00:00",
+      "end": "2026-12-09T21:00:00",
+      "location": "Glaze & Phase — 5174 South Broadway, Englewood, CO 80113",
+      "url": "https://www.eventbrite.com/e/holiday-pottery-painting-book-swap-denver-tickets-1997460886281",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "swap",
+        "exchange"
+      ]
+    },
+    {
+      "title": "Mystery Book Club",
+      "description": "We will be discussing our favorite books of the year! You are welcome, but not obligated, to bring a treat to share!",
+      "start": "2026-12-09T18:30:00",
+      "end": "2026-12-09T20:00:00",
+      "location": "Koelbel Library",
+      "url": "https://arapahoelibraries.bibliocommons.com/events/6abe7f729abb62002c6b7495",
+      "source": "Arapahoe Libraries",
+      "extractor": "bibliocommons",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Book Gifting Party",
+      "description": "Come wrap gently used books for the bookworm in your life. Decorate the packages with stickers, stamps, and ribbon!",
+      "start": "2026-12-10T16:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/17639450",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "C.A.F.E. Cancer and Community. A Forum for Exchange",
+      "description": "Join CU's Cancer Center. Pull up a chair. Let's talk cancer research, together.",
+      "start": "2026-12-11T10:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/15407257",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "exchange"
+      ]
+    },
+    {
+      "title": "LGBTQ+ Book Club",
+      "description": "Read and discuss queer stories in a variety of genres! December's book: We Could Be So Good by Cat Sebastian.",
+      "start": "2026-12-12T15:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/17555479",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Tallyn's Reach Library For All",
+      "description": "A weekly, themed library experience for adults with I/DD and caregivers. Build literacy and life skills through group reading, writing, games, and community knowledge-sharing.",
+      "start": "2026-12-15T10:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/14893882",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Early Birds Book Club and Social",
+      "description": "Join us each month for refreshments, conversation, and to discuss books we've read!",
+      "start": "2026-12-17T09:00:00",
+      "end": "2026-12-17T10:30:00",
+      "location": "Southglenn Library",
+      "url": "https://arapahoelibraries.bibliocommons.com/events/6abe7f70e06996003a807e6b",
+      "source": "Arapahoe Libraries",
+      "extractor": "bibliocommons",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Holiday Book Flood",
+      "description": "Partake in the classic Icelandic tradition by quietly reading a cozy story together with some hot chocolate!",
+      "start": "2026-12-17T16:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/17639464",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "reading"
+      ]
+    },
+    {
+      "title": "Dark Romance Book Club - Beautiful Venom by Rina Kent",
+      "description": "Join Spicy Librarian once a month to discuss dark romance books.",
+      "start": "2026-12-17T18:30:00",
+      "end": "2026-12-17T19:30:00",
+      "location": "Spicy Librarian — 3040 Blake Street #110, Denver, CO 80205",
+      "url": "https://www.eventbrite.com/e/dark-romance-book-club-beautiful-venom-by-rina-kent-tickets-2002250147089",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T16:34:37.548Z",
+      "matchedKeywords": [
+        "book*",
+        "romance"
+      ]
+    },
+    {
+      "title": "C.A.F.E. Series: Cancer and Community a Forum for Exchange",
+      "description": "Pull up a chair. Lets talk cancer research together, with CUs Cancer Center.",
+      "start": "2026-12-18T10:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/17322492",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "exchange"
+      ]
+    },
+    {
+      "title": "Coffee & Coloring",
+      "description": "Come enjoy some adult coloring books, coffee, tea and other warm beverages.",
+      "start": "2026-12-18T11:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/17491579",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Learn to Play Chess",
+      "description": "The Bookies is happy to host a chess meetup with David Costantino for people of all ages and levels. Never played chess before? Come learn to play! Already play? Come make new friends who love the game! Beginner lessons are $10 and registration is required. Experienced players can play casual or blitz games for free .",
+      "start": "2026-12-19T14:00:00",
+      "end": "2026-12-19T17:00:00",
+      "location": "The Bookies",
+      "url": "https://thebookies.com/events/5792420261219",
+      "source": "The Bookies",
+      "extractor": "bookmanager",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Tallyn's Reach Library For All",
+      "description": "A weekly, themed library experience for adults with I/DD and caregivers. Build literacy and life skills through group reading, writing, games, and community knowledge-sharing.",
+      "start": "2026-12-22T10:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/14893883",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Tallyn's Reach Library For All",
+      "description": "A weekly, themed library experience for adults with I/DD and caregivers. Build literacy and life skills through group reading, writing, games, and community knowledge-sharing.",
+      "start": "2026-12-29T10:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/14893884",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Tallyn's Reach Library For All",
+      "description": "A weekly, themed library experience for adults with I/DD and caregivers. Build literacy and life skills through group reading, writing, games, and community knowledge-sharing.",
+      "start": "2027-01-05T10:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/17626283",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "reading"
+      ]
+    },
+    {
+      "title": "Non-Fiction Book Club",
+      "description": "Join us the 1st Tuesday of every month for a lively book discussion.",
+      "start": "2027-01-05T13:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/17135446",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "fiction"
+      ]
+    },
+    {
+      "title": "Tallyn's Reach Cookbook Club",
+      "description": "Join our monthly cookbook potluck! This month, pick a recipe from [AUTHOR]'s [BOOK], make it at home, and join us to share delicious food and conversation.",
+      "start": "2027-01-05T17:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/17626442",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "author",
+        "book*"
+      ]
+    },
+    {
+      "title": "Book Rebinding Workshop w/ Bookish.and.Blissful",
+      "description": "Come with a paperback, and leave with a book you actually want to display! I promise to hold your hand every step of the way!",
+      "start": "2027-01-17T17:00:00",
+      "end": "2027-01-17T20:30:00",
+      "location": "Good Girl Cafe & Bookstore — 2807 South Broadway, Englewood, CO 80113",
+      "url": "https://www.eventbrite.com/e/book-rebinding-workshop-w-bookishandblissful-tickets-2003470758972",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-19T16:34:37.548Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Daytime Booklovers Book Club",
+      "description": "Join us the 3rd Wednesday of every month for a lively book discussion.",
+      "start": "2027-01-20T10:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/17138525",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "C.A.F.E. Series: Cancer and Community a Forum for Exchange",
+      "description": "Pull up a chair. Lets talk cancer research together, with CUs Cancer Center.",
+      "start": "2027-01-22T10:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/17553997",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "exchange"
+      ]
+    },
+    {
+      "title": "Mysteries with a Cup of Tea Bookclub",
+      "description": "A Cozy Mystery Book Club",
+      "start": "2027-01-22T12:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/17629155",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Book of the Month Club",
+      "description": "Try out a new book and join us for tea and snacks to tell us what you think! January: The Calamity Club\" by Kathryn Stockett",
+      "start": "2027-01-26T12:30:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/16894847",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Non-Fiction Book Club",
+      "description": "Join us the 1st Tuesday of every month for a lively book discussion.",
+      "start": "2027-02-02T13:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/17135455",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*",
+        "fiction"
+      ]
+    },
+    {
+      "title": "Tallyn's Reach Cookbook Club",
+      "description": "Join our monthly cookbook potluck! This month, pick a recipe from [AUTHOR]'s [BOOK], make it at home, and join us to share delicious food and conversation.",
+      "start": "2027-02-02T17:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/17626443",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "author",
+        "book*"
+      ]
+    },
+    {
+      "title": "Aurora Seed Swap",
+      "description": "Join Revols Beehive and APL for a seed swap event where you can bring or take home seeds, and connect with fellow gardeners.",
+      "start": "2027-02-06T11:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://auroraco.libnet.info/event/17555930",
+      "source": "Aurora Public Library",
+      "extractor": "rss",
+      "firstSeen": "2026-10-19T16:34:37.548Z",
+      "matchedKeywords": [
+        "swap"
+      ]
+    },
+    {
+      "title": "Fort Collins Book Fest",
+      "description": "Annual Fort Collins book festival (FoCoBookFest). Multi-day; kickoff 4/9.",
+      "start": "2027-04-09T10:00:00",
+      "end": "2027-04-11T17:00:00",
+      "location": "Fort Collins Senior Center, Fort Collins, CO",
+      "url": "https://focobookfest.org/",
+      "source": "FoCo Book Fest",
+      "extractor": "static",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    },
+    {
+      "title": "Denver Festival of Books",
+      "description": "Annual Denver book festival hosted by the Colorado Authors League.",
+      "start": "2027-05-20T10:00:00",
+      "end": null,
+      "location": "Denver, CO",
+      "url": "https://denverbookfest.com/",
+      "source": "Denver Book Fest",
+      "extractor": "static",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "author",
+        "book*"
+      ]
+    },
+    {
+      "title": "Books In Denver",
+      "description": "One Day. Multiple Authors. Incredible Books. Join us in Denver, CO for another year of celebrating all things books.",
+      "start": "2027-07-24T11:00:00",
+      "end": "2027-07-24T16:00:00",
+      "location": "Embassy Suites by Hilton Denver Central Park — 4444 Havana Street, Denver, CO 80239",
+      "url": "https://www.eventbrite.com/e/books-in-denver-tickets-1995356641428",
+      "source": "Eventbrite (Denver books)",
+      "extractor": "eventbrite",
+      "firstSeen": "2026-10-15T18:44:05.775Z",
+      "matchedKeywords": [
+        "author",
+        "book*"
+      ]
+    },
+    {
+      "title": "Writing group",
+      "description": "Wednesday, 7-9 p.m. Edgewater Books inside Edgewater Public Market No RSVP needed — all are welcome! The Edgewater Books writing group meets on the second Wednesday and fourth Friday of every month. What to expect at each meeting: A few minutes of chit chat to catch up, 15 minutes to go over personal goals for the day and the day’s optional writing prompt, two 45-minute writing sprints, and 15 to 30 minutes to read aloud, ask questions, and give feedback. No requirements to join, just an interest in writing and community!",
+      "start": "2027-10-14T19:00:00",
+      "end": null,
+      "location": null,
+      "url": "https://edgewaterbooksofcolorado.com/events/",
+      "source": "Edgewater Books",
+      "extractor": "heuristic",
+      "firstSeen": "2026-10-19T17:17:15.574Z",
+      "matchedKeywords": [
+        "book*"
+      ]
+    }
+  ]
 }
