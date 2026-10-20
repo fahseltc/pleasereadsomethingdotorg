@@ -18,9 +18,16 @@ export const getStaticPaths = (async () => {
 const { post } = Astro.props;
 const { Content } = await render(post);
 
-const store = post.data.bookstore
-  ? await getEntry('bookstores', post.data.bookstore.id)
-  : null;
+// A post may be "about" a bookstore OR a library (both optional). Resolve the
+// linked place to a { name, href } for the "about <place>" line.
+let place: { name: string; href: string } | null = null;
+if (post.data.bookstore) {
+  const store = await getEntry('bookstores', post.data.bookstore.id);
+  if (store) place = { name: store.data.name, href: withBase(`/bookstores/${store.data.id}`) };
+} else if (post.data.library) {
+  const lib = await getEntry('libraries', post.data.library.id);
+  if (lib) place = { name: lib.data.name, href: withBase(`/libraries/${lib.data.id}`) };
+}
 ---
 
 <BaseLayout title={post.data.title} description={post.data.description}>
@@ -35,10 +42,10 @@ const store = post.data.bookstore
         day: 'numeric',
       })}
       {
-        store && (
+        place && (
           <>
             {' · about '}
-            <a href={withBase(`/bookstores/${store.data.id}`)}>{store.data.name}</a>
+            <a href={place.href}>{place.name}</a>
           </>
         )
       }

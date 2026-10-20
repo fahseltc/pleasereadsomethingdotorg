@@ -33,6 +33,7 @@ async function main() {
   const description = opts.description || (await prompt('Short description (optional)'));
   const tagsRaw = opts.tags || (await prompt('Tags, comma-separated (optional)'));
   const bookstore = opts.bookstore || (await prompt('Linked bookstore id (optional)'));
+  const library = bookstore ? '' : opts.library || (await prompt('Linked library id (optional)'));
   const isbnRaw = opts.isbn || (await prompt('Book ISBN-13 for a Bookshop.org buy button (optional)'));
 
   // Normalize + validate the ISBN the same way the content schema does. Accept
@@ -71,7 +72,10 @@ async function main() {
     `tags: ${JSON.stringify(tags)}`,
     bookstore
       ? `bookstore: ${JSON.stringify(bookstore)}   # links this post to a store id (optional)`
-      : '# bookstore: "boulder-bookstore"   # optional — link this post to a store id',
+      : '# bookstore: "boulder-bookstore"   # optional — link this post to a bookstore id',
+    library
+      ? `library: ${JSON.stringify(library)}   # links this post to a library id (optional)`
+      : '# library: "denver-central-library"   # optional — link this post to a library id',
     isbn
       ? `isbn: ${JSON.stringify(isbn)}   # adds a Bookshop.org buy button`
       : '# isbn: "9780000000000"   # optional — ISBN-13 of the book; adds a Bookshop.org buy button',

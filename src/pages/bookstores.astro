@@ -62,7 +62,7 @@ const allTags = Array.from(new Set(stores.flatMap((s) => s.data.tags))).sort();
     <div class="grid" id="store-grid">
       {
         stores.map((store) => (
-          <div class="store-item" data-tags={store.data.tags.join(' ')}>
+          <div class="store-item" data-tags={store.data.tags.join('|')}>
             <BookstoreCard store={store} />
           </div>
         ))
@@ -77,7 +77,7 @@ const allTags = Array.from(new Set(stores.flatMap((s) => s.data.tags))).sort();
       sel.addEventListener('change', function () {
         var tag = sel.value;
         document.querySelectorAll('.store-item').forEach(function (el) {
-          var tags = (el.getAttribute('data-tags') || '').split(' ');
+          var tags = (el.getAttribute('data-tags') || '').split('|');
           el.style.display = !tag || tags.indexOf(tag) !== -1 ? '' : 'none';
         });
       });

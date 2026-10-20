@@ -62,7 +62,7 @@ const allTags = Array.from(new Set(libraries.flatMap((l) => l.data.tags))).sort(
     <div class="grid" id="library-grid">
       {
         libraries.map((library) => (
-          <div class="library-item" data-tags={library.data.tags.join(' ')}>
+          <div class="library-item" data-tags={library.data.tags.join('|')}>
             <LibraryCard library={library} />
           </div>
         ))
@@ -77,7 +77,7 @@ const allTags = Array.from(new Set(libraries.flatMap((l) => l.data.tags))).sort(
       sel.addEventListener('change', function () {
         var tag = sel.value;
         document.querySelectorAll('.library-item').forEach(function (el) {
-          var tags = (el.getAttribute('data-tags') || '').split(' ');
+          var tags = (el.getAttribute('data-tags') || '').split('|');
           el.style.display = !tag || tags.indexOf(tag) !== -1 ? '' : 'none';
         });
       });
