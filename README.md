@@ -53,6 +53,9 @@ Then:
 
 One line: `npm run new:bookstore -- --name "Boulder Bookstore" --address "1107 Pearl St, Boulder, CO 80302"`
 
+Libraries work exactly the same way with `npm run new:library` — it adds to
+`src/content/libraries.json` and photos go in `public/images/libraries/`.
+
 ### 3. Preview it
 
 ```bash
@@ -75,14 +78,16 @@ anything that goes wrong in plain language.
 If it ever says someone else changed the site, run `npm run update` first, then
 `npm run publish` again.
 
-### Hiding a store (without deleting it)
+### Hiding a store or library (without deleting it)
 
 ```bash
-npm run disable:bookstore -- <store-id>    # removes its pin + card
-npm run enable:bookstore  -- <store-id>    # brings it back
+npm run disable:bookstore -- <store-id>      # removes its pin + card
+npm run enable:bookstore  -- <store-id>      # brings it back
+npm run disable:library   -- <library-id>    # same, for libraries
+npm run enable:library    -- <library-id>
 ```
 
-Run `npm run disable:bookstore` with no id to see the list of store ids.
+Run the disable command with no id to see the list of ids.
 
 ---
 
@@ -92,8 +97,10 @@ Run `npm run disable:bookstore` with no id to see the list of store ids.
 |---|---|
 | Write an article | `npm run new:post`, then `src/content/blog/<slug>.mdx` |
 | Add a bookstore | `npm run new:bookstore` |
+| Add a library | `npm run new:library` |
 | Add a store photo | `public/images/bookstores/<id>.jpg` + set `image` in `bookstores.json` |
 | Hide/show a store | `npm run disable:bookstore` / `enable:bookstore` |
+| Hide/show a library | `npm run disable:library` / `enable:library` |
 | Fix a map pin | `npm run geocode -- "<address>"`, then edit `lat`/`lng` |
 | Change contact emails | `.env` locally / GitHub secrets in CI (see "Contact email addresses" below) |
 | Put it live | `npm run publish` |
@@ -120,6 +127,10 @@ A bookstore record looks like this (`src/content/bookstores.json`):
 - `enabled: false` hides the store from the map and index without deleting it.
 - An **enabled** store must have real `lat`/`lng` numbers, or the site won't
   build (this is a safety check so you never publish a broken pin).
+- The home page's "Latest indie bookstores" section shows the most recently
+  added enabled stores. New stores are appended to the end of
+  `bookstores.json` (which is what `npm run new:bookstore` does), so "latest"
+  follows that order.
 - `mapsLink` (the "Get directions" button) is created for you as a Google Maps
   search for the store's **name + address**, so it opens on the actual business
   (with its hours and reviews), not just a dot on the map. For a store with a

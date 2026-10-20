@@ -7,9 +7,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 export const ROOT = resolve(__dirname, '..');
 export const paths = {
   bookstores: resolve(ROOT, 'src/content/bookstores.json'),
+  libraries: resolve(ROOT, 'src/content/libraries.json'),
   blogDir: resolve(ROOT, 'src/content/blog'),
   dataDir: resolve(ROOT, 'src/data'),
   storeImages: resolve(ROOT, 'public/images/bookstores'),
+  libraryImages: resolve(ROOT, 'public/images/libraries'),
   blogImages: resolve(ROOT, 'public/images/blog'),
 };
 

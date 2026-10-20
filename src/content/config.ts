@@ -67,8 +67,50 @@ const blog = defineCollection({
     heroImage: z.string().optional(),
     tags: z.array(z.string()).default([]),
     bookstore: reference('bookstores').optional(),
+    library: reference('libraries').optional(),
     draft: z.boolean().default(false),
   }),
 });
 
-export const collections = { bookstores, blog };
+/**
+ * Library index — same shape and rules as bookstores, for Front Range public
+ * libraries. One record per library in src/content/libraries.json.
+ */
+const libraries = defineCollection({
+  loader: file('src/content/libraries.json'),
+  schema: z
+    .object({
+      id: z.string(),
+      name: z.string(),
+      image: z.string(),
+      address: z.string(),
+      lat: z.number().nullable().optional(),
+      lng: z.number().nullable().optional(),
+      review: z.string(),
+      tags: z.array(z.string()).default([]),
+      website: z.string().url().optional(),
+      mapsLink: z.string().url().optional(),
+      sourceAliases: z.array(z.string()).default([]),
+      enabled: z.boolean().default(true),
+    })
+    .superRefine((lib, ctx) => {
+      if (lib.enabled) {
+        if (typeof lib.lat !== 'number') {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ['lat'],
+            message: `Enabled library "${lib.id}" needs a numeric lat (run "npm run geocode" or set enabled:false).`,
+          });
+        }
+        if (typeof lib.lng !== 'number') {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ['lng'],
+            message: `Enabled library "${lib.id}" needs a numeric lng (run "npm run geocode" or set enabled:false).`,
+          });
+        }
+      }
+    }),
+});
+
+export const collections = { bookstores, libraries, blog };

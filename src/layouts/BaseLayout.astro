@@ -21,6 +21,7 @@ const DEFAULT_MODE = 'light';
 const nav = [
   { href: '/', label: 'Home' },
   { href: '/bookstores', label: 'Bookstores' },
+  { href: '/libraries', label: 'Libraries' },
   { href: '/events', label: 'Events' },
   { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
@@ -53,6 +54,10 @@ function isActive(href: string) {
     </script>
   </head>
   <body>
+    <div class="beta-banner" role="note">
+      🚧 This site is under construction -
+      details may change and some events may be incorrect 🚧
+    </div>
     <header class="site-header">
       <div class="container">
         <a class="site-title" href={withBase('/')}>Please Read Something</a>

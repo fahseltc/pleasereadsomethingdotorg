@@ -2,12 +2,31 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BookstoreCard from '../components/BookstoreCard.astro';
+import { allUpcomingEvents } from '../lib/events';
 import { withBase } from '../lib/url';
 
-const stores = (await getCollection('bookstores'))
+// "Latest" bookstores = the most recently ADDED enabled stores. New stores are
+// appended to the end of bookstores.json (that's what `npm run new:bookstore`
+// does), so the source array order is our proxy for recency. We order by that
+// array index explicitly rather than relying on getCollection()'s order, then
+// take the last few, newest first.
+import storesJson from '../content/bookstores.json';
+const orderById = new Map(storesJson.map((s, i) => [s.id, i]));
+const enabledStores = (await getCollection('bookstores'))
   .filter((s) => s.data.enabled)
-  .sort((a, b) => a.data.name.localeCompare(b.data.name));
-const featured = stores.slice(0, 3);
+  .sort((a, b) => (orderById.get(a.data.id) ?? 0) - (orderById.get(b.data.id) ?? 0));
+const latestStores = enabledStores.slice(-3).reverse();
+
+// A few upcoming events for the home page (empty if the feed isn't synced).
+const upcomingEvents = (await allUpcomingEvents()).slice(0, 4);
+
+function eventWhen(start: string): string {
+  const d = new Date(start);
+  const date = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }).toUpperCase();
+  const hasTime = d.getHours() !== 0 || d.getMinutes() !== 0;
+  const time = hasTime ? d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }) : '';
+  return time ? `${date} · ${time}` : date;
+}
 
 const posts = (await getCollection('blog'))
   .filter((p) => !p.data.draft)
@@ -17,26 +36,53 @@ const posts = (await getCollection('blog'))
 
 <BaseLayout
   title="Please Read Something"
-  description="Reviews of independent bookstores along Colorado's Front Range, with a map, a blog, and directions to every shop."
+  description="Honest reviews of books, libraries, and independent bookstores along Colorado's Front Range — and a one-stop shop to find book events and your fellow book people."
 >
   <section class="section prose stack">
     <h1>Please Read Something</h1>
     <p class="lede">
-      Honest reviews of the independent bookstores along Colorado's Front Range -
-      what each shop is good at, where to find it, and what's happening there.
+      Honest reviews of books, libraries, and the independent bookstores along
+      Colorado's Front Range — and a one-stop shop to find book events and your
+      fellow book people.
     </p>
     <p class="cluster">
-      <a class="button" href={withBase('/bookstores')}>Browse the map</a>
-      <a class="button button--ghost" href={withBase('/blog')}>Read the blog</a>
+      <a class="button" href={withBase('/events')}>See book events</a>
+      <a class="button button--ghost" href={withBase('/bookstores')}>Browse the map</a>
     </p>
   </section>
 
   {
-    featured.length > 0 && (
+    upcomingEvents.length > 0 && (
       <section class="section">
-        <h2>Featured bookstores</h2>
+        <h2>Upcoming events</h2>
+        <ul class="stack">
+          {upcomingEvents.map((e) => (
+            <li>
+              <span class="muted small">{eventWhen(e.start)}</span>{' — '}
+              {e.url ? (
+                <a href={e.url} target="_blank" rel="noopener noreferrer">
+                  <strong>{e.title}</strong>
+                </a>
+              ) : (
+                <strong>{e.title}</strong>
+              )}
+              {e.location && <span class="muted small"> · {e.location}</span>}
+            </li>
+          ))}
+        </ul>
+        <p class="cluster">
+          <a class="button button--ghost" href={withBase('/events')}>All book events</a>
+        </p>
+      </section>
+    )
+  }
+
+  {
+    latestStores.length > 0 && (
+      <section class="section">
+        <h2>Latest indie bookstores</h2>
         <div class="grid">
-          {featured.map((store) => (
+          {latestStores.map((store) => (
             <BookstoreCard store={store} />
           ))}
         </div>

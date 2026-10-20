@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="Library photo placeholder">
+  <rect width="480" height="320" fill="#eef0ef" />
+  <!-- simple columned facade -->
+  <rect x="60" y="150" width="360" height="110" fill="#c9cfc9" />
+  <polygon points="40,150 240,90 440,150" fill="#a7b0a7" />
+  <rect x="90" y="160" width="20" height="90" fill="#8a948a" />
+  <rect x="150" y="160" width="20" height="90" fill="#8a948a" />
+  <rect x="210" y="160" width="20" height="90" fill="#8a948a" />
+  <rect x="270" y="160" width="20" height="90" fill="#8a948a" />
+  <rect x="330" y="160" width="20" height="90" fill="#8a948a" />
+  <rect x="390" y="160" width="20" height="90" fill="#8a948a" />
+  <text x="240" y="60" font-family="Georgia, serif" font-size="28" fill="#4a524a" text-anchor="middle">Add a photo</text>
+  <text x="240" y="285" font-family="Georgia, serif" font-size="14" fill="#7a827a" text-anchor="middle">public/images/libraries/</text>
+</svg>

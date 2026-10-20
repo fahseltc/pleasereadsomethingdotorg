@@ -36,7 +36,9 @@
 | `npm run check` | Astro type/content diagnostics (run after edits). |
 | `npm run new:post` | Scaffold a blog article. |
 | `npm run new:bookstore` | Add a store (auto-geocodes the address). |
+| `npm run new:library` | Add a library (same flow, writes libraries.json). |
 | `npm run disable:bookstore` / `enable:bookstore` | Toggle a store's map pin. |
+| `npm run disable:library` / `enable:library` | Toggle a library's map pin. |
 | `npm run geocode -- "<address>"` | OSM Nominatim lookup for lat/lng. |
 | `npm run sync:events` | Pull aggregator events into `src/data/events.json` (events bridge is currently DISABLED — see events.ts flag — so this has no visible effect). |
 | `npm run publish` | Build + git add/commit/push (git-free for the author). |

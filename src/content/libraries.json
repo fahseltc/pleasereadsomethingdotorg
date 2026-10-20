@@ -1,0 +1,45 @@
+[
+    {
+        "id": "denver-central-library",
+        "name": "Denver Central Library",
+        "image": "/images/libraries/placeholder.svg",
+        "address": "10 W 14th Ave Pkwy, Denver, CO 80204",
+        "lat": 39.7372,
+        "lng": -104.9898,
+        "review": "The flagship of the Denver Public Library system. A landmark Michael Graves building with deep special collections, a Western History reading room, and a steady calendar of talks and programs.",
+        "tags": [
+            "public",
+            "events",
+            "special-collections",
+            "denver"
+        ],
+        "website": "https://www.denverlibrary.org/",
+        "mapsLink": "https://www.google.com/maps/search/?api=1&query=Denver%20Central%20Library%2C%2010%20W%2014th%20Ave%20Pkwy%2C%20Denver%2C%20CO%2080204",
+        "sourceAliases": [
+            "Denver Public Library",
+            "Denver Central Library"
+        ],
+        "enabled": true
+    },
+    {
+        "id": "boulder-public-main",
+        "name": "Boulder Public Library (Main)",
+        "image": "/images/libraries/placeholder.svg",
+        "address": "1001 Arapahoe Ave, Boulder, CO 80302",
+        "lat": 40.0146,
+        "lng": -105.2862,
+        "review": "Boulder's main branch, spanning Boulder Creek with the glass Canyon Gallery walkway. Strong author events, a makerspace, and quiet reading spots over the water.",
+        "tags": [
+            "public",
+            "events",
+            "makerspace",
+            "boulder"
+        ],
+        "website": "https://boulderlibrary.org/",
+        "mapsLink": "https://www.google.com/maps/search/?api=1&query=Boulder%20Public%20Library%2C%201001%20Arapahoe%20Ave%2C%20Boulder%2C%20CO%2080302",
+        "sourceAliases": [
+            "Boulder Public Library"
+        ],
+        "enabled": true
+    }
+]

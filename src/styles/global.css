@@ -89,6 +89,17 @@ main {
   margin-inline: auto;
 }
 
+/* ---- beta / under-construction banner ---- */
+
+.beta-banner {
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+  text-align: center;
+  padding: var(--space-xs) var(--space);
+  font-size: var(--text-sm);
+  line-height: 1.4;
+}
+
 /* ---- site header / nav ---- */
 
 .site-header {

@@ -14,7 +14,7 @@ tsconfig.json              extends astro/tsconfigs/strict
 package.json               npm scripts = the author's whole workflow
 src/
   pages/
-    index.astro            home: intro, featured stores, recent posts
+    index.astro            home: intro, upcoming events, latest stores + posts
     bookstores.astro       index: full map (all pins) + filterable cards
     bookstores/[id].astro  per-store detail: image, review, map pin, events, posts
     blog/index.astro       blog listing (every non-draft post)
@@ -48,7 +48,8 @@ scripts/
   lib.mjs                  shared helpers (slugify, args, prompt, paths)
   new-post.mjs             npm run new:post
   new-bookstore.mjs        npm run new:bookstore (geocodes the address)
-  toggle-bookstore.mjs     npm run disable:/enable:bookstore
+  new-library.mjs          npm run new:library (same flow -> libraries.json)
+  toggle-entry.mjs         npm run disable:/enable:bookstore and :library
   geocode.mjs              npm run geocode (OSM Nominatim; also imported by new:bookstore)
   publish.mjs              npm run publish (build + git add/commit/push)
   update.mjs               npm run update (git pull wrapper)

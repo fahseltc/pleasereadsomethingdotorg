@@ -1,0 +1,158 @@
+---
+import { getCollection } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Map, { type MapPin } from '../../components/Map.astro';
+import { withBase } from '../../lib/url';
+import { upcomingEventsForStore } from '../../lib/events';
+
+export const getStaticPaths = (async () => {
+  const libraries = await getCollection('libraries');
+  return libraries.map((library) => ({
+    params: { id: library.data.id },
+    props: { library },
+  }));
+}) satisfies GetStaticPaths;
+
+const { library } = Astro.props;
+const d = library.data;
+
+// Related blog posts: non-draft posts whose `library` reference is this library.
+const relatedPosts = (await getCollection('blog'))
+  .filter((p) => !p.data.draft && p.data.library?.id === d.id)
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+// Related upcoming events via the aggregator bridge (empty if not synced). The
+// matcher is source/location-based, so it works for libraries too.
+const events = await upcomingEventsForStore({
+  name: d.name,
+  sourceAliases: d.sourceAliases,
+});
+
+const hasCoords = typeof d.lat === 'number' && typeof d.lng === 'number';
+const pins: MapPin[] = hasCoords
+  ? [
+      {
+        id: d.id,
+        name: d.name,
+        lat: d.lat as number,
+        lng: d.lng as number,
+        image: d.image,
+        href: withBase(`/libraries/${d.id}`),
+      },
+    ]
+  : [];
+---
+
+<BaseLayout title={d.name} description={d.review.slice(0, 150)}>
+  <article class="section stack">
+    <p>
+      <a href={withBase('/libraries')}>← All libraries</a>
+    </p>
+
+    <h1>{d.name}</h1>
+
+    <img
+      src={withBase(d.image)}
+      alt={`${d.name}`}
+      width="960"
+      height="640"
+      style="border-radius: var(--radius); border: var(--card-border);"
+    />
+
+    <div class="prose stack">
+      <p>{d.review}</p>
+
+      <p class="stack">
+        <span><strong>Address:</strong> {d.address}</span>
+        <span class="cluster">
+          {d.mapsLink && (
+            <a
+              class="button button--ghost"
+              href={d.mapsLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get directions
+            </a>
+          )}
+          {d.website && (
+            <a
+              class="button button--ghost"
+              href={d.website}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit website
+            </a>
+          )}
+        </span>
+      </p>
+
+      {
+        d.tags.length > 0 && (
+          <ul class="tags">
+            {d.tags.map((t) => (
+              <li class="tag">{t}</li>
+            ))}
+          </ul>
+        )
+      }
+    </div>
+
+    {
+      relatedPosts.length > 0 && (
+        <section class="section">
+          <h2>From the blog</h2>
+          <ul class="stack">
+            {relatedPosts.map((p) => (
+              <li>
+                <a href={withBase(`/blog/${p.id}`)}>{p.data.title}</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    {
+      pins.length > 0 && (
+        <section class="section">
+          <h2>Find it</h2>
+          <Map pins={pins} mode="single" class="map--detail" />
+        </section>
+      )
+    }
+
+    {
+      events.length > 0 && (
+        <section class="section">
+          <h2>Upcoming events</h2>
+          <ul class="stack">
+            {events.map((e) => (
+              <li>
+                {e.url ? (
+                  <a href={e.url} target="_blank" rel="noopener noreferrer">
+                    {e.title}
+                  </a>
+                ) : (
+                  e.title
+                )}
+                <span class="muted small">
+                  {' '}
+                  —{' '}
+                  {new Date(e.start).toLocaleDateString('en-US', {
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric',
+                  })}
+                </span>
+              </li>
+            ))}
+          </ul>
+          <p class="small muted">Events via book-events-aggregator.</p>
+        </section>
+      )
+    }
+  </article>
+</BaseLayout>
