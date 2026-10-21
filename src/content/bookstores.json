@@ -232,5 +232,82 @@
       "Capital Hill Books"
     ],
     "enabled": true
+  },
+  {
+    "id": "shop-at-matter",
+    "name": "Shop At Matter",
+    "image": "/images/bookstores/shopatmatter.png",
+    "address": "2114 Market Street, Denver,co",
+    "lat": 39.75465,
+    "lng": -104.99162,
+    "review": "book clubs",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://www.shopatmatter.com/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Shop%20At%20Matter%2C%202114%20Market%20Street%2C%20Denver%2Cco",
+    "sourceAliases": [
+      "Shop At Matter"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "spicy-librarian",
+    "name": "Spicy Librarian",
+    "image": "/images/bookstores/spicylibrarian.jpg",
+    "address": "3040 Blake Street Unit 110, Denver, Colorado 80205",
+    "lat": 39.76429335498662,
+    "lng": -104.98065472664217,
+    "review": "Where your next great love story awaits!",
+    "tags": [
+      "romance books",
+      "book clubs",
+      "spicy"
+    ],
+    "website": "https://spicylibrarian.com/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Spicy%20Librarian%2C%203040%20Blake%20Street%20Unit%20110%2C%20Denver%2C%20Colorado%2080205",
+    "sourceAliases": [
+      "Spicy Librarian"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "haven-coffee-and-books",
+    "name": "Haven Coffee and Books",
+    "image": "/images/bookstores/Haven.jpg",
+    "address": "1740 S Buckley Rd Unit 9 Aurora, CO 80017",
+    "lat": 39.68405090834597,
+    "lng": -104.78963279486608,
+    "review": "we aim to serve our community by providing an inclusive home for people who love coffee, books, games, art and more.",
+    "tags": [
+      "used books",
+      "coffee",
+      "book clubs"
+    ],
+    "website": "https://havencoffeeandbooks.com/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Haven%20Coffee%20and%20Books%2C%201740%20S%20Buckley%20Rd%20Unit%209%20Aurora%2C%20CO%2080017",
+    "sourceAliases": [
+      "Haven Coffee and Books"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "the-bookies",
+    "name": "The Bookies",
+    "image": "/images/bookstores/bookies.png",
+    "address": "2085 S Holly St. Denver, CO 80222",
+    "lat": 39.67911,
+    "lng": -104.92238,
+    "review": "Fiercely independent since 1971.",
+    "tags": [
+      "book clubs",
+      "storytime"
+    ],
+    "website": "https://thebookies.com/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=The%20Bookies%2C%202085%20S%20Holly%20St.%20Denver%2C%20CO%2080222",
+    "sourceAliases": [
+      "The Bookies"
+    ],
+    "enabled": true
   }
 ]
