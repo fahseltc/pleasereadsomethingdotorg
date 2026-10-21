@@ -30,6 +30,9 @@ async function resolveCoords(address) {
         note: 'No geocoding match — set coordinates by hand, then flip enabled:true.',
       };
     }
+    if (matches.retried) {
+      log.warn(`No match for the full address; used "${matches.retried}" (unit/suite removed) — double-check the pin.`);
+    }
     if (matches.length === 1 || !process.stdin.isTTY) {
       const m = matches[0];
       return { lat: m.lat, lng: m.lng, enabled: true, note: '' };

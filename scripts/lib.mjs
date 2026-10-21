@@ -61,12 +61,23 @@ export function prompt(question, fallback = '') {
   });
 }
 
+// ANSI colors — on only for an interactive terminal, and disabled when NO_COLOR
+// is set or output is piped/redirected (so logs stay clean in CI/pipes).
+const useColor = process.stdout.isTTY && !process.env.NO_COLOR;
+const paint = (code, s) => (useColor ? `\u001b[${code}m${s}\u001b[0m` : s);
+export const color = {
+  green: (s) => paint('32', s),
+  red: (s) => paint('31;1', s), // bold red for errors
+  yellow: (s) => paint('33', s),
+  dim: (s) => paint('2', s),
+};
+
 export const log = {
   info: (m) => console.log(m),
-  ok: (m) => console.log(`\u2713 ${m}`),
-  warn: (m) => console.warn(`! ${m}`),
-  err: (m) => console.error(`\u2717 ${m}`),
-  rule: () => console.log('\u2500'.repeat(60)),
+  ok: (m) => console.log(color.green(`\u2713 ${m}`)),
+  warn: (m) => console.warn(color.yellow(`! ${m}`)),
+  err: (m) => console.error(color.red(`\u2717 ${m}`)),
+  rule: () => console.log(color.dim('\u2500'.repeat(60))),
 };
 
 /**
