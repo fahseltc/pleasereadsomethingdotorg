@@ -62,7 +62,6 @@
     ],
     "enabled": true
   },
-
   {
     "id": "book-niche",
     "name": "Book Niche",
@@ -71,7 +70,9 @@
     "lat": 39.69779,
     "lng": -104.8129,
     "review": "Eclectic and organized bookstore",
-    "tags": ["used books"],
+    "tags": [
+      "used books"
+    ],
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Book%20Niche%2C%2015075%20E%20Mississippi%20Ave%2C%20Aurora%2C%20CO%2080012",
     "sourceAliases": [
       "Book Niche"
@@ -133,6 +134,102 @@
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Slowpoke%20Books%2C%202383%20S%20Downing%20Street%2C%20Denver%20CO%2080210",
     "sourceAliases": [
       "Slowpoke Books"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "old-fire-house-books",
+    "name": "Old Fire House Books",
+    "image": "/images/bookstores/Oldfirehousebookstore.png",
+    "address": "232 Walnut Street Fort Collins, CO 80524",
+    "lat": 40.58861,
+    "lng": -105.07577,
+    "review": "Northern Colorado's Oldest Independent Bookstore",
+    "tags": [
+      "coffee",
+      "book clubs"
+    ],
+    "website": "https://oldfirehousebooks.com/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Old%20Fire%20House%20Books%2C%20232%20Walnut%20Street%20Fort%20Collins%2C%20CO%2080524",
+    "sourceAliases": [
+      "Old Fire House Books"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "edgewater-books",
+    "name": "Edgewater Books",
+    "image": "/images/bookstores/edgewater.png",
+    "address": "5505 W 20th Ave Ste 144 Edgewater, CO 80214",
+    "lat": 39.74959242910378,
+    "lng": -105.05733310377575,
+    "review": "Reading Can Take You To nother World",
+    "tags": [
+      "used and new books"
+    ],
+    "website": "https://edgewaterbooksofcolorado.com/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Edgewater%20Books%2C%205505%20W%2020th%20Ave%20Ste%20144%20Edgewater%2C%20CO%2080214",
+    "sourceAliases": [
+      "Edgewater Books"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "denver-book-society",
+    "name": "Denver Book Society",
+    "image": "/images/bookstores/Denverbooksociety.png",
+    "address": "1700 N Humboldt St Denver, CO 80218",
+    "lat": 39.78113,
+    "lng": -104.96998,
+    "review": "Third Space with books",
+    "tags": [
+      "coffee",
+      "wine",
+      "beer",
+      "bookclubs"
+    ],
+    "website": "https://thedenverbooksociety.com/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Denver%20Book%20Society%2C%201700%20N%20Humboldt%20St%20Denver%2C%20CO%2080218",
+    "sourceAliases": [
+      "Denver Book Society"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "black-read",
+    "name": "Black & Read",
+    "image": "/images/bookstores/blackandread.png",
+    "address": "6655 Wadsworth Blvd. Arvada, CO 80003",
+    "lat": 39.81755,
+    "lng": -105.08274,
+    "review": "Colorado's Favorite Indie Store",
+    "tags": [
+      "used books",
+      "games",
+      "music"
+    ],
+    "website": "https://blackandread.com/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Black%20%26%20Read%2C%206655%20Wadsworth%20Blvd.%20Arvada%2C%20CO%2080003",
+    "sourceAliases": [
+      "Black & Read"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "capital-hill-books",
+    "name": "Capital Hill Books",
+    "image": "/images/bookstores/capitalhillbooks.jpg",
+    "address": "300 E Colfax Ave, Denver, CO 80203",
+    "lat": 39.73989,
+    "lng": -104.9834,
+    "review": "used books",
+    "tags": [
+      "used books"
+    ],
+    "website": "http://capitolhillbooks.com/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Capital%20Hill%20Books%2C%20300%20E%20Colfax%20Ave%2C%20Denver%2C%20CO%2080203",
+    "sourceAliases": [
+      "Capital Hill Books"
     ],
     "enabled": true
   }
