@@ -327,5 +327,25 @@
       "Friends of the Aurora Public Library"
     ],
     "enabled": true
+  },
+  {
+    "id": "the-plot-twist",
+    "name": "The Plot Twist",
+    "image": "/images/bookstores/plottwist.png",
+    "address": "227 West Oak Street Denton, TX 76201",
+    "lat": 33.21551,
+    "lng": -97.13454,
+    "review": "A Romance Bookstore & Bar",
+    "tags": [
+      "book clubs",
+      "wine",
+      "beer"
+    ],
+    "website": "https://www.theplottwistbookbar.com/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=The%20Plot%20Twist%2C%20227%20West%20Oak%20Street%20Denton%2C%20TX%2076201",
+    "sourceAliases": [
+      "The Plot Twist"
+    ],
+    "enabled": false
   }
 ]
