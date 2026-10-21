@@ -309,5 +309,23 @@
       "The Bookies"
     ],
     "enabled": true
+  },
+  {
+    "id": "friends-of-the-aurora-public-library",
+    "name": "Friends of the Aurora Public Library",
+    "image": "/images/bookstores/friendsaurora.png",
+    "address": "2243 S Peoria St Aurora, CO 80014",
+    "lat": 39.67582,
+    "lng": -104.84737,
+    "review": "A non-profit organization committed to supporting services and programs of the Aurora Public Library.",
+    "tags": [
+      "used books"
+    ],
+    "website": "https://www.fapl.info/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Friends%20of%20the%20Aurora%20Public%20Library%2C%202243%20S%20Peoria%20St%20Aurora%2C%20CO%2080014",
+    "sourceAliases": [
+      "Friends of the Aurora Public Library"
+    ],
+    "enabled": true
   }
 ]
