@@ -423,7 +423,7 @@
   {
     "id": "trident",
     "name": "Trident",
-    "image": "/images/bookstores/placeholder.svg",
+    "image": "/images/bookstores/trident.png",
     "address": "940 Pearl St, Boulder, CO 80302",
     "lat": 40.01714,
     "lng": -105.28299,
@@ -436,6 +436,24 @@
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Trident%2C%20940%20Pearl%20St%2C%20Boulder%2C%20CO%2080302",
     "sourceAliases": [
       "Trident"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "broadway-book-mall",
+    "name": "Broadway Book Mall",
+    "image": "/images/bookstores/broadwaybookmall.png",
+    "address": "316 S Broadway, Denver, CO 80209",
+    "lat": 39.71069,
+    "lng": -104.98734,
+    "review": "Curated used bookstore",
+    "tags": [
+      "used books"
+    ],
+    "website": "http://www.broadwaybookmall.com/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Broadway%20Book%20Mall%2C%20316%20S%20Broadway%2C%20Denver%2C%20CO%2080209",
+    "sourceAliases": [
+      "Broadway Book Mall"
     ],
     "enabled": true
   }
