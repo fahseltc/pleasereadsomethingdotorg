@@ -347,5 +347,96 @@
       "The Plot Twist"
     ],
     "enabled": false
+  },
+  {
+    "id": "munity-comics-and-books",
+    "name": "Munity Comics and Books",
+    "image": "/images/bookstores/Mutiny.png",
+    "address": "3483 S Broadway, Englewood, CO 80113",
+    "lat": 39.65346,
+    "lng": -104.98787,
+    "review": "Best Comic Book Shop",
+    "tags": [
+      "comics"
+    ],
+    "website": "https://mutinycomics.com/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Munity%20Comics%20and%20Books%2C%203483%20S%20Broadway%2C%20Englewood%2C%20CO%2080113",
+    "sourceAliases": [
+      "Munity Comics and Books"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "dream-books-co",
+    "name": "Dream Books Co.",
+    "image": "/images/bookstores/Dreambooks.png",
+    "address": "4455 Grape St, Denver, CO 80216",
+    "lat": 39.77793,
+    "lng": -104.92475,
+    "review": "Amazing used, bookstore doing good.",
+    "tags": [
+      "used books"
+    ],
+    "website": "https://www.dreambooksco.com/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Dream%20Books%20Co.%2C%204455%20Grape%20St%2C%20Denver%2C%20CO%2080216",
+    "sourceAliases": [
+      "Dream Books Co."
+    ],
+    "enabled": true
+  },
+  {
+    "id": "spell-books",
+    "name": "Spell Books",
+    "image": "/images/bookstores/spellbooks.png",
+    "address": "2376 W Main Street Littleton, CO 80120",
+    "lat": 39.61355,
+    "lng": -105.01568,
+    "review": "Witchy bookstore",
+    "tags": [
+      "books"
+    ],
+    "website": "https://www.spellbooksco.com/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Spell%20Books%2C%202376%20W%20Main%20Street%20Littleton%2C%20CO%2080120",
+    "sourceAliases": [
+      "Spell Books"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "the-romance-section",
+    "name": "The Romance Section",
+    "image": "/images/bookstores/romancesection.png",
+    "address": "1909 9th St #125, Boulder, CO 80302",
+    "lat": 40.01618,
+    "lng": -105.28379,
+    "review": "Romance bookstore",
+    "tags": [
+      "romance"
+    ],
+    "website": "https://theromancesection.com/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=The%20Romance%20Section%2C%201909%209th%20St%20%23125%2C%20Boulder%2C%20CO%2080302",
+    "sourceAliases": [
+      "The Romance Section"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "trident",
+    "name": "Trident",
+    "image": "/images/bookstores/placeholder.svg",
+    "address": "940 Pearl St, Boulder, CO 80302",
+    "lat": 40.01714,
+    "lng": -105.28299,
+    "review": "Trident Booksellers & Cafe is a small independent, employee-owned bookstore & café",
+    "tags": [
+      "coffee",
+      "books"
+    ],
+    "website": "https://www.tridentcafe.com/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Trident%2C%20940%20Pearl%20St%2C%20Boulder%2C%20CO%2080302",
+    "sourceAliases": [
+      "Trident"
+    ],
+    "enabled": true
   }
 ]
