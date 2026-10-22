@@ -1,7 +1,9 @@
 ---
 import { getCollection, getEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import YouTubeIcon from '../../components/YouTubeIcon.astro';
 import { withBase } from '../../lib/url';
+import { excerptFromBody } from '../../lib/excerpt';
 
 // Every non-draft post lists, store/library-linked or not (design §8).
 const posts = (await getCollection('blog'))
@@ -45,7 +47,10 @@ for (const post of posts) {
           <li class="card">
             <div class="card__body">
               <a href={withBase(`/blog/${post.id}`)}>
-                <h3>{post.data.title}</h3>
+                <h3>
+                  {post.data.youtube && <YouTubeIcon />}
+                  {post.data.title}
+                </h3>
               </a>
               <p class="small muted">
                 {post.data.pubDate.toLocaleDateString('en-US', {
@@ -62,7 +67,10 @@ for (const post of posts) {
                   </>
                 )}
               </p>
-              {post.data.description && <p>{post.data.description}</p>}
+              {(() => {
+                const summary = post.data.description || excerptFromBody(post.body);
+                return summary ? <p>{summary}</p> : null;
+              })()}
             </div>
           </li>
         ))

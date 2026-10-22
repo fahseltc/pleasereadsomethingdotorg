@@ -1,21 +1,50 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import BookstoreCard from '../components/BookstoreCard.astro';
+import Map, { type MapPin } from '../components/Map.astro';
 import { allUpcomingEvents } from '../lib/events';
+import { BOOKSHOP_SHOP_URL } from '../lib/affiliate';
 import { withBase } from '../lib/url';
 
-// "Latest" bookstores = the most recently ADDED enabled stores. New stores are
-// appended to the end of bookstores.json (that's what `npm run new:bookstore`
-// does), so the source array order is our proxy for recency. We order by that
-// array index explicitly rather than relying on getCollection()'s order, then
-// take the last few, newest first.
-import storesJson from '../content/bookstores.json';
-const orderById = new Map(storesJson.map((s, i) => [s.id, i]));
-const enabledStores = (await getCollection('bookstores'))
-  .filter((s) => s.data.enabled)
-  .sort((a, b) => (orderById.get(a.data.id) ?? 0) - (orderById.get(b.data.id) ?? 0));
-const latestStores = enabledStores.slice(-3).reverse();
+// Pin colors for the combined map key.
+const BOOKSTORE_COLOR = '#7a4a2b'; // bookish brown (matches the site accent)
+const LIBRARY_COLOR = '#2e7d6b'; // teal-green, clearly distinct from bookstores
+
+// Combined pins: enabled bookstores + libraries that have resolved coordinates.
+const stores = (await getCollection('bookstores')).filter(
+  (s) => s.data.enabled && typeof s.data.lat === 'number' && typeof s.data.lng === 'number'
+);
+const libraries = (await getCollection('libraries')).filter(
+  (l) => l.data.enabled && typeof l.data.lat === 'number' && typeof l.data.lng === 'number'
+);
+
+const pins: MapPin[] = [
+  ...stores.map((s) => ({
+    id: s.data.id,
+    name: s.data.name,
+    lat: s.data.lat as number,
+    lng: s.data.lng as number,
+    image: s.data.image,
+    href: withBase(`/bookstores/${s.data.id}`),
+    category: 'Bookstore',
+    color: BOOKSTORE_COLOR,
+  })),
+  ...libraries.map((l) => ({
+    id: l.data.id,
+    name: l.data.name,
+    lat: l.data.lat as number,
+    lng: l.data.lng as number,
+    image: l.data.image,
+    href: withBase(`/libraries/${l.data.id}`),
+    category: 'Library',
+    color: LIBRARY_COLOR,
+  })),
+];
+
+const legend = [
+  { label: `Bookstores (${stores.length})`, color: BOOKSTORE_COLOR },
+  { label: `Libraries (${libraries.length})`, color: LIBRARY_COLOR },
+];
 
 // A few upcoming events for the home page (empty if the feed isn't synced).
 const upcomingEvents = (await allUpcomingEvents()).slice(0, 4);
@@ -27,34 +56,34 @@ function eventWhen(start: string): string {
   const time = hasTime ? d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }) : '';
   return time ? `${date} · ${time}` : date;
 }
-
-const posts = (await getCollection('blog'))
-  .filter((p) => !p.data.draft)
-  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
-  .slice(0, 3);
 ---
 
 <BaseLayout
   title="Please Read Something"
   description="Honest reviews of books, libraries, and independent bookstores along Colorado's Front Range — and a one-stop shop to find book events and your fellow book people."
 >
-  <section class="section prose stack">
-    <h1>Please Read Something</h1>
-    <p class="lede">
-      Honest reviews of books, libraries, and the independent bookstores along
-      Colorado's Front Range — and a one-stop shop to find book events and your
-      fellow book people.
-    </p>
-    <p class="cluster">
-      <a class="button" href={withBase('/events')}>See book events</a>
-      <a class="button button--ghost" href={withBase('/bookstores')}>Browse the map</a>
-    </p>
+  <section class="section home-hero">
+    <img
+      class="home-logo"
+      src={withBase('/images/logos/round-logo-yellow.svg')}
+      alt="Please Read Something logo"
+      width="140"
+      height="140"
+    />
+    <div class="home-hero-text stack">
+      <h1>Please Read Something</h1>
+      <p class="lede">
+        Honest reviews of books, libraries, and the independent bookstores along
+        Colorado's Front Range — and a one-stop shop to find book events and your
+        fellow book people.
+      </p>
+    </div>
   </section>
 
   {
     upcomingEvents.length > 0 && (
       <section class="section">
-        <h2>Upcoming events</h2>
+        <h2>Front Range book events</h2>
         <ul class="stack">
           {upcomingEvents.map((e) => (
             <li>
@@ -77,41 +106,71 @@ const posts = (await getCollection('blog'))
     )
   }
 
-  {
-    latestStores.length > 0 && (
-      <section class="section">
-        <h2>Latest indie bookstores</h2>
-        <div class="grid">
-          {latestStores.map((store) => (
-            <BookstoreCard store={store} />
-          ))}
-        </div>
-      </section>
-    )
-  }
+  <section class="section stack">
+    <h2>Find a bookstore or library</h2>
+    <Map pins={pins} mode="all" legend={legend} />
+  </section>
 
-  {
-    posts.length > 0 && (
-      <section class="section">
-        <h2>Latest from the blog</h2>
-        <ul class="stack">
-          {posts.map((post) => (
-            <li>
-              <a href={withBase(`/blog/${post.id}`)}>
-                <strong>{post.data.title}</strong>
-              </a>
-              <span class="muted small">
-                {' '}
-                — {post.data.pubDate.toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'short',
-                  day: 'numeric',
-                })}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </section>
-    )
-  }
+  <section class="section">
+    <div class="bookshop-feature">
+      <h2>Shop our Bookshop.org store</h2>
+      <p>
+        Buy books online and support independent bookstores instead of Amazon.
+        Our curated storefront on Bookshop.org earns a small commission that
+        helps keep this site going — at no extra cost to you.
+      </p>
+      <p>
+        <a
+          class="button bookshop-cta"
+          href={BOOKSHOP_SHOP_URL}
+          target="_blank"
+          rel="noopener noreferrer sponsored"
+        >
+          Visit our Bookshop.org store →
+        </a>
+      </p>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  .home-hero {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .home-hero-text {
+    flex: 1 1 22rem;
+  }
+  .home-logo {
+    width: clamp(7rem, 28vw, 10rem);
+    height: auto;
+    margin: 0;
+    display: block;
+    flex: 0 0 auto;
+  }
+  .bookshop-feature {
+    padding: var(--space-lg);
+    border: var(--card-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+    text-align: center;
+  }
+  .bookshop-feature h2 {
+    margin-top: 0;
+  }
+  .bookshop-feature p {
+    max-width: var(--prose-max);
+    margin-inline: auto;
+  }
+  .bookshop-cta {
+    background: #3b6aa0; /* Bookshop.org brand blue */
+    color: #fff;
+  }
+  .bookshop-cta:hover {
+    background: #2f567f;
+    filter: none;
+  }
+</style>

@@ -65,6 +65,9 @@ const blog = defineCollection({
     description: z.string().optional(),
     pubDate: z.coerce.date(),
     heroImage: z.string().optional(),
+    // When true, a small YouTube glyph shows before the title (listing + post
+    // header). Use for Shorts/video posts. Purely visual; defaults to false.
+    youtube: z.boolean().default(false),
     tags: z.array(z.string()).default([]),
     bookstore: reference('bookstores').optional(),
     library: reference('libraries').optional(),

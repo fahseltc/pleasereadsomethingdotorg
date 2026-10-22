@@ -3,6 +3,7 @@ import { getCollection, getEntry, render } from 'astro:content';
 import type { GetStaticPaths } from 'astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import YouTube from '../../components/YouTube.astro';
+import YouTubeIcon from '../../components/YouTubeIcon.astro';
 import BookshopLink from '../../components/BookshopLink.astro';
 import { withBase } from '../../lib/url';
 
@@ -34,7 +35,10 @@ if (post.data.bookstore) {
   <article class="section prose stack">
     <p><a href={withBase('/blog')}>← All posts</a></p>
 
-    <h1>{post.data.title}</h1>
+    <h1>
+      {post.data.youtube && <YouTubeIcon />}
+      {post.data.title}
+    </h1>
     <p class="muted small">
       {post.data.pubDate.toLocaleDateString('en-US', {
         year: 'numeric',

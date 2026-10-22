@@ -8,9 +8,8 @@
     "lng": -104.954,
     "review": "A Front Range landmark independent bookstore. Deep, well-curated shelves across every section, comfortable reading nooks, and a steady calendar of author events.",
     "tags": [
-      "new",
       "events",
-      "cafe",
+      "coffee",
       "colfax"
     ],
     "website": "https://www.tatteredcover.com/",
@@ -29,10 +28,9 @@
     "lng": -105.28103,
     "review": "Three floors of new and used on the Pearl Street Mall. Strong local-author section and a reliably good staff-picks shelf. Worth the trip up to Boulder.",
     "tags": [
-      "used",
-      "new",
+      "used books",
       "events",
-      "pearl-street"
+      "pearl street"
     ],
     "website": "https://boulderbookstore.net/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Boulder%20Bookstore%2C%201107%20Pearl%20St%2C%20Boulder%2C%20CO%2080302",
@@ -51,7 +49,6 @@
     "review": "A joyful children's bookstore in the Berkeley/Tennyson neighborhood. Thoughtful hand-selling, a warm space for story time, and shelves that make kids (and parents) want to linger.",
     "tags": [
       "children",
-      "new",
       "events"
     ],
     "website": "https://secondstartotherightbooks.com/",
@@ -88,7 +85,7 @@
     "lng": -105.08946,
     "review": "Bookstore and Cafe",
     "tags": [
-      "board games",
+      "games",
       "coffee"
     ],
     "website": "https://thereadqueen.com/",
@@ -109,7 +106,7 @@
     "tags": [
       "coffee",
       "romance",
-      "bookclubs"
+      "book clubs"
     ],
     "website": "https://www.goodgirlcafeandbookstore.com/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Good%20Girls%20Bookstore%20and%20Cafe%2C%202807%20S%20Broadway%2C%20Englewood%2C%20CO%2080113",
@@ -127,8 +124,7 @@
     "lng": -104.97369,
     "review": "New book store in Denver Colorado",
     "tags": [
-      "used book exchange",
-      "books"
+      "used books"
     ],
     "website": "https://www.slowpokebooks.com/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Slowpoke%20Books%2C%202383%20S%20Downing%20Street%2C%20Denver%20CO%2080210",
@@ -163,9 +159,9 @@
     "address": "5505 W 20th Ave Ste 144 Edgewater, CO 80214",
     "lat": 39.74959242910378,
     "lng": -105.05733310377575,
-    "review": "Reading Can Take You To nother World",
+    "review": "Reading Can Take You To another world",
     "tags": [
-      "used and new books"
+      "used books"
     ],
     "website": "https://edgewaterbooksofcolorado.com/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Edgewater%20Books%2C%205505%20W%2020th%20Ave%20Ste%20144%20Edgewater%2C%20CO%2080214",
@@ -186,7 +182,7 @@
       "coffee",
       "wine",
       "beer",
-      "bookclubs"
+      "book clubs"
     ],
     "website": "https://thedenverbooksociety.com/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Denver%20Book%20Society%2C%201700%20N%20Humboldt%20St%20Denver%2C%20CO%2080218",
@@ -260,7 +256,7 @@
     "lng": -104.98065472664217,
     "review": "Where your next great love story awaits!",
     "tags": [
-      "romance books",
+      "romance",
       "book clubs",
       "spicy"
     ],

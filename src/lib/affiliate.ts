@@ -26,3 +26,6 @@ export function bookshopBookUrl(isbn: string): string {
 export function bookshopShopUrl(): string {
   return `https://bookshop.org/?aid=${BOOKSHOP_AFFILIATE_ID}`;
 }
+
+/** Our curated Bookshop.org storefront (also credits the affiliate ID). */
+export const BOOKSHOP_SHOP_URL = 'https://bookshop.org/shop/PleaseReadSomething';
