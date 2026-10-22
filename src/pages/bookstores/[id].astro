@@ -5,6 +5,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Map, { type MapPin } from '../../components/Map.astro';
 import { withBase } from '../../lib/url';
 import { upcomingEventsForStore } from '../../lib/events';
+import { BOOKSTORE_COLOR } from '../../lib/map-colors';
 
 export const getStaticPaths = (async () => {
   const stores = await getCollection('bookstores');
@@ -38,6 +39,7 @@ const pins: MapPin[] = hasCoords
         lng: d.lng as number,
         image: d.image,
         href: withBase(`/bookstores/${d.id}`),
+        color: BOOKSTORE_COLOR,
       },
     ]
   : [];

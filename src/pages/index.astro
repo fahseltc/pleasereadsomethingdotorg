@@ -5,10 +5,7 @@ import Map, { type MapPin } from '../components/Map.astro';
 import { allUpcomingEvents } from '../lib/events';
 import { BOOKSHOP_SHOP_URL } from '../lib/affiliate';
 import { withBase } from '../lib/url';
-
-// Pin colors for the combined map key.
-const BOOKSTORE_COLOR = '#7a4a2b'; // bookish brown (matches the site accent)
-const LIBRARY_COLOR = '#2e7d6b'; // teal-green, clearly distinct from bookstores
+import { BOOKSTORE_COLOR, LIBRARY_COLOR } from '../lib/map-colors';
 
 // Combined pins: enabled bookstores + libraries that have resolved coordinates.
 const stores = (await getCollection('bookstores')).filter(

@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import LibraryCard from '../components/LibraryCard.astro';
 import Map, { type MapPin } from '../components/Map.astro';
 import { withBase } from '../lib/url';
+import { LIBRARY_COLOR } from '../lib/map-colors';
 
 // Only enabled libraries with resolved coordinates appear on the map.
 const libraries = (await getCollection('libraries'))
@@ -21,6 +22,7 @@ const pins: MapPin[] = mapped.map((l) => ({
   lng: l.data.lng as number,
   image: l.data.image,
   href: withBase(`/libraries/${l.data.id}`),
+  color: LIBRARY_COLOR,
 }));
 
 const allTags = Array.from(new Set(libraries.flatMap((l) => l.data.tags))).sort();

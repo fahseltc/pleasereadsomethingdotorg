@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import BookstoreCard from '../components/BookstoreCard.astro';
 import Map, { type MapPin } from '../components/Map.astro';
 import { withBase } from '../lib/url';
+import { BOOKSTORE_COLOR } from '../lib/map-colors';
 
 // Only enabled stores with resolved coordinates appear (design §7).
 const stores = (await getCollection('bookstores'))
@@ -21,6 +22,7 @@ const pins: MapPin[] = mapped.map((s) => ({
   lng: s.data.lng as number,
   image: s.data.image,
   href: withBase(`/bookstores/${s.data.id}`),
+  color: BOOKSTORE_COLOR,
 }));
 
 const allTags = Array.from(new Set(stores.flatMap((s) => s.data.tags))).sort();
