@@ -1,45 +1,226 @@
 [
-    {
-        "id": "denver-central-library",
-        "name": "Denver Central Library",
-        "image": "/images/libraries/placeholder.svg",
-        "address": "10 W 14th Ave Pkwy, Denver, CO 80204",
-        "lat": 39.7372,
-        "lng": -104.9898,
-        "review": "The flagship of the Denver Public Library system. A landmark Michael Graves building with deep special collections, a Western History reading room, and a steady calendar of talks and programs.",
-        "tags": [
-            "public",
-            "events",
-            "special-collections",
-            "denver"
-        ],
-        "website": "https://www.denverlibrary.org/",
-        "mapsLink": "https://www.google.com/maps/search/?api=1&query=Denver%20Central%20Library%2C%2010%20W%2014th%20Ave%20Pkwy%2C%20Denver%2C%20CO%2080204",
-        "sourceAliases": [
-            "Denver Public Library",
-            "Denver Central Library"
-        ],
-        "enabled": true
-    },
-    {
-        "id": "boulder-public-main",
-        "name": "Boulder Public Library (Main)",
-        "image": "/images/libraries/placeholder.svg",
-        "address": "1001 Arapahoe Ave, Boulder, CO 80302",
-        "lat": 40.0146,
-        "lng": -105.2862,
-        "review": "Boulder's main branch, spanning Boulder Creek with the glass Canyon Gallery walkway. Strong author events, a makerspace, and quiet reading spots over the water.",
-        "tags": [
-            "public",
-            "events",
-            "makerspace",
-            "boulder"
-        ],
-        "website": "https://boulderlibrary.org/",
-        "mapsLink": "https://www.google.com/maps/search/?api=1&query=Boulder%20Public%20Library%2C%201001%20Arapahoe%20Ave%2C%20Boulder%2C%20CO%2080302",
-        "sourceAliases": [
-            "Boulder Public Library"
-        ],
-        "enabled": true
-    }
+  {
+    "id": "denver-central-library",
+    "name": "Denver Central Library",
+    "image": "/images/libraries/placeholder.svg",
+    "address": "10 W 14th Ave Pkwy, Denver, CO 80204",
+    "lat": 39.7372,
+    "lng": -104.9898,
+    "review": "The flagship of the Denver Public Library system. A landmark Michael Graves building with deep special collections, a Western History reading room, and a steady calendar of talks and programs.",
+    "tags": [
+      "public",
+      "events",
+      "special-collections",
+      "denver"
+    ],
+    "website": "https://www.denverlibrary.org/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Denver%20Central%20Library%2C%2010%20W%2014th%20Ave%20Pkwy%2C%20Denver%2C%20CO%2080204",
+    "sourceAliases": [
+      "Denver Public Library",
+      "Denver Central Library"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "boulder-public-main",
+    "name": "Boulder Public Library (Main)",
+    "image": "/images/libraries/placeholder.svg",
+    "address": "1001 Arapahoe Ave, Boulder, CO 80302",
+    "lat": 40.0146,
+    "lng": -105.2862,
+    "review": "Boulder's main branch, spanning Boulder Creek with the glass Canyon Gallery walkway. Strong author events, a makerspace, and quiet reading spots over the water.",
+    "tags": [
+      "public",
+      "events",
+      "makerspace",
+      "boulder"
+    ],
+    "website": "https://boulderlibrary.org/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Boulder%20Public%20Library%2C%201001%20Arapahoe%20Ave%2C%20Boulder%2C%20CO%2080302",
+    "sourceAliases": [
+      "Boulder Public Library"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "parker-douglas-county-library",
+    "name": "Parker Douglas County Library",
+    "image": "/images/libraries/Parker.jpg",
+    "address": "20105 East Mainstreet, Parker, CO 80138",
+    "lat": 39.51839,
+    "lng": -104.75458,
+    "review": "Douglas County Libraries supports the arts by featuring stunning public art.",
+    "tags": [
+      "Library",
+      "book clubs"
+    ],
+    "website": "https://www.dcl.org/parker/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Parker%20Douglas%20County%20Library%2C%2020105%20East%20Mainstreet%2C%20Parker%2C%20CO%2080138",
+    "sourceAliases": [
+      "Parker Douglas County Library"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "lone-tree-douglas-county-library",
+    "name": "Lone Tree Douglas County Library",
+    "image": "/images/libraries/Lonetree.png",
+    "address": "10055 Library Way, Lone Tree, CO 80124",
+    "lat": 39.53368,
+    "lng": -104.88159,
+    "review": "Informal and formal meeting and event spaces are also available to the public, as well as laptop borrowing.",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://www.dcl.org/lone-tree/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Lone%20Tree%20Douglas%20County%20Library%2C%2010055%20Library%20Way%2C%20Lone%20Tree%2C%20CO%2080124",
+    "sourceAliases": [
+      "Lone Tree Douglas County Library"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "roxborough-douglas-county-library",
+    "name": "Roxborough Douglas County Library",
+    "image": "/images/libraries/roxborough.png",
+    "address": "8357 N. Rampart Range Rd. #200, Littleton, CO 80125",
+    "lat": 39.48409,
+    "lng": -105.07532,
+    "review": "Located in the heart of Roxborough, this intimate storefront library boasts a light-filled space with a fantastic view of Colorado's Front Range.",
+    "tags": [
+      "book club"
+    ],
+    "website": "https://www.dcl.org/roxborough/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Roxborough%20Douglas%20County%20Library%2C%208357%20N.%20Rampart%20Range%20Rd.%20%23200%2C%20Littleton%2C%20CO%2080125",
+    "sourceAliases": [
+      "Roxborough Douglas County Library"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "louviers-douglas-county-library",
+    "name": "Louviers Douglas County Library",
+    "image": "/images/libraries/louviers.png",
+    "address": "7885 Louviers Blvd., Louviers, CO 80131",
+    "lat": 39.47628,
+    "lng": -105.00586,
+    "review": "This charming library is located on the second floor of the historic Village Club House in the former DuPont Company town of Louviers.",
+    "tags": [
+      "historic"
+    ],
+    "website": "https://www.dcl.org/louviers/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Louviers%20Douglas%20County%20Library%2C%207885%20Louviers%20Blvd.%2C%20Louviers%2C%20CO%2080131",
+    "sourceAliases": [
+      "Louviers Douglas County Library"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "highlands-ranch-douglas-county-library",
+    "name": "Highlands Ranch Douglas County Library",
+    "image": "/images/libraries/highlandsranch.png",
+    "address": "9292 S. Ridgeline Blvd., Highlands Ranch, CO 80129",
+    "lat": 39.54558,
+    "lng": -104.9974,
+    "review": "library features interactive children’s areas, flexible meeting and community spaces with state-of-the-art technology, laptop borrowing, and a furnished terrace with shade structure.",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://www.dcl.org/highlands-ranch/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Highlands%20Ranch%20Douglas%20County%20Library%2C%209292%20S.%20Ridgeline%20Blvd.%2C%20Highlands%20Ranch%2C%20CO%2080129",
+    "sourceAliases": [
+      "Highlands Ranch Douglas County Library"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "castle-rock-the-philip-jerry-miller-library-douglas-county-library",
+    "name": "Castle Rock The Philip & Jerry Miller Library Douglas County Library",
+    "image": "/images/libraries/castlerock.png",
+    "address": "100 S. Wilcox Street, Castle Rock, CO 80104",
+    "lat": 39.3682,
+    "lng": -104.85992,
+    "review": "This new library houses the DCL Archives & Local History, offering customers specialized help with historical, archival and genealogical projects—and where you can learn about the library's namesake and benefactors, Philip and Jerry Miller.",
+    "tags": [
+      "book club"
+    ],
+    "website": "https://www.dcl.org/castle-rock/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Castle%20Rock%20The%20Philip%20%26%20Jerry%20Miller%20Library%20Douglas%20County%20Library%2C%20100%20S.%20Wilcox%20Street%2C%20Castle%20Rock%2C%20CO%2080104",
+    "sourceAliases": [
+      "Castle Rock The Philip & Jerry Miller Library Douglas County Library"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "castle-pines-douglas-county-library",
+    "name": "Castle Pines Douglas County Library",
+    "image": "/images/libraries/castlepine.png",
+    "address": "360 Village Square Lane, Castle Pines, CO 80108",
+    "lat": 39.47017,
+    "lng": -104.87945,
+    "review": "This library's creativity-encouraging features include vending-machine-style laptop borrowing, a furnished terrace with a fireplace and a Lite-Brite-inspired interactive wall.",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://www.dcl.org/castle-pines/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Castle%20Pines%20Douglas%20County%20Library%2C%20360%20Village%20Square%20Lane%2C%20Castle%20Pines%2C%20CO%2080108",
+    "sourceAliases": [
+      "Castle Pines Douglas County Library"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "old-town-poudre-county-library",
+    "name": "Old Town Poudre County Library",
+    "image": "/images/libraries/oldtown.png",
+    "address": "201 Peterson Street Fort Collins, CO 80524",
+    "lat": 40.58495,
+    "lng": -105.07266,
+    "review": "Old Town Library's 50th Birthday Celebration",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://poudrelibraries.org/old-town-library/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Old%20Town%20Poudre%20County%20Library%2C%20201%20Peterson%20Street%20Fort%20Collins%2C%20CO%2080524",
+    "sourceAliases": [
+      "Old Town Poudre County Library"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "harmony-library",
+    "name": "Harmony Library",
+    "image": "/images/libraries/Harmony.png",
+    "address": "4616 S. Shields Street Fort Collins, CO 80526",
+    "lat": 40.52186,
+    "lng": -105.09498,
+    "review": "TODO: write a description.",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://poudrelibraries.org/harmony-library/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Harmony%20Library%2C%204616%20S.%20Shields%20Street%20Fort%20Collins%2C%20CO%2080526",
+    "sourceAliases": [
+      "Harmony Library"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "council-tree-library",
+    "name": "Council Tree Library",
+    "image": "/images/libraries/counciltree.png",
+    "address": "2733 Council Tree Avenue #200 Fort Collins, CO 80525",
+    "lat": 40.52501,
+    "lng": -105.02531,
+    "review": "TODO: write a description.",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://poudrelibraries.org/council-tree-library/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Council%20Tree%20Library%2C%202733%20Council%20Tree%20Avenue%20%23200%20Fort%20Collins%2C%20CO%2080525",
+    "sourceAliases": [
+      "Council Tree Library"
+    ],
+    "enabled": true
+  }
 ]
