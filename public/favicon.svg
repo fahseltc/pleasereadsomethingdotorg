@@ -1,5 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#7a4a2b" />
-  <path d="M8 7h7a3 3 0 0 1 3 3v15a4 4 0 0 0-4-3H8z" fill="#faf7f2" />
-  <path d="M24 7h-7a3 3 0 0 0-3 3v15a4 4 0 0 1 4-3h6z" fill="#e4ddd1" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Please Read Something">
+  <!-- Simplified favicon of the site logo: the yellow-green badge + an open
+       book. Legible at 16–32px, unlike the full logo (round-logo-yellow.svg),
+       which keeps all the detail for the header. Colors match the logo. -->
+  <circle cx="16" cy="16" r="15" fill="#e3ed82" stroke="#1b1b1b" stroke-width="2" />
+  <!-- open book -->
+  <g fill="none" stroke="#1b1b1b" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M16 10.5c-1.8-1.2-4-1.8-6.5-1.8V21c2.5 0 4.7.6 6.5 1.8" fill="#fffdf9" />
+    <path d="M16 10.5c1.8-1.2 4-1.8 6.5-1.8V21c-2.5 0-4.7.6-6.5 1.8" fill="#faf7f2" />
+    <path d="M16 10.5v12.3" />
+  </g>
 </svg>

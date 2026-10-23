@@ -63,6 +63,7 @@ function isActive(href: string) {
     <title>{fullTitle}</title>
     {description && <meta name="description" content={description} />}
     <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
+    <link rel="apple-touch-icon" href={withBase('/favicon.svg')} />
     <meta name="color-scheme" content="light dark" />
     <!-- Apply the saved light/dark mode BEFORE paint to avoid a flash. -->
     <script is:inline>
