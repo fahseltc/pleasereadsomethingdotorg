@@ -71,6 +71,9 @@ const blog = defineCollection({
     tags: z.array(z.string()).default([]),
     bookstore: reference('bookstores').optional(),
     library: reference('libraries').optional(),
+    // Optional author label (free text). Shown as a small tag on the listing and
+    // the post page. Posts without it show nothing.
+    author: z.string().optional(),
     // Optional ISBN-13 of the book this post is about. When set, the post shows
     // a Bookshop.org affiliate "buy" button. Hyphens/spaces are allowed; it must
     // be 13 digits once stripped (ISBN-13 always starts 978 or 979).

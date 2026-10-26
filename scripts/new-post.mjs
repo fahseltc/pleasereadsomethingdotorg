@@ -69,6 +69,7 @@ async function main() {
     `description: ${JSON.stringify(description || 'A short summary used for previews and SEO.')}`,
     `pubDate: ${nowStamp()}`,
     '# heroImage: "/images/blog/your-image.jpg"   # optional — drop the file in public/images/blog/',
+    '# author: "Name"   # optional — shows a small label on the listing and the post',
     `tags: ${JSON.stringify(tags)}`,
     bookstore
       ? `bookstore: ${JSON.stringify(bookstore)}   # links this post to a store id (optional)`

@@ -58,6 +58,7 @@ for (const post of posts) {
                   month: 'long',
                   day: 'numeric',
                 })}
+                {post.data.author && <span class="tag">{post.data.author}</span>}
                 {placeByPostId.get(post.id) && (
                   <>
                     {' · about '}

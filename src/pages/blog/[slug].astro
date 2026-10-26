@@ -4,6 +4,7 @@ import type { GetStaticPaths } from 'astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import YouTube from '../../components/YouTube.astro';
 import YouTubeIcon from '../../components/YouTubeIcon.astro';
+import BlogImage from '../../components/BlogImage.astro';
 import BookshopLink from '../../components/BookshopLink.astro';
 import { withBase } from '../../lib/url';
 
@@ -45,6 +46,7 @@ if (post.data.bookstore) {
         month: 'long',
         day: 'numeric',
       })}
+      {post.data.author && <span class="tag">{post.data.author}</span>}
       {
         place && (
           <>
@@ -67,7 +69,7 @@ if (post.data.bookstore) {
       )
     }
 
-    <Content components={{ YouTube, BookshopLink }} />
+    <Content components={{ YouTube, BookshopLink, BlogImage }} />
 
     {post.data.isbn && <BookshopLink isbn={post.data.isbn} />}
 

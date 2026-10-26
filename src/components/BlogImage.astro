@@ -1,0 +1,61 @@
+---
+/*
+ * BlogImage.astro — place an image anywhere inside a blog post body.
+ *
+ * Usage inside an .mdx post (no import needed; it's provided to every post):
+ *   <BlogImage src="/images/blog/slow-bullets.jpg" alt="Book spine close-up" />
+ *   <BlogImage src="/images/blog/shop.jpg" alt="Front window" size="small" caption="The front window" />
+ *
+ * - src: path under public/ (e.g. /images/blog/your-image.jpg). Required.
+ * - alt: describes the image for screen readers. Required; use alt="" only
+ *   for purely decorative images.
+ * - caption: optional text shown below the image.
+ * - size: "small" (240px), "medium" (420px), or "full" (the column width).
+ *   Default "full".
+ *
+ * The banner image (heroImage in the front matter) is separate and still
+ * appears at the top of the post.
+ */
+import { withBase } from '../lib/url';
+
+interface Props {
+  src: string;
+  alt: string;
+  caption?: string;
+  size?: 'small' | 'medium' | 'full';
+}
+
+const { src, alt, caption, size = 'full' } = Astro.props;
+---
+
+<figure class:list={['blog-image', `blog-image--${size}`]}>
+  <img src={withBase(src)} alt={alt} loading="lazy" decoding="async" />
+  {caption && <figcaption class="small muted">{caption}</figcaption>}
+</figure>
+
+<style>
+  .blog-image {
+    margin: var(--space) auto;
+    max-width: 100%;
+  }
+
+  .blog-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+  }
+
+  .blog-image--small {
+    max-width: 240px;
+  }
+
+  .blog-image--medium {
+    max-width: 420px;
+  }
+
+  .blog-image figcaption {
+    margin-top: var(--space-xs);
+    text-align: center;
+  }
+</style>
