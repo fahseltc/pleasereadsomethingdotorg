@@ -452,5 +452,45 @@
       "Broadway Book Mall"
     ],
     "enabled": true
+  },
+  {
+    "id": "corridor-bookstore",
+    "name": "Corridor Bookstore",
+    "image": "/images/bookstores/corridor-bookstore.png",
+    "address": "7700 W 44th Ave Ste 3, Wheat Ridge, CO 80033",
+    "lat": 39.77603,
+    "lng": -105.08287,
+    "review": "A new Denver bookstore, focused on tightly curated 'weird girl' fiction",
+    "tags": [
+      "curated",
+      "weird-girl",
+      "cute"
+    ],
+    "website": "https://www.corridor-bookstore.com/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Corridor%20Bookstore%2C%207700%20W%2044th%20Ave%20Ste%203%2C%20Wheat%20Ridge%2C%20CO%2080033",
+    "sourceAliases": [
+      "Corridor Bookstore"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "tropes-bookstore",
+    "name": "Tropes Bookstore",
+    "image": "/images/bookstores/placeholder.svg",
+    "address": "3316 Tejon St #104, Denver, CO 80211",
+    "lat": 39.76357,
+    "lng": -105.01075,
+    "review": "Opened on October 23, 2026. New books in the romance, horror, mystery, scifi categories in a cute personal space.",
+    "tags": [
+      "curated",
+      "cozy",
+      "newly opened"
+    ],
+    "website": "https://www.tropesdenver.com/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Tropes%20Bookstore%2C%203316%20Tejon%20St%20%23104%2C%20Denver%2C%20CO%2080211",
+    "sourceAliases": [
+      "Tropes Bookstore"
+    ],
+    "enabled": true
   }
 ]
