@@ -222,5 +222,167 @@
       "Council Tree Library"
     ],
     "enabled": true
+  },
+  {
+    "id": "eloise-may-library",
+    "name": "Eloise May Library",
+    "image": "/images/libraries/eloisemay.png",
+    "address": "1471 S. Parker Rd. Denver, CO 80231",
+    "lat": 39.69,
+    "lng": -104.89132,
+    "review": "Library",
+    "tags": [
+      "bookclubs"
+    ],
+    "website": "https://arapahoelibraries.org/locations/ma/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Eloise%20May%20Library%2C%201471%20S.%20Parker%20Rd.%20Denver%2C%20CO%2080231",
+    "sourceAliases": [
+      "Eloise May Library"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "smoky-hill-library",
+    "name": "Smoky Hill Library",
+    "image": "/images/libraries/smokyhill.png",
+    "address": "5430 S. Biscay Cir. Centennial, CO 80015",
+    "lat": 39.61798,
+    "lng": -104.7674,
+    "review": "Arapahoe County Libraries",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://arapahoelibraries.org/locations/sm/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Smoky%20Hill%20Library%2C%205430%20S.%20Biscay%20Cir.%20Centennial%2C%20CO%2080015",
+    "sourceAliases": [
+      "Smoky Hill Library"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "koelbel-library",
+    "name": "Koelbel Library",
+    "image": "/images/libraries/koelbellibrary.png",
+    "address": "5955 S. Holly St. Centennial, CO 80121",
+    "lat": 39.60894,
+    "lng": -104.92363,
+    "review": "Arapahoe County Library",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://arapahoelibraries.org/locations/ko/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Koelbel%20Library%2C%205955%20S.%20Holly%20St.%20Centennial%2C%20CO%2080121",
+    "sourceAliases": [
+      "Koelbel Library"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "castlewood-library",
+    "name": "Castlewood Library",
+    "image": "/images/libraries/castlewoodlibrary.png",
+    "address": "6739 S. Uinta St. Centennial, CO 80112",
+    "lat": 39.59467,
+    "lng": -104.89405,
+    "review": "Arapahoe County Library",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://arapahoelibraries.org/locations/cw/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Castlewood%20Library%2C%206739%20S.%20Uinta%20St.%20Centennial%2C%20CO%2080112",
+    "sourceAliases": [
+      "Castlewood Library"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "the-space-by-arapahoe-libraries",
+    "name": "The Space by Arapahoe Libraries",
+    "image": "/images/libraries/thespace.png",
+    "address": "12855 E. Adam Aircraft Cir Englewood, CO 80112",
+    "lat": 39.57809,
+    "lng": -104.83917,
+    "review": "The Space features a cafe, coworking space, meeting rooms and event space. It is designed to meet a growing demand for public meeting space.",
+    "tags": [
+      "bookclubs"
+    ],
+    "website": "https://arapahoelibraries.org/locations/sp/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=The%20Space%20by%20Arapahoe%20Libraries%2C%2012855%20E.%20Adam%20Aircraft%20Cir%20Englewood%2C%20CO%2080112",
+    "sourceAliases": [
+      "The Space by Arapahoe Libraries"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "southglenn-library",
+    "name": "Southglenn Library",
+    "image": "/images/libraries/southglenn.png",
+    "address": "6972 S. Vine St. Centennial, CO 80122",
+    "lat": 39.59056,
+    "lng": -104.96353,
+    "review": "Southglenn Library is open for browsing, using library computers and picking up holds. Book return in mall parking garage across the street.",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://arapahoelibraries.org/locations/sg/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Southglenn%20Library%2C%206972%20S.%20Vine%20St.%20Centennial%2C%20CO%2080122",
+    "sourceAliases": [
+      "Southglenn Library"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "sheridan-library",
+    "name": "Sheridan Library",
+    "image": "/images/libraries/sheridan.png",
+    "address": "3425 W. Oxford Ave. Denver, CO 80236",
+    "lat": 39.64251,
+    "lng": -105.03117,
+    "review": "Arapahoe County Library",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://arapahoelibraries.org/locations/sh/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Sheridan%20Library%2C%203425%20W.%20Oxford%20Ave.%20Denver%2C%20CO%2080236",
+    "sourceAliases": [
+      "Sheridan Library"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "kelver-library",
+    "name": "Kelver Library",
+    "image": "/images/libraries/kelver.png",
+    "address": "585 S. Main St. Byers, CO 80103",
+    "lat": 39.70341,
+    "lng": -104.22392,
+    "review": "Arapahoe County Library",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://arapahoelibraries.org/locations/ke/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Kelver%20Library%2C%20585%20S.%20Main%20St.%20Byers%2C%20CO%2080103",
+    "sourceAliases": [
+      "Kelver Library"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "davies-library",
+    "name": "Davies Library",
+    "image": "/images/libraries/davies.png",
+    "address": "128 2nd Ave. Deer Trail, CO 80105",
+    "lat": 39.60892,
+    "lng": -104.04123,
+    "review": "Davies Library is located in the Deer Trail School and has its own entrance.",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://arapahoelibraries.org/locations/da/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Davies%20Library%2C%20128%202nd%20Ave.%20Deer%20Trail%2C%20CO%2080105",
+    "sourceAliases": [
+      "Davies Library"
+    ],
+    "enabled": true
   }
 ]
