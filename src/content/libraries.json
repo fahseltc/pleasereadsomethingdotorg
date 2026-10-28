@@ -370,7 +370,7 @@
   {
     "id": "davies-library",
     "name": "Davies Library",
-    "image": "/images/libraries/davies.png",
+    "image": "/images/libraries/Davies.png",
     "address": "128 2nd Ave. Deer Trail, CO 80105",
     "lat": 39.60892,
     "lng": -104.04123,
@@ -552,7 +552,7 @@
   {
     "id": "palmer-lake-library-pa",
     "name": "Palmer Lake Library (PA)",
-    "image": "/images/libraries/Palmerlake.jpg",
+    "image": "/images/libraries/palmerlake.jpg",
     "address": "66 Lower Glenway, Palmer Lake, CO 80133",
     "lat": 39.12002,
     "lng": -104.916,
@@ -570,7 +570,7 @@
   {
     "id": "penrose-library-pe",
     "name": "Penrose Library (PE)",
-    "image": "/images/libraries/Penrose.png",
+    "image": "/images/libraries/penrose.png",
     "address": "20 N. Cascade Ave., Colorado Springs, CO 80903",
     "lat": 38.8353,
     "lng": -104.82591,
