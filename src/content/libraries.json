@@ -384,5 +384,261 @@
       "Davies Library"
     ],
     "enabled": true
+  },
+  {
+    "id": "calhan-library",
+    "name": "Calhan Library",
+    "image": "/images/libraries/calhan.png",
+    "address": "600 Bank Street, Calhan, CO 80808",
+    "lat": 39.03665,
+    "lng": -104.29985,
+    "review": "Calhan Library serves the far east reaches of El Paso County with friendly, knowledgeable staff.",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://ppld.org/calhan-library",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Calhan%20Library%2C%20600%20Bank%20Street%2C%20Calhan%2C%20CO%2080808",
+    "sourceAliases": [
+      "Calhan Library"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "cheyenne-mountain-library-ch",
+    "name": "Cheyenne Mountain Library (CH)",
+    "image": "/images/libraries/cheyennemountain.png",
+    "address": "1785 South 8th Street, Suite 100, Colorado Springs, CO 80905",
+    "lat": 38.80475,
+    "lng": -104.83982,
+    "review": "Pikes Peak Library District",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://ppld.org/cheyenne-mountain-library",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Cheyenne%20Mountain%20Library%20(CH)%2C%201785%20South%208th%20Street%2C%20Suite%20100%2C%20Colorado%20Springs%2C%20CO%2080905",
+    "sourceAliases": [
+      "Cheyenne Mountain Library (CH)"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "east-library-ea",
+    "name": "East Library (EA)",
+    "image": "/images/libraries/EastPPLD.png",
+    "address": "5550 N. Union Blvd., Colorado Springs, CO 80918",
+    "lat": 38.91265,
+    "lng": -104.7783,
+    "review": "Pikes Peak Library District",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://ppld.org/east-library",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=East%20Library%20(EA)%2C%205550%20N.%20Union%20Blvd.%2C%20Colorado%20Springs%2C%20CO%2080918",
+    "sourceAliases": [
+      "East Library (EA)"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "fountain-library-fo",
+    "name": "Fountain Library (FO)",
+    "image": "/images/libraries/fountain.png",
+    "address": "230 South Main St., Fountain, CO 80817",
+    "lat": 38.68141,
+    "lng": -104.6996,
+    "review": "Pikes Peak Library District",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://ppld.org/fountain-library",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Fountain%20Library%20(FO)%2C%20230%20South%20Main%20St.%2C%20Fountain%2C%20CO%2080817",
+    "sourceAliases": [
+      "Fountain Library (FO)"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "high-prairie-library-hi",
+    "name": "High Prairie Library (HI)",
+    "image": "/images/libraries/highprairie.png",
+    "address": "7035 Old Meridian Rd. Falcon, CO 80831",
+    "lat": 38.93469,
+    "lng": -104.60749,
+    "review": "Pikes Peak Library District",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://ppld.org/high-prairie-library",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=High%20Prairie%20Library%20(HI)%2C%207035%20Old%20Meridian%20Rd.%20Falcon%2C%20CO%2080831",
+    "sourceAliases": [
+      "High Prairie Library (HI)"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "library-21c-li",
+    "name": "Library 21c (LI)",
+    "image": "/images/libraries/library21c.png",
+    "address": "1175 Chapel Hills Dr., Colorado Springs, CO 80920",
+    "lat": 38.95335,
+    "lng": -104.79312,
+    "review": "Pikes Peak Library District",
+    "tags": [
+      "makers space"
+    ],
+    "website": "https://ppld.org/library-21c",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Library%2021c%20(LI)%2C%201175%20Chapel%20Hills%20Dr.%2C%20Colorado%20Springs%2C%20CO%2080920",
+    "sourceAliases": [
+      "Library 21c (LI)"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "manitou-springs-library-ma",
+    "name": "Manitou Springs Library (MA)",
+    "image": "/images/libraries/manitousprings.png",
+    "address": "701 Manitou Ave., Manitou Springs, CO 80829",
+    "lat": 38.85658,
+    "lng": -104.91476,
+    "review": "Pikes Peak Library District",
+    "tags": [
+      "book clubs",
+      "Carnegie Library"
+    ],
+    "website": "https://ppld.org/manitou-springs-library",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Manitou%20Springs%20Library%20(MA)%2C%20701%20Manitou%20Ave.%2C%20Manitou%20Springs%2C%20CO%2080829",
+    "sourceAliases": [
+      "Manitou Springs Library (MA)"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "monument-library-mo",
+    "name": "Monument Library (MO)",
+    "image": "/images/libraries/monument.png",
+    "address": "1706 Lake Woodmoor Dr., Monument, CO 80132",
+    "lat": 39.09605,
+    "lng": -104.85958,
+    "review": "Pikes Peak Library District",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://ppld.org/monument-library",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Monument%20Library%20(MO)%2C%201706%20Lake%20Woodmoor%20Dr.%2C%20Monument%2C%20CO%2080132",
+    "sourceAliases": [
+      "Monument Library (MO)"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "old-colorado-city-library-ol",
+    "name": "Old Colorado City Library (OL)",
+    "image": "/images/libraries/oldcoloradocity.png",
+    "address": "2418 West Pikes Peak Ave., Colorado Springs, CO 80904",
+    "lat": 38.84762,
+    "lng": -104.86107,
+    "review": "Pikes Peak Library District",
+    "tags": [
+      "book clubs",
+      "Carnegie Library"
+    ],
+    "website": "https://ppld.org/old-colorado-city-library",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Old%20Colorado%20City%20Library%20(OL)%2C%202418%20West%20Pikes%20Peak%20Ave.%2C%20Colorado%20Springs%2C%20CO%2080904",
+    "sourceAliases": [
+      "Old Colorado City Library (OL)"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "palmer-lake-library-pa",
+    "name": "Palmer Lake Library (PA)",
+    "image": "/images/libraries/Palmerlake.jpg",
+    "address": "66 Lower Glenway, Palmer Lake, CO 80133",
+    "lat": 39.12002,
+    "lng": -104.916,
+    "review": "Pikes Peak Library District",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://ppld.org/palmer-lake-library",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Palmer%20Lake%20Library%20(PA)%2C%2066%20Lower%20Glenway%2C%20Palmer%20Lake%2C%20CO%2080133",
+    "sourceAliases": [
+      "Palmer Lake Library (PA)"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "penrose-library-pe",
+    "name": "Penrose Library (PE)",
+    "image": "/images/libraries/Penrose.png",
+    "address": "20 N. Cascade Ave., Colorado Springs, CO 80903",
+    "lat": 38.8353,
+    "lng": -104.82591,
+    "review": "The Regional History & Genealogy Collection can be found in the historic 1905 Carnegie Library which is located in the northwest corner of Penrose Library.",
+    "tags": [
+      "genealogy",
+      "book clubs"
+    ],
+    "website": "https://ppld.org/penrose-library",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Penrose%20Library%20(PE)%2C%2020%20N.%20Cascade%20Ave.%2C%20Colorado%20Springs%2C%20CO%2080903",
+    "sourceAliases": [
+      "Penrose Library (PE)"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "ruth-holley-library-ru",
+    "name": "Ruth Holley Library (RU)",
+    "image": "/images/libraries/ruthholley.png",
+    "address": "685 North Murray Blvd., Colorado Springs, CO 80915",
+    "lat": 38.84299,
+    "lng": -104.7461,
+    "review": "Pikes Peak Library District",
+    "tags": [
+      "Book Clubs"
+    ],
+    "website": "https://ppld.org/ruth-holley-library",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Ruth%20Holley%20Library%20(RU)%2C%20685%20North%20Murray%20Blvd.%2C%20Colorado%20Springs%2C%20CO%2080915",
+    "sourceAliases": [
+      "Ruth Holley Library (RU)"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "sand-creek-library-sa",
+    "name": "Sand Creek Library (SA)",
+    "image": "/images/libraries/sandcreek.png",
+    "address": "1821 South Academy Blvd., Colorado Springs, CO 80916",
+    "lat": 38.80623,
+    "lng": -104.75554,
+    "review": "Pikes Peak Library District",
+    "tags": [
+      "makerspace",
+      "recording studio"
+    ],
+    "website": "https://ppld.org/sand-creek-library",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Sand%20Creek%20Library%20(SA)%2C%201821%20South%20Academy%20Blvd.%2C%20Colorado%20Springs%2C%20CO%2080916",
+    "sourceAliases": [
+      "Sand Creek Library (SA)"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "ute-pass-library-ut",
+    "name": "Ute Pass Library (UT)",
+    "image": "/images/libraries/utepass.png",
+    "address": "8010 Severy Rd. Cascade, CO 80809",
+    "lat": 38.89673,
+    "lng": -104.97001,
+    "review": "Pike Peak Library District",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://ppld.org/ute-pass-library",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Ute%20Pass%20Library%20(UT)%2C%208010%20Severy%20Rd.%20Cascade%2C%20CO%2080809",
+    "sourceAliases": [
+      "Ute Pass Library (UT)"
+    ],
+    "enabled": true
   }
 ]
