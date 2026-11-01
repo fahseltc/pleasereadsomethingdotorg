@@ -10,6 +10,15 @@
 import { spawnSync } from 'node:child_process';
 import { parseArgs, ROOT, log } from './lib.mjs';
 
+// Shown after a successful publish. The timing comes from the GitHub Actions
+// "Deploy to GitHub Pages" workflow, measured from run start to the site going
+// live. Last 15 successful runs, pulled 2026-11-01: median 143 s. Thirteen of the
+// 15 finished in 106 to 193 s. Two slow runs took 403 s and 746 s. Update these
+// numbers if the typical time changes.
+const SITE_URL = 'https://pleasereadsomething.org/';
+const ESTIMATE_MIN_MINUTES = 2;
+const ESTIMATE_MAX_MINUTES = 3;
+
 function run(cmd, args, { capture = false } = {}) {
   // On Windows we run through the shell (so `git`/`npm` resolve via PATH),
   // but that means spawnSync joins args into a command string and the shell
@@ -106,8 +115,10 @@ function main() {
   }
 
   log.rule();
-  log.ok('Published. Your changes are building now and will be live in a minute or two.');
-  log.info('If you set up a custom domain or GitHub Pages URL, that\'s where it\'ll appear.');
+  log.ok('Published. Your changes are building now.');
+  log.info(`Site: ${SITE_URL}`);
+  log.info(`It usually updates in about ${ESTIMATE_MIN_MINUTES} to ${ESTIMATE_MAX_MINUTES} minutes.`);
+  log.info('If the page still shows the old version after that, press Ctrl+F5 to reload it. This skips the browser cache.');
 }
 
 main();
