@@ -242,7 +242,7 @@ never types a git command themselves. The intended loop is:
 
 1. `npm run new:post` or `npm run new:bookstore` to create/scaffold content.
 2. Edit the generated file(s) in their editor and add any images.
-3. `npm run preview:local` to see it locally (optional but encouraged).
+3. `npm run dev` to see it locally (optional but encouraged).
 4. `npm run publish` to put it live — this is the command that does the git work
    for them.
 
@@ -337,7 +337,7 @@ author to ask for help rather than dumping git output.
 
 | Command | Purpose |
 |---|---|
-| `npm run dev` / `npm run preview:local` | Local Astro dev server with hot reload — the author's "see it before publishing" command. Run by the user, not in CI. |
+| `npm run dev` | Local Astro dev server with hot reload — the author's "see it before publishing" command. Run by the user, not in CI. |
 | `npm run build` | Static build into `dist/` (also run automatically inside `publish`). |
 | `npm run geocode -- "<address>"` | Look up `lat`/`lng` for an address (OSM/Nominatim) — used inside `new:bookstore`, also callable alone to re-check a pin. |
 | `npm run sync:events` | Optional: copy `../book-events-aggregator/output/events.json` into `src/data/` so detail pages can show related events. |

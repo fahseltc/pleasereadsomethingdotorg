@@ -136,7 +136,7 @@
   {
     "id": "old-fire-house-books",
     "name": "Old Fire House Books",
-    "image": "/images/bookstores/Oldfirehousebookstore.png",
+    "image": "/images/bookstores/oldfirehousebookstore.png",
     "address": "232 Walnut Street Fort Collins, CO 80524",
     "lat": 40.58861,
     "lng": -105.07577,
@@ -173,7 +173,7 @@
   {
     "id": "denver-book-society",
     "name": "Denver Book Society",
-    "image": "/images/bookstores/Denverbooksociety.png",
+    "image": "/images/bookstores/denverbooksociety.png",
     "address": "1700 N Humboldt St Denver, CO 80218",
     "lat": 39.78113,
     "lng": -104.96998,
@@ -270,7 +270,7 @@
   {
     "id": "haven-coffee-and-books",
     "name": "Haven Coffee and Books",
-    "image": "/images/bookstores/Haven.jpg",
+    "image": "/images/bookstores/haven.jpg",
     "address": "1740 S Buckley Rd Unit 9 Aurora, CO 80017",
     "lat": 39.68405090834597,
     "lng": -104.78963279486608,
@@ -347,7 +347,7 @@
   {
     "id": "munity-comics-and-books",
     "name": "Munity Comics and Books",
-    "image": "/images/bookstores/Mutiny.png",
+    "image": "/images/bookstores/mutiny.png",
     "address": "3483 S Broadway, Englewood, CO 80113",
     "lat": 39.65346,
     "lng": -104.98787,
@@ -365,7 +365,7 @@
   {
     "id": "dream-books-co",
     "name": "Dream Books Co.",
-    "image": "/images/bookstores/Dreambooks.png",
+    "image": "/images/bookstores/dreambooks.png",
     "address": "4455 Grape St, Denver, CO 80216",
     "lat": 39.77793,
     "lng": -104.92475,

@@ -45,7 +45,7 @@
   {
     "id": "parker-douglas-county-library",
     "name": "Parker Douglas County Library",
-    "image": "/images/libraries/Parker.jpg",
+    "image": "/images/libraries/parker.jpg",
     "address": "20105 East Mainstreet, Parker, CO 80138",
     "lat": 39.51839,
     "lng": -104.75458,
@@ -64,7 +64,7 @@
   {
     "id": "lone-tree-douglas-county-library",
     "name": "Lone Tree Douglas County Library",
-    "image": "/images/libraries/Lonetree.png",
+    "image": "/images/libraries/lonetree.png",
     "address": "10055 Library Way, Lone Tree, CO 80124",
     "lat": 39.53368,
     "lng": -104.88159,
@@ -190,7 +190,7 @@
   {
     "id": "harmony-library",
     "name": "Harmony Library",
-    "image": "/images/libraries/Harmony.png",
+    "image": "/images/libraries/harmony.png",
     "address": "4616 S. Shields Street Fort Collins, CO 80526",
     "lat": 40.52186,
     "lng": -105.09498,
@@ -370,7 +370,7 @@
   {
     "id": "davies-library",
     "name": "Davies Library",
-    "image": "/images/libraries/Davies.png",
+    "image": "/images/libraries/davies.png",
     "address": "128 2nd Ave. Deer Trail, CO 80105",
     "lat": 39.60892,
     "lng": -104.04123,
@@ -424,7 +424,7 @@
   {
     "id": "east-library-ea",
     "name": "East Library (EA)",
-    "image": "/images/libraries/EastPPLD.png",
+    "image": "/images/libraries/eastppld.png",
     "address": "5550 N. Union Blvd., Colorado Springs, CO 80918",
     "lat": 38.91265,
     "lng": -104.7783,

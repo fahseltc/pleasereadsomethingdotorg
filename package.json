@@ -8,12 +8,9 @@
     "node": ">=22.23.4"
   },
   "scripts": {
-    "dev": "astro dev",
-    "preview:local": "astro dev",
-    "start": "astro dev",
+    "dev": "node scripts/fix-images.mjs && astro dev",
+    "fix-images": "node scripts/fix-images.mjs",
     "build": "astro build",
-    "preview": "astro preview",
-    "check": "astro check",
     "new:post": "node scripts/new-post.mjs",
     "new:bookstore": "node scripts/new-bookstore.mjs",
     "new:library": "node scripts/new-library.mjs",

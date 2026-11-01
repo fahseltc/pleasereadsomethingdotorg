@@ -50,14 +50,24 @@ function main() {
     process.exit(1);
   }
 
-  // 1. Anything to publish?
+  // 1. Make image names match the files on disk. Runs before the "nothing
+  //    changed" check so a casing problem on the live site still gets fixed.
+  log.info('Checking image names…');
+  const imageCheck = run('node', ['scripts/fix-images.mjs']);
+  if (imageCheck.status !== 0) {
+    log.err('Some image names still do not match their files, so nothing was published.');
+    log.info('Fix the names listed above, then run `npm run publish` again.');
+    process.exit(1);
+  }
+
+  // 2. Anything to publish?
   const status = gitOut(['status', '--porcelain']);
   if (!status) {
     log.ok('Nothing has changed since the last publish — the live site is already up to date.');
     return;
   }
 
-  // 2. Build as a safety check so a broken site is caught before going live.
+  // 3. Build as a safety check so a broken site is caught before going live.
   log.info('Checking the site builds…');
   const build = run('npm', ['run', 'build']);
   if (build.status !== 0) {
@@ -66,10 +76,10 @@ function main() {
     process.exit(1);
   }
 
-  // 3. Stage everything (content + images + data).
+  // 4. Stage everything (content + images + data).
   run('git', ['add', '-A']);
 
-  // 4. Commit with an auto message if none provided.
+  // 5. Commit with an auto message if none provided.
   const auto = message || `Update site content (${new Date().toISOString().slice(0, 16).replace('T', ' ')})`;
   const commit = run('git', ['commit', '-m', auto]);
   if (commit.status !== 0) {
@@ -77,7 +87,7 @@ function main() {
     process.exit(1);
   }
 
-  // 5. Push to the current branch's upstream (main).
+  // 6. Push to the current branch's upstream (main).
   log.info('Publishing…');
   const push = run('git', ['push'], { capture: true });
   if (push.status !== 0) {

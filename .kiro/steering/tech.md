@@ -30,7 +30,7 @@
 
 | Command | Purpose |
 |---|---|
-| `npm run dev` / `npm run preview:local` | Local dev server (hot reload). |
+| `npm run dev` | Local dev server (hot reload). |
 | `npm run build` | Static build into `dist/`. |
 | `npm run preview` | Serve the built `dist/`. |
 | `npm run check` | Astro type/content diagnostics (run after edits). |
