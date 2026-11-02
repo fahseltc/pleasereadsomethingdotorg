@@ -2,16 +2,18 @@
   {
     "id": "denver-central-library",
     "name": "Denver Central Library",
-    "image": "/images/libraries/placeholder.svg",
+    "image": "/images/libraries/denver-central.png",
     "address": "10 W 14th Ave Pkwy, Denver, CO 80204",
     "lat": 39.7372,
     "lng": -104.9898,
     "review": "The flagship of the Denver Public Library system. A landmark Michael Graves building with deep special collections, a Western History reading room, and a steady calendar of talks and programs.",
     "tags": [
+      "denver",
+      "denver public library",
       "public",
       "events",
       "special-collections",
-      "denver"
+      "history"
     ],
     "website": "https://www.denverlibrary.org/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Denver%20Central%20Library%2C%2010%20W%2014th%20Ave%20Pkwy%2C%20Denver%2C%20CO%2080204",
@@ -24,16 +26,16 @@
   {
     "id": "boulder-public-main",
     "name": "Boulder Public Library (Main)",
-    "image": "/images/libraries/placeholder.svg",
+    "image": "/images/libraries/boulder-public-main.png",
     "address": "1001 Arapahoe Ave, Boulder, CO 80302",
     "lat": 40.0146,
     "lng": -105.2862,
     "review": "Boulder's main branch, spanning Boulder Creek with the glass Canyon Gallery walkway. Strong author events, a makerspace, and quiet reading spots over the water.",
     "tags": [
+      "boulder",
       "public",
       "events",
-      "makerspace",
-      "boulder"
+      "makerspace"
     ],
     "website": "https://boulderlibrary.org/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Boulder%20Public%20Library%2C%201001%20Arapahoe%20Ave%2C%20Boulder%2C%20CO%2080302",
@@ -51,8 +53,9 @@
     "lng": -104.75458,
     "review": "Douglas County Libraries supports the arts by featuring stunning public art.",
     "tags": [
-      "Library",
-      "book clubs"
+      "parker",
+      "douglas county",
+      "art"
     ],
     "website": "https://www.dcl.org/parker/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Parker%20Douglas%20County%20Library%2C%2020105%20East%20Mainstreet%2C%20Parker%2C%20CO%2080138",
@@ -70,7 +73,10 @@
     "lng": -104.88159,
     "review": "Informal and formal meeting and event spaces are also available to the public, as well as laptop borrowing.",
     "tags": [
-      "book clubs"
+      "lone tree",
+      "douglas county",
+      "meeting space",
+      "laptop borrowing"
     ],
     "website": "https://www.dcl.org/lone-tree/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Lone%20Tree%20Douglas%20County%20Library%2C%2010055%20Library%20Way%2C%20Lone%20Tree%2C%20CO%2080124",
@@ -88,7 +94,9 @@
     "lng": -105.07532,
     "review": "Located in the heart of Roxborough, this intimate storefront library boasts a light-filled space with a fantastic view of Colorado's Front Range.",
     "tags": [
-      "book club"
+      "littleton",
+      "roxborough",
+      "douglas county"
     ],
     "website": "https://www.dcl.org/roxborough/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Roxborough%20Douglas%20County%20Library%2C%208357%20N.%20Rampart%20Range%20Rd.%20%23200%2C%20Littleton%2C%20CO%2080125",
@@ -106,6 +114,8 @@
     "lng": -105.00586,
     "review": "This charming library is located on the second floor of the historic Village Club House in the former DuPont Company town of Louviers.",
     "tags": [
+      "louviers",
+      "douglas county",
       "historic"
     ],
     "website": "https://www.dcl.org/louviers/",
@@ -124,7 +134,10 @@
     "lng": -104.9974,
     "review": "library features interactive children’s areas, flexible meeting and community spaces with state-of-the-art technology, laptop borrowing, and a furnished terrace with shade structure.",
     "tags": [
-      "book clubs"
+      "highlands ranch",
+      "douglas county",
+      "children",
+      "laptop borrowing"
     ],
     "website": "https://www.dcl.org/highlands-ranch/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Highlands%20Ranch%20Douglas%20County%20Library%2C%209292%20S.%20Ridgeline%20Blvd.%2C%20Highlands%20Ranch%2C%20CO%2080129",
@@ -142,7 +155,10 @@
     "lng": -104.85992,
     "review": "This new library houses the DCL Archives & Local History, offering customers specialized help with historical, archival and genealogical projects—and where you can learn about the library's namesake and benefactors, Philip and Jerry Miller.",
     "tags": [
-      "book club"
+      "castle rock",
+      "douglas county",
+      "genealogy",
+      "history"
     ],
     "website": "https://www.dcl.org/castle-rock/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Castle%20Rock%20The%20Philip%20%26%20Jerry%20Miller%20Library%20Douglas%20County%20Library%2C%20100%20S.%20Wilcox%20Street%2C%20Castle%20Rock%2C%20CO%2080104",
@@ -160,7 +176,9 @@
     "lng": -104.87945,
     "review": "This library's creativity-encouraging features include vending-machine-style laptop borrowing, a furnished terrace with a fireplace and a Lite-Brite-inspired interactive wall.",
     "tags": [
-      "book clubs"
+      "castle pines",
+      "douglas county",
+      "laptop borrowing"
     ],
     "website": "https://www.dcl.org/castle-pines/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Castle%20Pines%20Douglas%20County%20Library%2C%20360%20Village%20Square%20Lane%2C%20Castle%20Pines%2C%20CO%2080108",
@@ -178,7 +196,7 @@
     "lng": -105.07266,
     "review": "Old Town Library's 50th Birthday Celebration",
     "tags": [
-      "book clubs"
+      "fort collins"
     ],
     "website": "https://poudrelibraries.org/old-town-library/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Old%20Town%20Poudre%20County%20Library%2C%20201%20Peterson%20Street%20Fort%20Collins%2C%20CO%2080524",
@@ -196,7 +214,7 @@
     "lng": -105.09498,
     "review": "TODO: write a description.",
     "tags": [
-      "book clubs"
+      "fort collins"
     ],
     "website": "https://poudrelibraries.org/harmony-library/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Harmony%20Library%2C%204616%20S.%20Shields%20Street%20Fort%20Collins%2C%20CO%2080526",
@@ -214,7 +232,7 @@
     "lng": -105.02531,
     "review": "TODO: write a description.",
     "tags": [
-      "book clubs"
+      "fort collins"
     ],
     "website": "https://poudrelibraries.org/council-tree-library/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Council%20Tree%20Library%2C%202733%20Council%20Tree%20Avenue%20%23200%20Fort%20Collins%2C%20CO%2080525",
@@ -232,7 +250,7 @@
     "lng": -104.89132,
     "review": "Library",
     "tags": [
-      "bookclubs"
+      "denver"
     ],
     "website": "https://arapahoelibraries.org/locations/ma/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Eloise%20May%20Library%2C%201471%20S.%20Parker%20Rd.%20Denver%2C%20CO%2080231",
@@ -250,7 +268,8 @@
     "lng": -104.7674,
     "review": "Arapahoe County Libraries",
     "tags": [
-      "book clubs"
+      "centennial",
+      "arapahoe county"
     ],
     "website": "https://arapahoelibraries.org/locations/sm/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Smoky%20Hill%20Library%2C%205430%20S.%20Biscay%20Cir.%20Centennial%2C%20CO%2080015",
@@ -268,7 +287,8 @@
     "lng": -104.92363,
     "review": "Arapahoe County Library",
     "tags": [
-      "book clubs"
+      "centennial",
+      "arapahoe county"
     ],
     "website": "https://arapahoelibraries.org/locations/ko/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Koelbel%20Library%2C%205955%20S.%20Holly%20St.%20Centennial%2C%20CO%2080121",
@@ -286,7 +306,8 @@
     "lng": -104.89405,
     "review": "Arapahoe County Library",
     "tags": [
-      "book clubs"
+      "centennial",
+      "arapahoe county"
     ],
     "website": "https://arapahoelibraries.org/locations/cw/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Castlewood%20Library%2C%206739%20S.%20Uinta%20St.%20Centennial%2C%20CO%2080112",
@@ -304,7 +325,10 @@
     "lng": -104.83917,
     "review": "The Space features a cafe, coworking space, meeting rooms and event space. It is designed to meet a growing demand for public meeting space.",
     "tags": [
-      "bookclubs"
+      "englewood",
+      "arapahoe county",
+      "coworking",
+      "cafe"
     ],
     "website": "https://arapahoelibraries.org/locations/sp/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=The%20Space%20by%20Arapahoe%20Libraries%2C%2012855%20E.%20Adam%20Aircraft%20Cir%20Englewood%2C%20CO%2080112",
@@ -322,7 +346,8 @@
     "lng": -104.96353,
     "review": "Southglenn Library is open for browsing, using library computers and picking up holds. Book return in mall parking garage across the street.",
     "tags": [
-      "book clubs"
+      "centennial",
+      "arapahoe county"
     ],
     "website": "https://arapahoelibraries.org/locations/sg/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Southglenn%20Library%2C%206972%20S.%20Vine%20St.%20Centennial%2C%20CO%2080122",
@@ -340,7 +365,8 @@
     "lng": -105.03117,
     "review": "Arapahoe County Library",
     "tags": [
-      "book clubs"
+      "denver",
+      "arapahoe county"
     ],
     "website": "https://arapahoelibraries.org/locations/sh/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Sheridan%20Library%2C%203425%20W.%20Oxford%20Ave.%20Denver%2C%20CO%2080236",
@@ -358,7 +384,8 @@
     "lng": -104.22392,
     "review": "Arapahoe County Library",
     "tags": [
-      "book clubs"
+      "byers",
+      "arapahoe county"
     ],
     "website": "https://arapahoelibraries.org/locations/ke/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Kelver%20Library%2C%20585%20S.%20Main%20St.%20Byers%2C%20CO%2080103",
@@ -376,7 +403,7 @@
     "lng": -104.04123,
     "review": "Davies Library is located in the Deer Trail School and has its own entrance.",
     "tags": [
-      "book clubs"
+      "deer trail"
     ],
     "website": "https://arapahoelibraries.org/locations/da/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Davies%20Library%2C%20128%202nd%20Ave.%20Deer%20Trail%2C%20CO%2080105",
@@ -394,7 +421,7 @@
     "lng": -104.29985,
     "review": "Calhan Library serves the far east reaches of El Paso County with friendly, knowledgeable staff.",
     "tags": [
-      "book clubs"
+      "calhan"
     ],
     "website": "https://ppld.org/calhan-library",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Calhan%20Library%2C%20600%20Bank%20Street%2C%20Calhan%2C%20CO%2080808",
@@ -412,7 +439,8 @@
     "lng": -104.83982,
     "review": "Pikes Peak Library District",
     "tags": [
-      "book clubs"
+      "colorado springs",
+      "pikes peak"
     ],
     "website": "https://ppld.org/cheyenne-mountain-library",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Cheyenne%20Mountain%20Library%20(CH)%2C%201785%20South%208th%20Street%2C%20Suite%20100%2C%20Colorado%20Springs%2C%20CO%2080905",
@@ -430,7 +458,8 @@
     "lng": -104.7783,
     "review": "Pikes Peak Library District",
     "tags": [
-      "book clubs"
+      "colorado springs",
+      "pikes peak"
     ],
     "website": "https://ppld.org/east-library",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=East%20Library%20(EA)%2C%205550%20N.%20Union%20Blvd.%2C%20Colorado%20Springs%2C%20CO%2080918",
@@ -448,7 +477,8 @@
     "lng": -104.6996,
     "review": "Pikes Peak Library District",
     "tags": [
-      "book clubs"
+      "fountain",
+      "pikes peak"
     ],
     "website": "https://ppld.org/fountain-library",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Fountain%20Library%20(FO)%2C%20230%20South%20Main%20St.%2C%20Fountain%2C%20CO%2080817",
@@ -466,7 +496,8 @@
     "lng": -104.60749,
     "review": "Pikes Peak Library District",
     "tags": [
-      "book clubs"
+      "falcon",
+      "pikes peak"
     ],
     "website": "https://ppld.org/high-prairie-library",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=High%20Prairie%20Library%20(HI)%2C%207035%20Old%20Meridian%20Rd.%20Falcon%2C%20CO%2080831",
@@ -484,7 +515,9 @@
     "lng": -104.79312,
     "review": "Pikes Peak Library District",
     "tags": [
-      "makers space"
+      "colorado springs",
+      "pikes peak",
+      "makerspace"
     ],
     "website": "https://ppld.org/library-21c",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Library%2021c%20(LI)%2C%201175%20Chapel%20Hills%20Dr.%2C%20Colorado%20Springs%2C%20CO%2080920",
@@ -502,8 +535,9 @@
     "lng": -104.91476,
     "review": "Pikes Peak Library District",
     "tags": [
-      "book clubs",
-      "Carnegie Library"
+      "manitou springs",
+      "pikes peak",
+      "carnegie"
     ],
     "website": "https://ppld.org/manitou-springs-library",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Manitou%20Springs%20Library%20(MA)%2C%20701%20Manitou%20Ave.%2C%20Manitou%20Springs%2C%20CO%2080829",
@@ -521,7 +555,8 @@
     "lng": -104.85958,
     "review": "Pikes Peak Library District",
     "tags": [
-      "book clubs"
+      "monument",
+      "pikes peak"
     ],
     "website": "https://ppld.org/monument-library",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Monument%20Library%20(MO)%2C%201706%20Lake%20Woodmoor%20Dr.%2C%20Monument%2C%20CO%2080132",
@@ -539,8 +574,9 @@
     "lng": -104.86107,
     "review": "Pikes Peak Library District",
     "tags": [
-      "book clubs",
-      "Carnegie Library"
+      "colorado springs",
+      "pikes peak",
+      "carnegie"
     ],
     "website": "https://ppld.org/old-colorado-city-library",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Old%20Colorado%20City%20Library%20(OL)%2C%202418%20West%20Pikes%20Peak%20Ave.%2C%20Colorado%20Springs%2C%20CO%2080904",
@@ -558,7 +594,8 @@
     "lng": -104.916,
     "review": "Pikes Peak Library District",
     "tags": [
-      "book clubs"
+      "palmer lake",
+      "pikes peak"
     ],
     "website": "https://ppld.org/palmer-lake-library",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Palmer%20Lake%20Library%20(PA)%2C%2066%20Lower%20Glenway%2C%20Palmer%20Lake%2C%20CO%2080133",
@@ -576,8 +613,10 @@
     "lng": -104.82591,
     "review": "The Regional History & Genealogy Collection can be found in the historic 1905 Carnegie Library which is located in the northwest corner of Penrose Library.",
     "tags": [
-      "genealogy",
-      "book clubs"
+      "colorado springs",
+      "pikes peak",
+      "carnegie",
+      "genealogy"
     ],
     "website": "https://ppld.org/penrose-library",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Penrose%20Library%20(PE)%2C%2020%20N.%20Cascade%20Ave.%2C%20Colorado%20Springs%2C%20CO%2080903",
@@ -595,7 +634,8 @@
     "lng": -104.7461,
     "review": "Pikes Peak Library District",
     "tags": [
-      "Book Clubs"
+      "colorado springs",
+      "pikes peak"
     ],
     "website": "https://ppld.org/ruth-holley-library",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Ruth%20Holley%20Library%20(RU)%2C%20685%20North%20Murray%20Blvd.%2C%20Colorado%20Springs%2C%20CO%2080915",
@@ -613,6 +653,8 @@
     "lng": -104.75554,
     "review": "Pikes Peak Library District",
     "tags": [
+      "colorado springs",
+      "pikes peak",
       "makerspace",
       "recording studio"
     ],
@@ -632,7 +674,8 @@
     "lng": -104.97001,
     "review": "Pike Peak Library District",
     "tags": [
-      "book clubs"
+      "cascade",
+      "pikes peak"
     ],
     "website": "https://ppld.org/ute-pass-library",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Ute%20Pass%20Library%20(UT)%2C%208010%20Severy%20Rd.%20Cascade%2C%20CO%2080809",
