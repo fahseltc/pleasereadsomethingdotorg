@@ -719,5 +719,77 @@
       "Carnegie Library for Local History"
     ],
     "enabled": true
+  },
+  {
+    "id": "george-f-reynolds-library",
+    "name": "George F. Reynolds Library",
+    "image": "/images/libraries/georgefreynoldslibrary.png",
+    "address": "3595 Table Mesa Drive, Boulder, CO 80305",
+    "lat": 39.98443,
+    "lng": -105.25261,
+    "review": "Boulder Public Library",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://boulderlibrary.org/locations/reynolds/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=George%20F.%20Reynolds%20Library%2C%203595%20Table%20Mesa%20Drive%2C%20Boulder%2C%20CO%2080305",
+    "sourceAliases": [
+      "George F. Reynolds Library"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "gunbarrel-library",
+    "name": "Gunbarrel Library",
+    "image": "/images/libraries/gunbarrellibrary.png",
+    "address": "6500 Lookout Rd, Boulder, CO 80301",
+    "lat": 40.07222,
+    "lng": -105.20296,
+    "review": "Boulder Public Library",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://boulderlibrary.org/locations/gunbarrel/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Gunbarrel%20Library%2C%206500%20Lookout%20Rd%2C%20Boulder%2C%20CO%2080301",
+    "sourceAliases": [
+      "Gunbarrel Library"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "meadows-library",
+    "name": "Meadows Library",
+    "image": "/images/libraries/meadowsbranch.png",
+    "address": "4800 Baseline Road Unit C112, Boulder, CO 80303",
+    "lat": null,
+    "lng": null,
+    "review": "Boulder Public Library",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://boulderlibrary.org/locations/meadows/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Meadows%20Library%2C%204800%20Baseline%20Road%20Unit%20C112%2C%20Boulder%2C%20CO%2080303",
+    "sourceAliases": [
+      "Meadows Library"
+    ],
+    "enabled": false
+  },
+  {
+    "id": "nobo-library",
+    "name": "NoBo Library",
+    "image": "/images/libraries/nobo.png",
+    "address": "4500 13th Street, Boulder, CO 80304",
+    "lat": 40.0561,
+    "lng": -105.28094,
+    "review": "Boulder Public Library",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://boulderlibrary.org/locations/nobo/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=NoBo%20Library%2C%204500%2013th%20Street%2C%20Boulder%2C%20CO%2080304",
+    "sourceAliases": [
+      "NoBo Library"
+    ],
+    "enabled": true
   }
 ]
