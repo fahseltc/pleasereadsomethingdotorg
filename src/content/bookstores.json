@@ -492,5 +492,42 @@
       "Tropes Bookstore"
     ],
     "enabled": true
+  },
+  {
+    "id": "cherry-on-top",
+    "name": "Cherry On Top",
+    "image": "/images/bookstores/cherryontop.jpg",
+    "address": "119 E Mountain Ave Fort Collins, CO 80524",
+    "lat": 40.58695,
+    "lng": -105.07671,
+    "review": "Romance Bookstore with a non-fiction and children sections!",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://cherryontopbookshop.com/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Cherry%20On%20Top%2C%20119%20E%20Mountain%20Ave%20Fort%20Collins%2C%20CO%2080524",
+    "sourceAliases": [
+      "Cherry On Top"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "bookstore-on-the-square",
+    "name": "Bookstore On The Square",
+    "image": "/images/bookstores/bookstoreonthesquare.jpg",
+    "address": "113 Linden St, Fort Collins, CO 80524",
+    "lat": 40.58735,
+    "lng": -105.07641,
+    "review": "Banned Books Central",
+    "tags": [
+      "banned books",
+      "book clubs"
+    ],
+    "website": "https://bookstoreonthesquare.blogspot.com/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Bookstore%20On%20The%20Square%2C%20113%20Linden%20St%2C%20Fort%20Collins%2C%20CO%2080524",
+    "sourceAliases": [
+      "Bookstore On The Square"
+    ],
+    "enabled": true
   }
 ]
