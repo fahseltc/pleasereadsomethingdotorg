@@ -529,5 +529,24 @@
       "Bookstore On The Square"
     ],
     "enabled": true
+  },
+  {
+    "id": "wolverine-farm-publick-house",
+    "name": "Wolverine Farm Publick House",
+    "image": "/images/bookstores/wolverinefarms.jpg",
+    "address": "316 Willow St. Fort Collins, CO 80521",
+    "lat": 40.59073,
+    "lng": -105.07328,
+    "review": "Wolverine Farm Publick House is a creative outpost and event space in Fort Collins’ River District.",
+    "tags": [
+      "book clubs",
+      "coffee"
+    ],
+    "website": "https://www.wolverinefarm.org/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Wolverine%20Farm%20Publick%20House%2C%20316%20Willow%20St.%20Fort%20Collins%2C%20CO%2080521",
+    "sourceAliases": [
+      "Wolverine Farm Publick House"
+    ],
+    "enabled": true
   }
 ]
