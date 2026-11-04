@@ -549,21 +549,4 @@
     ],
     "enabled": true
   },
-  {
-    "id": "book-haven",
-    "name": "Book Haven",
-    "image": "/images/bookstores/bookhaven.png",
-    "address": "680 E 29th St, Loveland, CO 80538",
-    "lat": 40.42121,
-    "lng": -105.06894,
-    "review": "Used and new books",
-    "tags": [
-      "used books"
-    ],
-    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Book%20Haven%2C%20680%20E%2029th%20St%2C%20Loveland%2C%20CO%2080538",
-    "sourceAliases": [
-      "Book Haven"
-    ],
-    "enabled": true
-  }
 ]

@@ -773,5 +773,41 @@
       "NoBo Library"
     ],
     "enabled": true
+  },
+  {
+    "id": "cheyenne-library",
+    "name": "Cheyenne Library",
+    "image": "/images/libraries/cheyenne.png",
+    "address": "2200 Pioneer Ave. Cheyenne, WY 82001",
+    "lat": 41.13729,
+    "lng": -104.82115,
+    "review": "book clubs",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://lclsonline.org/",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Cheyenne%20Library%2C%202200%20Pioneer%20Ave.%20Cheyenne%2C%20WY%2082001",
+    "sourceAliases": [
+      "Cheyenne Library"
+    ],
+    "enabled": true
+  },
+  {
+    "id": "loveland-public-library",
+    "name": "Loveland Public Library",
+    "image": "/images/libraries/loveland.png",
+    "address": "300 N. Adams Ave. Loveland, CO 80537",
+    "lat": 40.3975,
+    "lng": -105.06926,
+    "review": "Tucked in the Front Range of the Colorado Rocky Mountains, Loveland Public Library is a dynamic, evolving organization, dedicated to providing our community members equal access to the space, information, and resources they need.",
+    "tags": [
+      "book clubs"
+    ],
+    "website": "https://www.lovelandpubliclibrary.org/home-library",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Loveland%20Public%20Library%2C%20300%20N.%20Adams%20Ave.%20Loveland%2C%20CO%2080537",
+    "sourceAliases": [
+      "Loveland Public Library"
+    ],
+    "enabled": true
   }
 ]
