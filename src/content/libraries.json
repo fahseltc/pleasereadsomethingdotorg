@@ -26,7 +26,7 @@
   {
     "id": "boulder-public-main",
     "name": "Boulder Public Library (Main)",
-    "image": "/images/libraries/boulder-public-main.png",
+    "image": "/images/libraries/bouldermainlibrary.png",
     "address": "1001 Arapahoe Ave, Boulder, CO 80302",
     "lat": 40.0146,
     "lng": -105.2862,
@@ -685,27 +685,9 @@
     "enabled": true
   },
   {
-    "id": "main-library",
-    "name": "Main Library",
-    "image": "/images/libraries/bouldermainlibrary.png",
-    "address": "1001 Arapahoe Ave., Boulder, CO 80302",
-    "lat": 40.014,
-    "lng": -105.28177,
-    "review": "Boulder Public Library",
-    "tags": [
-      "book clubs"
-    ],
-    "website": "https://boulderlibrary.org/locations/main/",
-    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Main%20Library%2C%201001%20Arapahoe%20Ave.%2C%20Boulder%2C%20CO%2080302",
-    "sourceAliases": [
-      "Main Library"
-    ],
-    "enabled": true
-  },
-  {
     "id": "carnegie-library-for-local-history",
     "name": "Carnegie Library for Local History",
-    "image": "/images/libraries/bouldercarniegn",
+    "image": "/images/libraries/bouldercarniegn.png",
     "address": "1125 Pine Street, Boulder, CO 80302",
     "lat": 40.02008,
     "lng": -105.28152,
