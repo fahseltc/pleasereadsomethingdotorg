@@ -10,6 +10,7 @@ export const paths = {
   libraries: resolve(ROOT, 'src/content/libraries.json'),
   blogDir: resolve(ROOT, 'src/content/blog'),
   dataDir: resolve(ROOT, 'src/data'),
+  youtubeShorts: resolve(ROOT, 'src/data/youtube-shorts.json'),
   storeImages: resolve(ROOT, 'public/images/bookstores'),
   libraryImages: resolve(ROOT, 'public/images/libraries'),
   blogImages: resolve(ROOT, 'public/images/blog'),

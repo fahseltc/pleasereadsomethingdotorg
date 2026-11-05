@@ -86,9 +86,15 @@ jobs:
         #   PUBLIC_CONTACT_EMAIL, PUBLIC_ADMIN_EMAIL
         # (NOTE: they render into the published HTML — "secret" here just means
         # "not stored in the repo", not hidden from visitors.)
+        #
+        # YOUTUBE_API_KEY is read by scripts/sync-youtube.mjs, which runs first
+        # in `npm run build`. It refreshes the channel's Shorts list. The key
+        # stays in the build; it is never written to the site. If it is missing,
+        # the build keeps the last saved list.
         env:
           PUBLIC_CONTACT_EMAIL: ${{ secrets.PUBLIC_CONTACT_EMAIL }}
           PUBLIC_ADMIN_EMAIL: ${{ secrets.PUBLIC_ADMIN_EMAIL }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: npm run build
 
       - name: Upload artifact

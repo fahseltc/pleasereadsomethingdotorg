@@ -32,6 +32,7 @@ src/
     blog/*.{md,mdx}        one article per file (.mdx can embed <YouTube/>)
   data/
     events.json            committed EMPTY stub; sync:events overwrites locally
+    youtube-shorts.json    channel Shorts (id, title, publishedAt, url); refreshed by sync-youtube at build
   lib/
     url.ts                 withBase() — prefix internal links with Astro base
     events.ts              aggregator bridge: map events -> store by sourceAliases
@@ -54,6 +55,7 @@ scripts/
   publish.mjs              npm run publish (build + git add/commit/push)
   update.mjs               npm run update (git pull wrapper)
   sync-events.mjs          npm run sync:events (pull aggregator output)
+  sync-youtube.mjs         npm run sync:youtube (YouTube Data API -> Shorts list; runs first in npm run build)
 .github/workflows/deploy.yml   build + deploy to GitHub Pages
 ```
 
@@ -72,6 +74,10 @@ scripts/
   upcoming. It is currently short-circuited by `eventsFeature.disabled = true`,
   so `upcomingEventsForStore` returns `[]` and no events render. Flip the flag to
   re-enable; all wiring stays in place.
+- **YouTube Shorts:** `npm run build` runs `scripts/sync-youtube.mjs` first. It
+  calls the YouTube Data API (key from `YOUTUBE_API_KEY`) and rewrites
+  `src/data/youtube-shorts.json`. If the key is missing or the API fails, it
+  keeps the last file and the build still runs.
 - **Publish:** author runs `npm run publish` → `scripts/publish.mjs` builds, then
   `git add/commit/push` → GitHub Actions builds and deploys to Pages.
 

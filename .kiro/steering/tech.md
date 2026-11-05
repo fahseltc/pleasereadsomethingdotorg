@@ -31,7 +31,7 @@
 | Command | Purpose |
 |---|---|
 | `npm run dev` | Local dev server (hot reload). |
-| `npm run build` | Static build into `dist/`. |
+| `npm run build` | Refresh the YouTube Shorts list (`sync-youtube`), then static build into `dist/`. |
 | `npm run preview` | Serve the built `dist/`. |
 | `npm run check` | Astro type/content diagnostics (run after edits). |
 | `npm run new:post` | Scaffold a blog article. |
@@ -41,6 +41,7 @@
 | `npm run disable:library` / `enable:library` | Toggle a library's map pin. |
 | `npm run geocode -- "<address>"` | OSM Nominatim lookup for lat/lng. |
 | `npm run sync:events` | Pull aggregator events into `src/data/events.json` (events bridge is currently DISABLED — see events.ts flag — so this has no visible effect). |
+| `npm run sync:youtube` | Refresh `src/data/youtube-shorts.json` from the YouTube Data API. Needs `YOUTUBE_API_KEY`. Also runs first in `npm run build`. |
 | `npm run publish` | Build + git add/commit/push (git-free for the author). |
 | `npm run update` | `git pull` wrapper with friendly output. |
 
@@ -73,8 +74,6 @@ There is NO automated test suite. After any change:
   deploy workflow deliberately does NOT feed `actions/configure-pages` base_path
   into the build (it would inject a wrong `/<repo>/` subpath). `public/CNAME`
   holds the domain so it persists across deploys.
-- **No secrets, ever.** There is no `.env` requirement. Don't introduce
-  API-keyed services; the whole point is a free, keyless static site.
 - **Analytics: GoatCounter (cookieless, keyless).** The count script is loaded
   in `BaseLayout.astro` (endpoint `GOATCOUNTER_ENDPOINT`, a public value — no
   key). Pageviews are automatic; `BookshopLink.astro` fires a custom

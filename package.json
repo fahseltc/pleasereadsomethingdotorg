@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "node scripts/fix-images.mjs && astro dev",
     "fix-images": "node scripts/fix-images.mjs",
-    "build": "astro build",
+    "build": "node scripts/sync-youtube.mjs && astro build",
     "new:post": "node scripts/new-post.mjs",
     "new:bookstore": "node scripts/new-bookstore.mjs",
     "new:library": "node scripts/new-library.mjs",
@@ -20,6 +20,7 @@
     "enable:library": "node scripts/toggle-entry.mjs enable library",
     "geocode": "node scripts/geocode.mjs",
     "sync:events": "node scripts/sync-events.mjs",
+    "sync:youtube": "node scripts/sync-youtube.mjs",
     "publish": "node scripts/publish.mjs",
     "update": "node scripts/update.mjs"
   },

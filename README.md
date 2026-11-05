@@ -12,7 +12,8 @@ A small static website for **Front Range independent bookstore reviews**. It has
   site **without ever using git**.
 
 It's built with [Astro](https://astro.build/) and deploys free to GitHub Pages.
-There's no server, no database, and no secrets.
+There's no server and no database. The one API key (YouTube, build-time only)
+lives in `.env` locally or in GitHub secrets.
 
 ---
 
@@ -328,8 +329,9 @@ which is exactly what `npm run publish` triggers.
 
 ```bash
 npm run dev       # local dev server
-npm run build     # static build into dist/
+npm run build     # sync YouTube Shorts, then static build into dist/
 npm run preview   # serve the built dist/
+npm run sync:youtube  # refresh src/data/youtube-shorts.json on its own
 npm run check     # Astro type/content diagnostics
 ```
 

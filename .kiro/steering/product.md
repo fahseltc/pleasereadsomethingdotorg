@@ -13,8 +13,10 @@ on GitHub Pages. Built so a non-technical author can add content with plain
   to its pin) or standalone (news, roundups) — both list the same way.
 - **Contact:** a "tell me about your bookstore" page (a `mailto:` template; no
   backend, no stored submissions).
-- **Zero running cost / no secrets:** no server, no database, no API keys. The
-  map needs no billing. Everything is committed files built to static HTML.
+- **Near-zero running cost:** no server and no database. The map needs no
+  billing. The site is committed files built to static HTML. The one API key
+  (YouTube Data API) is used only at build time, and its key never reaches the
+  browser.
 
 ## Key domain concepts
 
@@ -81,8 +83,9 @@ cookieless** — GoatCounter (`pleasereadsomething.goatcounter.com`), loaded in
 consent banner is needed. It counts pageviews site-wide and a custom
 `buy-click/<isbn>` event when a Bookshop.org affiliate button is clicked
 (wired in `BookshopLink.astro`). The GoatCounter endpoint is a public value (no
-secret/key). The visitor's light/dark choice is kept in `localStorage`
-on-device only. External runtime calls: OpenStreetMap tiles (attribution
+secret/key). The YouTube Data API key is used only during the build
+(`scripts/sync-youtube.mjs`) and is never sent to visitors. The visitor's
+light/dark choice is kept in `localStorage` on-device only. External runtime calls: OpenStreetMap tiles (attribution
 shown), GoatCounter's count script (`gc.zgo.at`), and any YouTube embeds in a
 post (youtube-nocookie.com).
 
