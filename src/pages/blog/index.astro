@@ -1,5 +1,6 @@
 ---
 import { getCollection, getEntry } from 'astro:content';
+import { breadcrumbJsonLd } from '../../lib/jsonld';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import YouTubeIcon from '../../components/YouTubeIcon.astro';
 import { withBase } from '../../lib/url';
@@ -32,9 +33,10 @@ for (const post of posts) {
     }
   }
 }
+const ld = breadcrumbJsonLd([{ name: 'Blog', path: '/blog' }]);
 ---
 
-<BaseLayout
+<BaseLayout jsonLd={ld}
   title="Blog"
   description="Articles about the Front Range's independent bookstores and libraries — reviews, roundups, and news."
 >

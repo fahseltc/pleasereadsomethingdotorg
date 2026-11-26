@@ -5,6 +5,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Map, { type MapPin } from '../../components/Map.astro';
 import { withBase } from '../../lib/url';
 import { snippet } from '../../lib/seo';
+import { placeJsonLd, breadcrumbJsonLd, eventJsonLd } from '../../lib/jsonld';
 import { upcomingEventsForStore } from '../../lib/events';
 import { BOOKSTORE_COLOR } from '../../lib/map-colors';
 
@@ -44,9 +45,15 @@ const pins: MapPin[] = hasCoords
       },
     ]
   : [];
+// Structured data (JSON-LD): the place itself, breadcrumbs, and its upcoming events.
+const ldPath = `/bookstores/${d.id}`;
+const ld = [
+  placeJsonLd('BookStore', d, ldPath),
+  breadcrumbJsonLd([{ name: 'Bookstores', path: '/bookstores' }, { name: d.name, path: ldPath }]),
+  ...events.map((e) => eventJsonLd(e, { type: 'BookStore', name: d.name, address: d.address, path: ldPath })),
+];
 ---
-
-<BaseLayout title={d.name} description={snippet(d.review)}>
+<BaseLayout title={d.name} description={snippet(d.review)} jsonLd={ld}>
   <article class="section stack">
     <p>
       <a href={withBase('/bookstores')}>← All bookstores</a>

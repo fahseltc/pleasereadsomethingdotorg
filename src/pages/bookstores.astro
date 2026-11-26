@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { breadcrumbJsonLd } from '../lib/jsonld';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BookstoreCard from '../components/BookstoreCard.astro';
 import Map, { type MapPin } from '../components/Map.astro';
@@ -26,9 +27,10 @@ const pins: MapPin[] = mapped.map((s) => ({
 }));
 
 const allTags = Array.from(new Set(stores.flatMap((s) => s.data.tags))).sort();
+const ld = breadcrumbJsonLd([{ name: 'Bookstores', path: '/bookstores' }]);
 ---
 
-<BaseLayout
+<BaseLayout jsonLd={ld}
   title="Bookstores"
   description="A map and index of independent bookstores along Colorado's Front Range."
 >

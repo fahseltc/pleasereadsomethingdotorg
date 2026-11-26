@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { siteJsonLd } from '../lib/jsonld';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Map, { type MapPin } from '../components/Map.astro';
 import { allUpcomingEvents } from '../lib/events';
@@ -53,9 +54,10 @@ function eventWhen(start: string): string {
   const time = hasTime ? d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }) : '';
   return time ? `${date} · ${time}` : date;
 }
+const ld = siteJsonLd();
 ---
 
-<BaseLayout
+<BaseLayout jsonLd={ld}
   title="Please Read Something"
   description="Honest reviews of books, libraries, and independent bookstores along Colorado's Front Range — and a one-stop shop to find book events and your fellow book people."
 >

@@ -1,5 +1,6 @@
 ---
 import { withBase } from '../lib/url';
+import { serializeJsonLd } from '../lib/jsonld';
 import '../styles/tokens.css';
 import '../styles/themes/classic.css';
 import '../styles/global.css';
@@ -11,9 +12,12 @@ interface Props {
   image?: string;
   /** Set 'article' for blog posts. */
   ogType?: 'website' | 'article';
+  /** schema.org JSON-LD object(s); see src/lib/jsonld.ts. */
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const { title, description, image, ogType = 'website' } = Astro.props;
+const { title, description, image, ogType = 'website', jsonLd } = Astro.props;
+const jsonLdItems = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 const siteName = 'Please Read Something';
 const fullTitle = title === siteName ? title : `${title} — ${siteName}`;
 
@@ -85,6 +89,7 @@ function isActive(href: string) {
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={shareImage} />
     <meta name="twitter:card" content="summary" />
+    {jsonLdItems.map((item) => <script type="application/ld+json" set:html={serializeJsonLd(item)} />)}
     <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
     <link rel="apple-touch-icon" href={withBase('/favicon.svg')} />
     <meta name="color-scheme" content="light dark" />

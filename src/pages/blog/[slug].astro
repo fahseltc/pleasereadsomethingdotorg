@@ -7,6 +7,7 @@ import YouTubeIcon from '../../components/YouTubeIcon.astro';
 import BlogImage from '../../components/BlogImage.astro';
 import BookshopLink from '../../components/BookshopLink.astro';
 import { withBase } from '../../lib/url';
+import { articleJsonLd, breadcrumbJsonLd } from '../../lib/jsonld';
 
 export const getStaticPaths = (async () => {
   // Draft posts are excluded from the build (design §10).
@@ -23,16 +24,27 @@ const { Content } = await render(post);
 // A post may be "about" a bookstore OR a library (both optional). Resolve the
 // linked place to a { name, href } for the "about <place>" line.
 let place: { name: string; href: string } | null = null;
+let about: { type: 'BookStore' | 'Library'; name: string; path: string } | null = null;
 if (post.data.bookstore) {
   const store = await getEntry('bookstores', post.data.bookstore.id);
-  if (store) place = { name: store.data.name, href: withBase(`/bookstores/${store.data.id}`) };
+  if (store) {
+    place = { name: store.data.name, href: withBase(`/bookstores/${store.data.id}`) };
+    about = { type: 'BookStore', name: store.data.name, path: `/bookstores/${store.data.id}` };
+  }
 } else if (post.data.library) {
   const lib = await getEntry('libraries', post.data.library.id);
-  if (lib) place = { name: lib.data.name, href: withBase(`/libraries/${lib.data.id}`) };
+  if (lib) {
+    place = { name: lib.data.name, href: withBase(`/libraries/${lib.data.id}`) };
+    about = { type: 'Library', name: lib.data.name, path: `/libraries/${lib.data.id}` };
+  }
 }
+const postPath = `/blog/${post.id}`;
+const ld = [
+  articleJsonLd(post.data, postPath, about),
+  breadcrumbJsonLd([{ name: 'Blog', path: '/blog' }, { name: post.data.title, path: postPath }]),
+];
 ---
-
-<BaseLayout title={post.data.title} description={post.data.description} ogType="article">
+<BaseLayout title={post.data.title} description={post.data.description} ogType="article" jsonLd={ld}>
   <article class="section prose stack">
     <p><a href={withBase('/blog')}>← All posts</a></p>
 

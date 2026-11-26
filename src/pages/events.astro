@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { breadcrumbJsonLd, eventJsonLd } from '../lib/jsonld';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import {
   allUpcomingEvents,
@@ -54,9 +55,23 @@ function formatTime(e: AggregatorEvent): string {
     ? start.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })
     : '';
 }
+// Structured data (JSON-LD): breadcrumbs + one Event per listed event. A matched
+// indexed store supplies the venue name/address; otherwise the feed's text is used.
+const storeById = new Map((await getCollection('bookstores')).map((s) => [s.data.id, s.data]));
+const ld = [
+  breadcrumbJsonLd([{ name: 'Events', path: '/events' }]),
+  ...events.map((e) => {
+    const id = storeIdFor.get(e);
+    const s = id ? storeById.get(id) : undefined;
+    return eventJsonLd(
+      e,
+      s ? { type: 'BookStore', name: s.name, address: s.address, path: `/bookstores/${s.id}` } : null,
+    );
+  }),
+];
 ---
 
-<BaseLayout
+<BaseLayout jsonLd={ld}
   title="Book Events in the Front Range"
   description="Upcoming author talks, signings, book clubs, and literary events at independent bookstores and libraries along Colorado's Front Range."
 >
