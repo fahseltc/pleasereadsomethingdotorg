@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
+import sitemap from '@astrojs/sitemap';
 
 // GitHub Pages configuration.
 //
@@ -25,5 +26,5 @@ export default defineConfig({
   },
   // MDX lets a blog post embed components (e.g. <YouTube/>) while still being
   // plain Markdown otherwise. Posts can be .md OR .mdx.
-  integrations: [mdx()],
+  integrations: [mdx(), sitemap()],
 });

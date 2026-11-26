@@ -7,11 +7,24 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  /** Absolute or site-relative path to a share image (og:image). */
+  image?: string;
+  /** Set 'article' for blog posts. */
+  ogType?: 'website' | 'article';
 }
 
-const { title, description } = Astro.props;
+const { title, description, image, ogType = 'website' } = Astro.props;
 const siteName = 'Please Read Something';
 const fullTitle = title === siteName ? title : `${title} — ${siteName}`;
+
+// SEO: every page gets a description (site default as fallback), a canonical
+// URL on the production origin, and Open Graph / Twitter share tags.
+const DEFAULT_DESCRIPTION =
+  'Independent bookstore and library reviews, a map, and upcoming book events for Denver and Colorado\'s Front Range.';
+const metaDescription = description || DEFAULT_DESCRIPTION;
+const canonicalPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
+const canonicalUrl = new URL(canonicalPath, Astro.site ?? Astro.url).href;
+const shareImage = new URL(image ?? '/images/logos/round-logo-yellow.png', Astro.site ?? Astro.url).href;
 
 // Analytics: GoatCounter — privacy-friendly, cookieless, no consent banner.
 // The endpoint is a public value (ships in the HTML), so no secret is involved.
@@ -63,7 +76,15 @@ function isActive(href: string) {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
-    {description && <meta name="description" content={description} />}
+    <meta name="description" content={metaDescription} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={shareImage} />
+    <meta name="twitter:card" content="summary" />
     <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
     <link rel="apple-touch-icon" href={withBase('/favicon.svg')} />
     <meta name="color-scheme" content="light dark" />

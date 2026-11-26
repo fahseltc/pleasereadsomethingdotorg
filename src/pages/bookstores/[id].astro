@@ -4,6 +4,7 @@ import type { GetStaticPaths } from 'astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Map, { type MapPin } from '../../components/Map.astro';
 import { withBase } from '../../lib/url';
+import { snippet } from '../../lib/seo';
 import { upcomingEventsForStore } from '../../lib/events';
 import { BOOKSTORE_COLOR } from '../../lib/map-colors';
 
@@ -45,7 +46,7 @@ const pins: MapPin[] = hasCoords
   : [];
 ---
 
-<BaseLayout title={d.name} description={d.review.slice(0, 150)}>
+<BaseLayout title={d.name} description={snippet(d.review)}>
   <article class="section stack">
     <p>
       <a href={withBase('/bookstores')}>← All bookstores</a>

@@ -32,7 +32,7 @@ if (post.data.bookstore) {
 }
 ---
 
-<BaseLayout title={post.data.title} description={post.data.description}>
+<BaseLayout title={post.data.title} description={post.data.description} ogType="article">
   <article class="section prose stack">
     <p><a href={withBase('/blog')}>← All posts</a></p>
 
