@@ -37,6 +37,7 @@
     "sourceAliases": [
       "Boulder Bookstore"
     ],
+    "youtube": "https://www.youtube.com/shorts/9KR4RztyU-Q",
     "enabled": true
   },
   {
@@ -57,6 +58,7 @@
       "Second Star to the Right",
       "Second Star to the Right Books"
     ],
+    "youtube": "https://www.youtube.com/shorts/SbZoyMoe6L0",
     "enabled": true
   },
   {
@@ -66,7 +68,7 @@
     "address": "15075 E Mississippi Ave, Aurora, CO 80012",
     "lat": 39.69779,
     "lng": -104.8129,
-    "review": "Eclectic and organized bookstore",
+    "review": "A stricly secondhand store only which is very well organized. No gifts or other things are available for sale, just books, books and more books! They take donations and the selection is very eclectic. Would recommend especially if you like to dig and find treasures!",
     "tags": [
       "used books"
     ],
@@ -74,6 +76,7 @@
     "sourceAliases": [
       "Book Niche"
     ],
+    "youtube": "https://www.youtube.com/shorts/ejGW0bSJ_ss",
     "enabled": true
   },
   {
@@ -83,7 +86,7 @@
     "address": "129 N Harrison Ave, Lafayette, CO 80026",
     "lat": 39.99856,
     "lng": -105.08946,
-    "review": "Bookstore and Cafe",
+    "review": "The Read Queen bookstore and cafe in Lafayette, CO is SUPER awesome and is situated in a cool small downtown area. Not only is it a bookstore, but it also has a lounge area, a game shop and an outdoor space to explore. Events include book clubs and storytimes - Don't forget to grab a yummy drink from the cafe to enjoy while browsing!",
     "tags": [
       "games",
       "coffee"
@@ -93,6 +96,7 @@
     "sourceAliases": [
       "The Read Queen"
     ],
+    "youtube": "https://www.youtube.com/shorts/q0g8-95hCio",
     "enabled": true
   },
   {
@@ -113,6 +117,7 @@
     "sourceAliases": [
       "Good Girls Bookstore and Cafe"
     ],
+    "youtube": "https://www.youtube.com/shorts/Jk9o32BrSFM",
     "enabled": true
   },
   {
@@ -131,6 +136,7 @@
     "sourceAliases": [
       "Slowpoke Books"
     ],
+    "youtube": "https://www.youtube.com/shorts/qyL8XcY8ZG4",
     "enabled": true
   },
   {
@@ -150,6 +156,7 @@
     "sourceAliases": [
       "Old Fire House Books"
     ],
+    "youtube": "https://www.youtube.com/shorts/43tJmtehyQk",
     "enabled": true
   },
   {
@@ -168,6 +175,7 @@
     "sourceAliases": [
       "Edgewater Books"
     ],
+    "youtube": "https://www.youtube.com/shorts/h-Ml4NEZjjM",
     "enabled": true
   },
   {
@@ -189,6 +197,7 @@
     "sourceAliases": [
       "Denver Book Society"
     ],
+    "youtube": "https://www.youtube.com/shorts/ciMB1ihPOvA",
     "enabled": true
   },
   {
@@ -209,6 +218,7 @@
     "sourceAliases": [
       "Black & Read"
     ],
+    "youtube": "https://www.youtube.com/shorts/EfT8_8f56IE",
     "enabled": true
   },
   {
@@ -227,6 +237,7 @@
     "sourceAliases": [
       "Capital Hill Books"
     ],
+    "youtube": "https://www.youtube.com/shorts/P1Nd5THqfLk",
     "enabled": true
   },
   {
@@ -245,6 +256,7 @@
     "sourceAliases": [
       "Shop At Matter"
     ],
+    "youtube": "https://www.youtube.com/shorts/yga5Guo7j-M",
     "enabled": true
   },
   {
@@ -265,6 +277,7 @@
     "sourceAliases": [
       "Spicy Librarian"
     ],
+    "youtube": "https://www.youtube.com/shorts/pyxsLI-cki4",
     "enabled": true
   },
   {
@@ -285,6 +298,7 @@
     "sourceAliases": [
       "Haven Coffee and Books"
     ],
+    "youtube": "https://www.youtube.com/shorts/I4Ht5OB2WnU",
     "enabled": true
   },
   {
@@ -304,6 +318,7 @@
     "sourceAliases": [
       "The Bookies"
     ],
+    "youtube": "https://www.youtube.com/shorts/maiZtQfDVxQ",
     "enabled": true
   },
   {
@@ -322,6 +337,7 @@
     "sourceAliases": [
       "Friends of the Aurora Public Library"
     ],
+    "youtube": "https://www.youtube.com/shorts/4YtmiZR_Ntw",
     "enabled": true
   },
   {
@@ -342,11 +358,12 @@
     "sourceAliases": [
       "The Plot Twist"
     ],
+    "youtube": "https://www.youtube.com/shorts/K_HDe_5Zxpo",
     "enabled": false
   },
   {
-    "id": "munity-comics-and-books",
-    "name": "Munity Comics and Books",
+    "id": "mutiny-comics-and-books",
+    "name": "Mutiny Comics and Books",
     "image": "/images/bookstores/mutiny.png",
     "address": "3483 S Broadway, Englewood, CO 80113",
     "lat": 39.65346,
@@ -356,10 +373,11 @@
       "comics"
     ],
     "website": "https://mutinycomics.com/",
-    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Munity%20Comics%20and%20Books%2C%203483%20S%20Broadway%2C%20Englewood%2C%20CO%2080113",
+    "mapsLink": "https://www.google.com/maps/search/?api=1&query=Mutiny%20Comics%20and%20Books%2C%203483%20S%20Broadway%2C%20Englewood%2C%20CO%2080113",
     "sourceAliases": [
-      "Munity Comics and Books"
+      "Mutiny Comics and Books"
     ],
+    "youtube": "https://www.youtube.com/shorts/WMFcSv5OzbM",
     "enabled": true
   },
   {
@@ -378,6 +396,7 @@
     "sourceAliases": [
       "Dream Books Co."
     ],
+    "youtube": "https://www.youtube.com/shorts/dfC1U8wSL9k",
     "enabled": true
   },
   {
@@ -396,6 +415,7 @@
     "sourceAliases": [
       "Spell Books"
     ],
+    "youtube": "https://www.youtube.com/shorts/yFlsiww4sZw",
     "enabled": true
   },
   {
@@ -414,6 +434,7 @@
     "sourceAliases": [
       "The Romance Section"
     ],
+    "youtube": "https://www.youtube.com/shorts/Gd27J20Nacs",
     "enabled": true
   },
   {
@@ -433,6 +454,7 @@
     "sourceAliases": [
       "Trident"
     ],
+    "youtube": "https://www.youtube.com/shorts/YHHhDOspbZc",
     "enabled": true
   },
   {
@@ -451,6 +473,7 @@
     "sourceAliases": [
       "Broadway Book Mall"
     ],
+    "youtube": "https://www.youtube.com/shorts/G3UFFrReI70",
     "enabled": true
   },
   {
@@ -491,6 +514,7 @@
     "sourceAliases": [
       "Tropes Bookstore"
     ],
+    "youtube": "https://www.youtube.com/shorts/4t5w6xkWG2k",
     "enabled": true
   },
   {
@@ -509,6 +533,7 @@
     "sourceAliases": [
       "Cherry On Top"
     ],
+    "youtube": "https://www.youtube.com/shorts/AB3O__4rsFw",
     "enabled": true
   },
   {
@@ -518,7 +543,7 @@
     "address": "113 Linden St, Fort Collins, CO 80524",
     "lat": 40.58735,
     "lng": -105.07641,
-    "review": "Banned Books Central",
+    "review": "Bookstore on the square Located in Old Town Fort Collins and specializes in banned books. It has a very 'library' feel about it and has a moderate collection of books and gifts.",
     "tags": [
       "banned books",
       "book clubs"
@@ -528,6 +553,7 @@
     "sourceAliases": [
       "Bookstore On The Square"
     ],
+    "youtube": "https://www.youtube.com/shorts/xKxW4q1FhFo",
     "enabled": true
   },
   {
@@ -537,16 +563,19 @@
     "address": "316 Willow St. Fort Collins, CO 80521",
     "lat": 40.59073,
     "lng": -105.07328,
-    "review": "Wolverine Farm Publick House is a creative outpost and event space in Fort Collins’ River District.",
+    "review": "Wolverine Farm Publick House is an indie creative outpost and event space in Fort Collins’ River District. Extremely curated with a huge selection of poetry and interesting prints from local authors.",
     "tags": [
       "book clubs",
-      "coffee"
+      "coffee",
+      "coworking space",
+      "patio"
     ],
     "website": "https://www.wolverinefarm.org/",
     "mapsLink": "https://www.google.com/maps/search/?api=1&query=Wolverine%20Farm%20Publick%20House%2C%20316%20Willow%20St.%20Fort%20Collins%2C%20CO%2080521",
     "sourceAliases": [
       "Wolverine Farm Publick House"
     ],
+    "youtube": "https://www.youtube.com/shorts/LcEtBy1m8WE",
     "enabled": true
   }
 ]

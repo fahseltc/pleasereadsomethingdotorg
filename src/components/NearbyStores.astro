@@ -1,0 +1,32 @@
+---
+import { withBase } from '../lib/url';
+import type { NearbyStore } from '../lib/nearby';
+
+interface Props {
+  city: string | null;
+  stores: NearbyStore[];
+  /** True when every listed store is in `city` (heading says "in <city>"). */
+  allSameCity: boolean;
+}
+const { city, stores, allSameCity } = Astro.props;
+const heading = allSameCity && city ? `More bookstores in ${city}` : 'Nearby bookstores';
+const fmtMiles = (m: number) => (m < 0.1 ? 'under 0.1 mi' : `${m.toFixed(1)} mi`);
+---
+{
+  stores.length > 0 && (
+    <section class="section" aria-labelledby="nearby-heading">
+      <h2 id="nearby-heading">{heading}</h2>
+      <ul class="stack">
+        {stores.map((s) => (
+          <li>
+            <a href={withBase(`/bookstores/${s.id}`)}>{s.name}</a>
+            <span class="muted small">
+              {' '}
+              — {fmtMiles(s.miles)} away{!allSameCity && s.city ? ` · ${s.city}` : ''}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}

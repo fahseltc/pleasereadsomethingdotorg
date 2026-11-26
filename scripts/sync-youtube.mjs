@@ -111,7 +111,7 @@ async function videoRecords(ids, key) {
   const records = [];
   for (let i = 0; i < ids.length; i += PAGE_SIZE) {
     const batch = ids.slice(i, i + PAGE_SIZE);
-    const body = await apiGet('videos', { part: 'contentDetails,status', id: batch.join(',') }, key);
+    const body = await apiGet('videos', { part: 'snippet,contentDetails,status', id: batch.join(',') }, key);
     records.push(...(body.items ?? []));
   }
   return records;
@@ -125,6 +125,19 @@ function durationSeconds(iso) {
   return Number(days) * 86400 + Number(hours) * 3600 + Number(minutes) * 60 + Number(seconds);
 }
 
+/**
+ * Hashtags in a description, without the "#", lowercased, deduplicated, in the
+ * order they first appear. All-digit tags (e.g. "#1") are skipped, as YouTube
+ * does not treat them as hashtags.
+ */
+function extractHashtags(text) {
+  const seen = new Set();
+  for (const m of (text ?? '').matchAll(/(?:^|[^\p{L}\p{N}_&])#([\p{L}\p{N}_]+)/gu)) {
+    const tag = m[1].toLowerCase();
+    if (!/^\d+$/.test(tag)) seen.add(tag);
+  }
+  return [...seen];
+}
 /** Public Shorts on the channel, newest first, as the rows written to the JSON. */
 async function fetchShorts(key) {
   const { channelId, uploads } = await uploadsPlaylist(key);
@@ -144,6 +157,8 @@ async function fetchShorts(key) {
     .map((v) => ({
       id: v.id,
       title: v.snippet?.title || v.id,
+      description: (v.snippet?.description ?? '').trim(),
+      hashtags: extractHashtags(v.snippet?.description),
       publishedAt: publishedById.get(v.id),
       url: `https://www.youtube.com/shorts/${v.id}`,
     }))

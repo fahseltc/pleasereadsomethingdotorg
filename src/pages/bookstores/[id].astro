@@ -6,6 +6,9 @@ import Map, { type MapPin } from '../../components/Map.astro';
 import { withBase } from '../../lib/url';
 import { snippet } from '../../lib/seo';
 import { placeJsonLd, breadcrumbJsonLd, eventJsonLd } from '../../lib/jsonld';
+import YouTube from '../../components/YouTube.astro';
+import NearbyStores from '../../components/NearbyStores.astro';
+import { nearbyStores } from '../../lib/nearby';
 import { upcomingEventsForStore } from '../../lib/events';
 import { BOOKSTORE_COLOR } from '../../lib/map-colors';
 
@@ -45,6 +48,11 @@ const pins: MapPin[] = hasCoords
       },
     ]
   : [];
+// Other enabled stores, nearest first (see lib/nearby.ts).
+const nearby = nearbyStores(
+  d,
+  (await getCollection('bookstores')).filter((s) => s.data.enabled).map((s) => s.data),
+);
 // Structured data (JSON-LD): the place itself, breadcrumbs, and its upcoming events.
 const ldPath = `/bookstores/${d.id}`;
 const ld = [
@@ -71,6 +79,7 @@ const ld = [
 
     <div class="prose stack">
       <p>{d.review}</p>
+      {d.youtube && <YouTube url={d.youtube} title={`${d.name} review video`} />}
 
       <p class="stack">
         <span><strong>Address:</strong> {d.address}</span>
@@ -163,5 +172,6 @@ const ld = [
         </section>
       )
     }
+    <NearbyStores city={nearby.city} stores={nearby.stores} allSameCity={nearby.allSameCity} />
   </article>
 </BaseLayout>

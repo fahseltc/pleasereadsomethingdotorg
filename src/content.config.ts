@@ -30,6 +30,14 @@ const bookstores = defineCollection({
       // Maps search for NAME + address (lands on the business, not a bare pin).
       // Override by hand with a Place ID URL for an exact match if needed.
       mapsLink: z.url().optional(),
+      // Optional YouTube video/Short URL (watch, shorts, youtu.be, embed). Embedded
+      // under the review on the store's page.
+      youtube: z
+        .url()
+        .refine((u) => /(youtube\.com\/(shorts|watch\?|embed)|youtu\.be\/)/.test(u), {
+          message: 'youtube must be a YouTube watch, shorts, embed, or youtu.be URL.',
+        })
+        .optional(),
       sourceAliases: z.array(z.string()).default([]),
       enabled: z.boolean().default(true),
     })
