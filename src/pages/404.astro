@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { withBase } from '../lib/url';
+
+const links = [
+  { href: '/bookstores', label: 'Browse independent bookstores', note: 'A map and cards for every shop we have reviewed.' },
+  { href: '/libraries', label: 'Browse libraries', note: 'Front Range public libraries and what they offer.' },
+  { href: '/events', label: 'See upcoming book events', note: 'Author talks, signings, book clubs, and readings.' },
+  { href: '/blog', label: 'Read the blog', note: 'Reviews, roundups, and videos.' },
+];
+---
+<BaseLayout
+  title="Page not found"
+  description="That page doesn't exist. Find Front Range bookstores, libraries, and book events from here."
+>
+  <section class="section prose stack">
+    <h1>That page wandered off the shelf</h1>
+    <p class="lede">
+      We couldn't find what you were looking for. The link may be old or mistyped.
+      Here are some places to pick up from:
+    </p>
+    <ul class="stack">
+      {
+        links.map((l) => (
+          <li>
+            <a href={withBase(l.href)}>{l.label}</a>
+            <span class="muted small"> — {l.note}</span>
+          </li>
+        ))
+      }
+    </ul>
+    <p>
+      <a class="button" href={withBase('/')}>Back to the home page</a>
+    </p>
+  </section>
+</BaseLayout>

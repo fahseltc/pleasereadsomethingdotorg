@@ -7,6 +7,8 @@ import { withBase } from '../../lib/url';
 import { snippet } from '../../lib/seo';
 import { placeJsonLd, breadcrumbJsonLd, eventJsonLd } from '../../lib/jsonld';
 import { upcomingEventsForStore } from '../../lib/events';
+import NearbyStores from '../../components/NearbyStores.astro';
+import { nearbyStores } from '../../lib/nearby';
 import { LIBRARY_COLOR } from '../../lib/map-colors';
 
 export const getStaticPaths = (async () => {
@@ -46,6 +48,11 @@ const pins: MapPin[] = hasCoords
       },
     ]
   : [];
+// Other enabled libraries, nearest first (see lib/nearby.ts).
+const nearby = nearbyStores(
+  d,
+  (await getCollection('libraries')).filter((l) => l.data.enabled).map((l) => l.data),
+);
 // Structured data (JSON-LD): the place itself, breadcrumbs, and its upcoming events.
 const ldPath = `/libraries/${d.id}`;
 const ld = [
@@ -163,5 +170,6 @@ const ld = [
         </section>
       )
     }
+    <NearbyStores kind="libraries" city={nearby.city} stores={nearby.stores} allSameCity={nearby.allSameCity} />
   </article>
 </BaseLayout>

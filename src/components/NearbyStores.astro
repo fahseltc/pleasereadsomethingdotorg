@@ -7,9 +7,11 @@ interface Props {
   stores: NearbyStore[];
   /** True when every listed store is in `city` (heading says "in <city>"). */
   allSameCity: boolean;
+  /** Which collection the stores belong to; sets heading text and link path. */
+  kind?: 'bookstores' | 'libraries';
 }
-const { city, stores, allSameCity } = Astro.props;
-const heading = allSameCity && city ? `More bookstores in ${city}` : 'Nearby bookstores';
+const { city, stores, allSameCity, kind = 'bookstores' } = Astro.props;
+const heading = allSameCity && city ? `More ${kind} in ${city}` : `Nearby ${kind}`;
 const fmtMiles = (m: number) => (m < 0.1 ? 'under 0.1 mi' : `${m.toFixed(1)} mi`);
 ---
 {
@@ -19,7 +21,7 @@ const fmtMiles = (m: number) => (m < 0.1 ? 'under 0.1 mi' : `${m.toFixed(1)} mi`
       <ul class="stack">
         {stores.map((s) => (
           <li>
-            <a href={withBase(`/bookstores/${s.id}`)}>{s.name}</a>
+            <a href={withBase(`/${kind}/${s.id}`)}>{s.name}</a>
             <span class="muted small">
               {' '}
               — {fmtMiles(s.miles)} away{!allSameCity && s.city ? ` · ${s.city}` : ''}

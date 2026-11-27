@@ -45,11 +45,21 @@ upcoming events on its detail page — `npm run sync:events` copies the aggregat
 output into `src/data/events.json`, and events are matched to a store via its
 `sourceAliases` (plus a name/location substring fallback).
 
-**This bridge is currently DISABLED** via a feature flag (`eventsFeature.disabled
-= true` in `src/lib/events.ts`): no events render anywhere, even if synced. All
-the wiring is intentionally left in place; flip the flag to re-enable. The bridge
-is additive — the committed `src/data/events.json` is an empty stub and the
-aggregator schema is never changed, so the site builds fine regardless.
+**This bridge is ENABLED** (`eventsFeature.disabled = false` in
+`src/lib/events.ts`). Events render on the `/events` page, the home page, and
+each matched store/library detail page. CI runs the aggregator before building,
+so the committed `src/data/events.json` holds real data. The bridge is additive:
+the aggregator schema is never changed, and the site still builds if the file is
+missing or empty. Set the flag to `true` to hide events site-wide without
+removing any wiring.
+
+## SEO
+
+Most SEO is automatic: sitemap, canonical + Open Graph tags, JSON-LD structured
+data (BookStore/Library, Article, Event, BreadcrumbList, WebSite/Organization),
+a custom 404 page, and "nearby" internal links on store and library pages. New
+stores, posts, and events pick all of this up on the next build with no extra
+authoring. See the SEO section of `structure.md` for where the code lives.
 
 ## Authoring workflow (git-free, by design)
 

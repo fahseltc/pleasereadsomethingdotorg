@@ -10,6 +10,8 @@
   The only embedded component is `YouTube.astro`, made available to every post
   without an import via `<Content components={{ YouTube }} />` in
   `blog/[slug].astro`. `new:post` scaffolds `.mdx`; plain `.md` posts still work.
+- **@astrojs/sitemap** generates `sitemap-index.xml` at build (relies on
+  `site` in `astro.config.mjs`).
 - **Leaflet 1.9.4 + OpenStreetMap** raster tiles for the map. No API key, no
   billing. Loaded from a pinned unpkg URL with SRI integrity hashes.
 - **Styling:** hand-written CSS custom properties (design tokens). No CSS
@@ -40,7 +42,7 @@
 | `npm run disable:bookstore` / `enable:bookstore` | Toggle a store's map pin. |
 | `npm run disable:library` / `enable:library` | Toggle a library's map pin. |
 | `npm run geocode -- "<address>"` | OSM Nominatim lookup for lat/lng. |
-| `npm run sync:events` | Pull aggregator events into `src/data/events.json` (events bridge is currently DISABLED — see events.ts flag — so this has no visible effect). |
+| `npm run sync:events` | Pull aggregator events into `src/data/events.json` Events are ENABLED (flag in `events.ts`); CI also runs the aggregator before each build. |
 | `npm run sync:youtube` | Refresh `src/data/youtube-shorts.json` from the YouTube Data API. Needs `YOUTUBE_API_KEY`. Also runs first in `npm run build`. |
 | `npm run publish` | Build + git add/commit/push (git-free for the author). |
 | `npm run update` | `git pull` wrapper with friendly output. |

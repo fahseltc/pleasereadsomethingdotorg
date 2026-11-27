@@ -210,28 +210,28 @@ under its `[data-theme="<name>"]` selector, and import it.
 
 ---
 
-## Events from book-events-aggregator (currently off)
+## Events from book-events-aggregator
 
-There's an optional bridge to the sibling
-[`book-events-aggregator`](../book-events-aggregator) project that can list each
-store's upcoming events on its detail page. **It is currently disabled** — no
-events render anywhere, by design.
+The site lists upcoming book events from the sibling
+[`book-events-aggregator`](../book-events-aggregator) project on the `/events`
+page, the home page, and each matching store or library page. **This is
+enabled.**
 
-All the wiring is still in place (`src/lib/events.ts`, `npm run sync:events`,
-`src/data/events.json`, and the "Upcoming events" section on the detail page); a
-single feature flag short-circuits it. To turn it back on, set `disabled` to
-`false` in `src/lib/events.ts`:
+`npm run sync:events` copies the aggregator's `output/events.json` into
+`src/data/events.json`, and CI does the same before each deploy. Events are
+matched to a store by its `sourceAliases` (plus the store name/address
+appearing in the event). Events only refresh when the site is rebuilt, by a
+publish or a manual workflow run.
+
+A single feature flag in `src/lib/events.ts` can hide events everywhere:
 
 ```ts
 const eventsFeature = {
-  disabled: true, // ← set to false to show events again
+  disabled: false, // set to true to hide events site-wide
 };
 ```
 
-With the flag on, running `npm run sync:events` (which copies the aggregator's
-`output/events.json` into `src/data/events.json`) has no visible effect. With it
-off, events are matched to a store by its `sourceAliases` (plus the store
-name/address appearing in the event). Either way the site builds fine.
+Either way the site builds fine.
 
 ---
 

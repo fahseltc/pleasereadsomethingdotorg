@@ -1,5 +1,5 @@
-﻿/**
- * "More bookstores nearby" helper for store detail pages.
+/**
+ * "More nearby" helper for bookstore and library detail pages.
  *
  * Ranks other enabled stores by straight-line distance (haversine) from lat/lng
  * rather than by city name, because address city names are inconsistent
