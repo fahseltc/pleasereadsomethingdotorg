@@ -15,7 +15,7 @@ const href = withBase(`/bookstores/${d.id}`);
     <img
       class="card__media"
       src={withBase(d.image)}
-      alt={`${d.name} storefront`}
+      alt={d.imageAlt ?? `${d.name} storefront`}
       loading="lazy"
       width="480"
       height="320"

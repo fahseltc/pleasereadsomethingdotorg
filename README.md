@@ -183,6 +183,38 @@ list.
   works out of the box — otherwise you write them exactly like normal Markdown.
   (The scaffolded post includes a commented-out example you can uncomment.)
 
+### Photos: sizes and descriptions (mostly automatic)
+
+Drop photos in straight from your phone; you don't need to resize them.
+
+- **Automatic shrinking.** `npm run dev` and `npm run publish` both run
+  `npm run optimize-images`. Any photo bigger than 1600 pixels on its longest
+  side, or over 500 KB, is resized and compressed (usually 90% smaller, with
+  no visible difference). Photos saved as `.png` become `.jpg`, and the script
+  updates the `"image"` / `heroImage` / `<BlogImage>` references for you.
+  Photos with a transparent background stay `.png`.
+- **Originals are kept.** The untouched originals are copied to
+  `image-originals/` (not published, not in git). Delete that folder whenever
+  you like.
+- **Preview first** (optional): `npm run optimize-images -- --dry-run` lists
+  what it would change without touching anything.
+- **Sizes on the page are automatic.** The build reads each photo's real
+  width and height, so pages don't jump around while photos load.
+- **Describe your photos (alt text).** Search engines and screen readers rely
+  on it. Every photo already gets a sensible default, and you can be more
+  specific:
+  - Bookstore/library photo: add `"imageAlt": "Front window of Boulder
+    Bookstore on Pearl Street"` to that entry in `bookstores.json` /
+    `libraries.json`. (Default: the store name plus "storefront", or the
+    library name.)
+  - Post banner: add `heroImageAlt: "…"` next to `heroImage`. (Default: the
+    post title.)
+  - Photos inside a post: the `alt="…"` on `<BlogImage>` or the text in
+    `![…](…)`. Always write something real here; it's the only description.
+- **Sharing previews.** A store, library, or post with a real photo uses it as
+  the preview image when the link is shared (Facebook, iMessage, Bluesky, …).
+  Pages without one use the site logo.
+
 ---
 
 ## Changing the look (theme)

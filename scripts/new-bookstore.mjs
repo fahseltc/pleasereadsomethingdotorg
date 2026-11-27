@@ -109,6 +109,7 @@ async function main() {
   }
   log.info(`Add a photo at public/images/bookstores/${id}.jpg (or .png/.webp) and`);
   log.info(`update "image" to "/images/bookstores/${id}.jpg".`);
+  log.info('Any size photo is fine: it is shrunk automatically on dev/publish. Optionally add "imageAlt" to describe it.');
   log.info('To hide this store from the map/index, set "enabled": false (or run `npm run disable:bookstore`).');
   log.info('When ready, preview with `npm run dev`, then publish with `npm run publish`.');
 }

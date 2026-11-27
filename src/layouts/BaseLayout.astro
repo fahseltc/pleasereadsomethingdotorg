@@ -88,7 +88,7 @@ function isActive(href: string) {
     <meta property="og:description" content={metaDescription} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={shareImage} />
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
     {jsonLdItems.map((item) => <script type="application/ld+json" set:html={serializeJsonLd(item)} />)}
     <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
     <link rel="apple-touch-icon" href={withBase('/favicon.svg')} />

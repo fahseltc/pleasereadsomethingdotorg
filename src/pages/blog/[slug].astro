@@ -8,6 +8,7 @@ import BlogImage from '../../components/BlogImage.astro';
 import BookshopLink from '../../components/BookshopLink.astro';
 import { withBase } from '../../lib/url';
 import { articleJsonLd, breadcrumbJsonLd } from '../../lib/jsonld';
+import { imageSize } from '../../lib/images';
 
 export const getStaticPaths = (async () => {
   // Draft posts are excluded from the build (design §10).
@@ -39,12 +40,13 @@ if (post.data.bookstore) {
   }
 }
 const postPath = `/blog/${post.id}`;
+const heroSize = await imageSize(post.data.heroImage);
 const ld = [
   articleJsonLd(post.data, postPath, about),
   breadcrumbJsonLd([{ name: 'Blog', path: '/blog' }, { name: post.data.title, path: postPath }]),
 ];
 ---
-<BaseLayout title={post.data.title} description={post.data.description} ogType="article" jsonLd={ld}>
+<BaseLayout title={post.data.title} description={post.data.description} ogType="article" jsonLd={ld} image={post.data.heroImage}>
   <article class="section prose stack">
     <p><a href={withBase('/blog')}>← All posts</a></p>
 
@@ -73,9 +75,9 @@ const ld = [
       post.data.heroImage && (
         <img
           src={withBase(post.data.heroImage)}
-          alt=""
-          width="960"
-          height="540"
+          alt={post.data.heroImageAlt ?? post.data.title}
+          width={heroSize?.width ?? 960}
+          height={heroSize?.height ?? 540}
           style="border-radius: var(--radius);"
         />
       )

@@ -61,7 +61,10 @@ scripts/
   new-library.mjs          npm run new:library (same flow -> libraries.json)
   toggle-entry.mjs         npm run disable:/enable:bookstore and :library
   geocode.mjs              npm run geocode (OSM Nominatim; also imported by new:bookstore)
-  publish.mjs              npm run publish (build + git add/commit/push)
+  publish.mjs              npm run publish (optimize + fix images, build, git add/commit/push)
+  optimize-images.mjs      npm run optimize-images: shrink photos >1600px or >500KB (uses sharp);
+                           opaque PNG -> JPG + rewrites refs; originals to image-originals/
+  fix-images.mjs           npm run fix-images: lowercase image names + fix ref casing
   update.mjs               npm run update (git pull wrapper)
   sync-events.mjs          npm run sync:events (pull aggregator output)
   sync-youtube.mjs         npm run sync:youtube (YouTube Data API -> Shorts list; runs first in npm run build)
@@ -112,8 +115,16 @@ scripts/
   other enabled stores (or libraries) within 30 miles, by lat/lng rather than
   city name. The heading reads "More <kind> in <city>" only when every listed
   place is in that city.
-- **Not done yet:** compressed images / per-page og:image, a scheduled rebuild,
-  area landing pages, and alt text + image dimensions everywhere.
+- **Images:** `scripts/optimize-images.mjs` (runs on dev + publish) keeps
+  photos web-sized. `lib/images.ts` `imageSize()` reads real dimensions with
+  sharp at build (resolved from `process.cwd()/public`, NOT import.meta.url,
+  because pages run from a bundled chunk under dist/). Detail pages, the blog
+  hero, and `BlogImage` use it for `<img width/height>`; cards keep 480x320
+  because CSS forces 3:2 with object-fit. Alt text: optional `imageAlt`
+  (stores/libraries) and `heroImageAlt` (posts) with name/title defaults.
+  Pages with a real photo pass it as `image` to BaseLayout (og:image +
+  `summary_large_image`); `isPhoto()` filters out SVG placeholders.
+- **Not done yet:** a scheduled rebuild and area landing pages.
 
 ## Cross-cutting patterns & conventions
 
@@ -136,7 +147,8 @@ scripts/
   this is a no-op today, but keep it for portability back to a subpath. Markdown/
   MDX body links don't get `withBase()` — fine at `base: '/'`.
 - **Scripts are plain Node, git-hidden.** `scripts/*.mjs` use Node built-ins
-  only (no deps). They assume the author doesn't know git: wrap git in friendly
+  only (no deps), except `optimize-images.mjs`, which uses `sharp` (a pinned
+  dependency Astro also uses). They assume the author doesn't know git: wrap git in friendly
   messages, never surface raw git errors.
 - **Defensive external data.** Treat the aggregator's `events.json` and Nominatim
   responses as untrusted/variable: tolerate missing fields, fail soft (empty

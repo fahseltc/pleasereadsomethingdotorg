@@ -22,7 +22,7 @@
   {
     "id": "boulder-bookstore",
     "name": "Boulder Bookstore",
-    "image": "/images/bookstores/boulder-bookstore.png",
+    "image": "/images/bookstores/boulder-bookstore.jpg",
     "address": "1107 Pearl St, Boulder, CO 80302",
     "lat": 40.01781,
     "lng": -105.28103,
@@ -43,7 +43,7 @@
   {
     "id": "second-star-to-the-right",
     "name": "Second Star to the Right Books",
-    "image": "/images/bookstores/secondstartotheright.png",
+    "image": "/images/bookstores/secondstartotheright.jpg",
     "address": "4353 Tennyson St, Denver, CO 80212",
     "lat": 39.776,
     "lng": -105.043,
@@ -64,7 +64,7 @@
   {
     "id": "book-niche",
     "name": "Book Niche",
-    "image": "/images/bookstores/book-niche.png",
+    "image": "/images/bookstores/book-niche.jpg",
     "address": "15075 E Mississippi Ave, Aurora, CO 80012",
     "lat": 39.69779,
     "lng": -104.8129,
@@ -82,7 +82,7 @@
   {
     "id": "the-read-queen",
     "name": "The Read Queen",
-    "image": "/images/bookstores/readqueen.png",
+    "image": "/images/bookstores/readqueen.jpg",
     "address": "129 N Harrison Ave, Lafayette, CO 80026",
     "lat": 39.99856,
     "lng": -105.08946,
@@ -123,7 +123,7 @@
   {
     "id": "slowpoke-books",
     "name": "Slowpoke Books",
-    "image": "/images/bookstores/slowpokebooks.png",
+    "image": "/images/bookstores/slowpokebooks.jpg",
     "address": "2383 S Downing Street, Denver CO 80210",
     "lat": 39.67339,
     "lng": -104.97369,
@@ -203,7 +203,7 @@
   {
     "id": "black-read",
     "name": "Black & Read",
-    "image": "/images/bookstores/blackandread.png",
+    "image": "/images/bookstores/blackandread.jpg",
     "address": "6655 Wadsworth Blvd. Arvada, CO 80003",
     "lat": 39.81755,
     "lng": -105.08274,
@@ -243,7 +243,7 @@
   {
     "id": "shop-at-matter",
     "name": "Shop At Matter",
-    "image": "/images/bookstores/shopatmatter.png",
+    "image": "/images/bookstores/shopatmatter.jpg",
     "address": "2114 Market Street, Denver,co",
     "lat": 39.75465,
     "lng": -104.99162,
@@ -304,7 +304,7 @@
   {
     "id": "the-bookies",
     "name": "The Bookies",
-    "image": "/images/bookstores/bookies.png",
+    "image": "/images/bookstores/bookies.jpg",
     "address": "2085 S Holly St. Denver, CO 80222",
     "lat": 39.67911,
     "lng": -104.92238,
@@ -324,7 +324,7 @@
   {
     "id": "friends-of-the-aurora-public-library",
     "name": "Friends of the Aurora Public Library",
-    "image": "/images/bookstores/friendsaurora.png",
+    "image": "/images/bookstores/friendsaurora.jpg",
     "address": "2243 S Peoria St Aurora, CO 80014",
     "lat": 39.67582,
     "lng": -104.84737,
@@ -343,7 +343,7 @@
   {
     "id": "the-plot-twist",
     "name": "The Plot Twist",
-    "image": "/images/bookstores/plottwist.png",
+    "image": "/images/bookstores/plottwist.jpg",
     "address": "227 West Oak Street Denton, TX 76201",
     "lat": 33.21551,
     "lng": -97.13454,
@@ -364,7 +364,7 @@
   {
     "id": "mutiny-comics-and-books",
     "name": "Mutiny Comics and Books",
-    "image": "/images/bookstores/mutiny.png",
+    "image": "/images/bookstores/mutiny.jpg",
     "address": "3483 S Broadway, Englewood, CO 80113",
     "lat": 39.65346,
     "lng": -104.98787,
@@ -383,7 +383,7 @@
   {
     "id": "dream-books-co",
     "name": "Dream Books Co.",
-    "image": "/images/bookstores/dreambooks.png",
+    "image": "/images/bookstores/dreambooks.jpg",
     "address": "4455 Grape St, Denver, CO 80216",
     "lat": 39.77793,
     "lng": -104.92475,
@@ -402,7 +402,7 @@
   {
     "id": "spell-books",
     "name": "Spell Books",
-    "image": "/images/bookstores/spellbooks.png",
+    "image": "/images/bookstores/spellbooks.jpg",
     "address": "2376 W Main Street Littleton, CO 80120",
     "lat": 39.61355,
     "lng": -105.01568,
@@ -460,7 +460,7 @@
   {
     "id": "broadway-book-mall",
     "name": "Broadway Book Mall",
-    "image": "/images/bookstores/broadwaybookmall.png",
+    "image": "/images/bookstores/broadwaybookmall.jpg",
     "address": "316 S Broadway, Denver, CO 80209",
     "lat": 39.71069,
     "lng": -104.98734,
@@ -479,7 +479,7 @@
   {
     "id": "corridor-bookstore",
     "name": "Corridor Bookstore",
-    "image": "/images/bookstores/corridor-bookstore.png",
+    "image": "/images/bookstores/corridor-bookstore.jpg",
     "address": "7700 W 44th Ave Ste 3, Wheat Ridge, CO 80033",
     "lat": 39.77603,
     "lng": -105.08287,

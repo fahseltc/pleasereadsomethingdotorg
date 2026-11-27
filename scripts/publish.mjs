@@ -59,6 +59,15 @@ function main() {
     process.exit(1);
   }
 
+  // 0. Shrink any oversized photos (and update their references) so the live
+  //    site stays fast. Already-small photos are left alone. Not fatal: if it
+  //    can't run, publishing continues with the photos as they are.
+  log.info('Checking photo sizes…');
+  const optimize = run('node', ['scripts/optimize-images.mjs']);
+  if (optimize.status !== 0) {
+    log.warn('Photos could not be resized this time; publishing them as they are.');
+  }
+
   // 1. Make image names match the files on disk. Runs before the "nothing
   //    changed" check so a casing problem on the live site still gets fixed.
   log.info('Checking image names…');

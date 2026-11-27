@@ -20,6 +20,8 @@ const bookstores = defineCollection({
       id: z.string(),
       name: z.string(),
       image: z.string(),
+      // Optional alt text for the photo (what it shows). Defaults to the name.
+      imageAlt: z.string().optional(),
       address: z.string(),
       lat: z.number().nullable().optional(),
       lng: z.number().nullable().optional(),
@@ -74,6 +76,8 @@ const blog = defineCollection({
     description: z.string().optional(),
     pubDate: z.coerce.date(),
     heroImage: z.string().optional(),
+    // Optional alt text for the banner photo. Defaults to the post title.
+    heroImageAlt: z.string().optional(),
     // When true, a small YouTube glyph shows before the title (listing + post
     // header). Use for Shorts/video posts. Purely visual; defaults to false.
     youtube: z.boolean().default(false),
@@ -108,6 +112,8 @@ const libraries = defineCollection({
       id: z.string(),
       name: z.string(),
       image: z.string(),
+      // Optional alt text for the photo (what it shows). Defaults to the name.
+      imageAlt: z.string().optional(),
       address: z.string(),
       lat: z.number().nullable().optional(),
       lng: z.number().nullable().optional(),

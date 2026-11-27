@@ -5,6 +5,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Map, { type MapPin } from '../../components/Map.astro';
 import { withBase } from '../../lib/url';
 import { snippet } from '../../lib/seo';
+import { imageSize, isPhoto } from '../../lib/images';
 import { placeJsonLd, breadcrumbJsonLd, eventJsonLd } from '../../lib/jsonld';
 import { upcomingEventsForStore } from '../../lib/events';
 import NearbyStores from '../../components/NearbyStores.astro';
@@ -53,6 +54,9 @@ const nearby = nearbyStores(
   d,
   (await getCollection('libraries')).filter((l) => l.data.enabled).map((l) => l.data),
 );
+// Real photo dimensions (read at build) so the page doesn't jump while it loads.
+const size = await imageSize(d.image);
+const alt = d.imageAlt ?? `${d.name}`;
 // Structured data (JSON-LD): the place itself, breadcrumbs, and its upcoming events.
 const ldPath = `/libraries/${d.id}`;
 const ld = [
@@ -61,7 +65,7 @@ const ld = [
   ...events.map((e) => eventJsonLd(e, { type: 'Library', name: d.name, address: d.address, path: ldPath })),
 ];
 ---
-<BaseLayout title={d.name} description={snippet(d.review)} jsonLd={ld}>
+<BaseLayout title={d.name} description={snippet(d.review)} jsonLd={ld} image={isPhoto(d.image) ? d.image : undefined}>
   <article class="section stack">
     <p>
       <a href={withBase('/libraries')}>← All libraries</a>
@@ -71,9 +75,9 @@ const ld = [
 
     <img
       src={withBase(d.image)}
-      alt={`${d.name}`}
-      width="960"
-      height="640"
+      alt={alt}
+      width={size?.width ?? 960}
+      height={size?.height ?? 640}
       style="border-radius: var(--radius); border: var(--card-border);"
     />
 

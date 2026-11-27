@@ -15,7 +15,7 @@ const href = withBase(`/libraries/${d.id}`);
     <img
       class="card__media"
       src={withBase(d.image)}
-      alt={`${d.name}`}
+      alt={d.imageAlt ?? d.name}
       loading="lazy"
       width="480"
       height="320"
